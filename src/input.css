@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "flowbite";
+
+.grid-personal {
+  z-index: 999;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid_monedas {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+
+@media (min-width: 768px) {
+  .grid-personal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid_monedas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+
+.pt-2{
+  padding-top: 2px !important;
+}
+
+.pt-4{
+  padding-top: 4px !important;
+}
+
+.pt-6{
+  padding-top: 6px !important;
+}
+
+.pt-8{
+  padding-top: 8px !important;
+}
+
+.pt-10{
+  padding-top: 10px !important;
+}
+
+
+.mt-2{
+  margin-top: 2px !important;
+}
+
+.mt-4{
+  margin-top: 4px !important;
+}
+
+.mt-6{
+  margin-top: 6px !important;
+}
+
+.mt-8{
+  margin-top: 8px !important;
+}
+
+.mt-10{
+  margin-top: 10px !important;
+}
+
+
+.p-2 {
+  padding: 2px 2px 2px 2px !important;
+}
+
+.p-4 {
+  padding: 4px 4px 4px 4px !important;
+}
+
+.p-6 {
+  padding: 6px 6px 6px 6px !important;
+}
+
+.p-8 {
+  padding: 8px 8px 8px 8px !important;
+}
+
+.p-10 {
+  padding: 10px 10px 10px 10px !important;
+}
+
+
+.pr-2{
+  padding-right: 2px !important;
+}
+
+.pr-4{
+  padding-right: 4px !important;
+}
+
+
+.pr-6{
+  padding-right: 6px !important;
+}
+
+.pr-8{
+  padding-right: 8px !important;
+}
+
+.pr-10{
+  padding-right: 10px !important;
+}
+
+
+
+
+
+.pl-2{
+  padding-left: 2px !important;
+}
+
+.pl-4{
+  padding-left: 4px !important;
+}
+
+
+.pl-6{
+  padding-left: 6px !important;
+}
+
+.pl-8{
+  padding-left: 8px !important;
+}
+
+.pl-10{
+  padding-left: 10px !important;
+}
+
+

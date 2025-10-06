@@ -1,0 +1,57 @@
+.banner_contacto {
+  position: relative;
+  background-image: url('../img/portada/portada_nosotros.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 3%;
+  padding-bottom: 1%;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
+.grid_banner_contacto {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.titulo_contacto {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitulo_contacto {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.parrafo_contacto {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn_contacto {
+  display: inline-block;
+  background-color: #1e40af;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn_contacto:hover {
+  background-color: #e5e7eb;
+  color: black;
+}

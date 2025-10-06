@@ -1,0 +1,131 @@
+.postventa {
+
+  padding: 60px 5% 80px;
+  color: #1f2937;
+}
+
+.titulo_postventa {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitulo_postventa {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #6b7280;
+}
+
+/* Sección destacada */
+.grid_destacada {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.item_destacada {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.icono_destacada {
+  font-size: 2.5rem;
+  color: #181ca0;
+  margin-bottom: 15px;
+}
+
+.item_destacada h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.item_destacada p {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+/* Postventa detallado */
+.grid_postventa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.item_postventa_img img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.bloque_servicio h3 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.bloque_servicio p {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.beneficios_postventa ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.beneficios_postventa li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #10b981;
+}
+
+.beneficios_postventa i {
+  color: #10b981;
+  margin-right: 8px;
+}
+
+.btn_postventa {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #181ca0;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn_postventa:hover {
+  background-color: #0f1580;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid_postventa {
+    grid-template-columns: 1fr;
+  }
+
+  .bloque_servicio h3 {
+  font-size: 1.5rem;
+}
+
+  .grid_destacada {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo_postventa {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,239 @@
+
+
+/* ------------------------- */
+/* 🟨 CAROUSEL (SLIDER) */
+/* ------------------------- */
+
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  position: relative;
+}
+
+.carousel > div {
+  min-width: 100%;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; /* más centrado */
+  gap: 30px; /* espacio moderado */
+  padding: 50px 20px;
+  background-size: cover;
+  background-position: center;
+  scroll-snap-align: start;
+  color: white;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel .slide-content {
+  flex: 1;
+  max-width: 800px;
+}
+
+.carousel img {
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.slide-content h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.slide-content h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.slide-content p {
+  max-width: 800px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.slide-content button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  background-color: red;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+}
+
+
+.img_1 {
+  background-image: 
+    linear-gradient(to bottom, rgba(17, 24, 39,1), rgba(17, 24, 39, 0) 40%),
+    linear-gradient(to top, rgba(17, 24, 39, 1), rgba(17, 24, 39, 0) 40%),
+    url("https://constecoin.com/wp-content/uploads/2024/02/constecoin_soluciones-inteligentes.jpg");
+}
+
+
+ .img_2 {
+  background-image: 
+    linear-gradient(to bottom, rgba(17, 24, 39,1), rgba(17, 24, 39, 0) 40%),
+    linear-gradient(to top, rgba(17, 24, 39, 1), rgba(17, 24, 39, 0) 40%),
+    url("../img/portada/image.png");
+}
+
+  .img_3 {
+  background-image: 
+    linear-gradient(to bottom, rgba(17, 24, 39,1), rgba(17, 24, 39, 0) 40%),
+    linear-gradient(to top, rgba(17, 24, 39, 1), rgba(17, 24, 39, 0) 40%),
+    url("../img/image.png");
+}
+
+
+  .img_4 {
+  background-image: 
+    linear-gradient(to bottom, rgba(17, 24, 39,1), rgba(17, 24, 39, 0) 40%),
+    linear-gradient(to top, rgba(17, 24, 39, 1), rgba(17, 24, 39, 0) 40%),
+    url("../img/portada/familia_kisan_cechriza.jpg");
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.slide-content > * {
+  opacity: 0; /* Oculta hasta que se animen */
+}
+
+.carrousel_miniatura {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ padding-bottom: 50px;
+
+ 
+}
+
+
+.carrousel_miniatura > div {
+  position: relative;
+  width: 150px;
+  height: 80px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Capa oscura encima */
+.carrousel_miniatura > div::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* oscurecimiento */
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  
+}
+
+/* Texto sobre la capa */
+.carrousel_miniatura > div h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  text-align: center;
+  padding: 0 5px;
+}
+
+
+
+/* El slide activo no tiene capa oscura */
+.carrousel_miniatura > div.active::before {
+  background-color: transparent;
+}
+
+.items_min {
+  width: 200px !important;
+  height: 150px !important;
+  background-size: cover;         /* Ajusta al tamaño del div */
+  background-position: center;    /* Centra la imagen */
+  background-repeat: no-repeat;   /* Evita repeticiones */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.img_miniatura_1{
+    background-image: url("https://constecoin.com/wp-content/uploads/2024/02/constecoin_soluciones-inteligentes.jpg");
+}
+
+ .img_miniatura_2{
+    background-image: url("../img/portada/image.png");
+}
+
+ .img_miniatura_3{
+    background-image: url("../img/image.png");
+}
+
+ .img_miniatura_4{
+    background-image: url("../img/portada/familia_kisan_cechriza.jpg");
+}
+
+@media (max-width: 768px) {
+  .carousel > div {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 0px;
+    gap: 0px;
+    height: auto;
+  }
+
+  .carousel .slide-content {
+    padding: 0;
+    order: 1; /* primero el texto */
+  }
+
+  .carousel img {
+    max-width: 70%;
+    margin-top: 0px;
+    order: 2; /* luego la imagen */
+  }
+
+ 
+  
+.carrousel_miniatura{
+   padding: 10px;
+}
+
+}
+
+

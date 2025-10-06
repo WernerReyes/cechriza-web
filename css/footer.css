@@ -1,0 +1,513 @@
+
+
+
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.grid_formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+ align-items: center;
+  justify-items: center;
+  row-gap: 25px;
+  text-align: left;
+  padding-top: 80px;
+}
+
+.grid_formulario .logo_formulario{
+padding: 0% 15% 0% 15%;
+}
+
+.grid_formulario h1{
+    font-weight: bold;
+    font-size: 2rem;
+    color: #043399;
+    padding-bottom: 10px;
+}
+
+
+.grid_formulario p{
+   
+    padding-bottom: 10px;
+}
+
+
+.label_email{
+    font-weight: bold;
+}
+
+
+
+.grid_formulario .email {
+  width: 100% !important;
+  border-radius: 20px !important;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db; /* gris claro */
+  font-size: 15px;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  color: #111827;
+  transition: border 0.3s, box-shadow 0.3s;
+  margin-top: 10px !important;
+}
+
+.grid_formulario .email::placeholder {
+  color: #9ca3af; /* gris para placeholder */
+}
+
+.grid_formulario .email:focus {
+  border-color: #111827; /* azul moderno */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.4);
+  background-color: #f9fafb;
+}
+
+
+
+.group_label_subject {
+    padding-top: 15px;
+}
+
+
+.group_label_subject label {
+    font-weight: bold;
+}
+
+
+.group_label_subject .subject {
+  width: 100% !important;
+  border-radius: 20px !important;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db; /* gris claro */
+  font-size: 15px;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  color: #111827;
+  transition: border 0.3s, box-shadow 0.3s;
+  margin-top: 10px !important;
+}
+
+.group_label_subject .subject::placeholder {
+  color: #9ca3af; /* gris para placeholder */
+}
+
+.group_label_subject .subject:focus {
+  border-color: #111827; /* azul moderno */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.4);
+  background-color: #f9fafb;
+}
+
+
+.group_label_message{
+    padding-top: 15px;
+}
+
+
+.group_label_message label{
+    font-weight: bold;
+}
+
+
+.group_label_message textarea{
+    width: 100%;
+     width: 100% !important;
+  border-radius: 20px !important;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db; /* gris claro */
+  font-size: 15px;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  color: #111827;
+  transition: border 0.3s, box-shadow 0.3s;
+  margin-top: 10px !important;
+}
+
+
+
+.group_label_message textarea::placeholder {
+  color: #9ca3af; /* gris para placeholder */
+}
+
+.group_label_message textarea:focus {
+  border-color: #111827; /* azul moderno */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.4);
+  background-color: #f9fafb;
+}
+.group_boton{
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+
+.group_boton a{   
+    background: #043399;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    border-radius: 15px;
+}
+
+.group_boton a:hover{   
+    background: #111827;
+    color: white;
+}
+
+
+
+.footer {
+  background-color: #111827;
+  color: white;
+  padding-bottom: 30px;
+
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  padding: 25px 0 10px 0;
+}
+
+.logo-footer img {
+  max-width: 180px;
+  height: auto;
+}
+
+.grid_footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 10px;
+  align-items: start;
+  justify-items: center;
+
+  padding: 10px 3%;
+}
+
+.item_footer {
+  grid-column: span 3;
+  text-align: center;         /* Centra el texto horizontalmente */
+  border-top: 1px solid #444; /* Opcional para separar visualmente */
+}
+
+
+
+.text-footer:hover{
+    color: #E3A008;
+
+}
+
+
+.linia_footer{
+    background-color: #111827;
+    height: 5px;
+    margin-bottom: 5px !important;
+}
+
+
+.grid_enlaces{
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 10px;
+  align-items: start;
+  justify-items: center;
+  border-bottom: 1px solid white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+
+}
+
+.text-footer_ruta:hover{
+    color: #E3A008;
+  text-decoration: underline  #E3A008 1px;
+
+
+}
+
+
+.whats {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.whats {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-family: Arial, sans-serif;
+}
+
+.whatsapp-button-clicked {
+  position: fixed;
+  bottom: 17rem;
+  right: 15rem;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+
+
+#whatsapp-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 45px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  animation: bounce 3.5s infinite;
+}
+
+#whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+#whatsapp-chat {
+  display: none; /* Oculto inicialmente */
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  margin-top: 10px;
+}
+
+#whatsapp-chat img.chat-icono {
+ 
+  margin: 0 auto 10px;
+}
+
+#whatsapp-chat textarea {
+  resize: none;
+  height: 60px;
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#whatsapp-chat button {
+  background-color: #25D366;
+  border: none;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+#whatsapp-chat button:hover {
+  background-color: #1ebd58;
+}
+
+
+
+.swiper-clientes {
+  padding: 2% 0% 2% 0%;
+}
+
+.titulo_slider_cliente {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.sub_slider_parrafo {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.swiper-clientes {
+  padding: 10px 0 30px;
+}
+
+.item_cliente {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.item_cliente:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.item_cliente img {
+  max-height: 60px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.item_cliente img:hover {
+  filter: grayscale(0%);
+}
+
+
+
+@media (max-width: 768px) {
+
+.grid_formulario {
+  grid-template-columns: 1fr;
+}
+
+.grid_enlaces {
+  grid-template-columns: 1fr 1fr;
+}
+
+.item_footer_enlace{
+   grid-column: span 2;
+  text-align: center;   
+}
+
+  .grid_footer {
+    grid-template-columns: 1fr; /* Solo 1 columna en móviles */
+    text-align: center;         /* Centra el texto en móviles si deseas */
+    justify-items: center;
+  }
+
+  .item_footer {
+    grid-column: span 1;        /* Solo ocupa 1 columna, que es toda la fila */
+    text-align: center;
+  }
+
+ .whats a {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+  }
+
+  .whats {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+    }
+
+
+
+
+
+
+
+
+    
+
+.fondo_paralelo {
+  position: relative;
+  overflow: hidden;
+  height: auto; /* o el alto que necesites */
+  background-color: white;
+}
+
+/* Primera franja */
+.fondo_paralelo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #F9FAFB;
+  z-index: 0;
+  animation: expandFirst 22s ease-in-out infinite;
+  transform: skew(20deg);
+}
+
+/* Segunda franja (aparece después) */
+.fondo_paralelo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #F3F4F6;
+  z-index: 0;
+  animation: expandSecond 22s ease-in-out infinite;
+  animation-delay: 0.1s; /* se activa 1 segundo después */
+  transform: skew(20deg);
+}
+
+/* El contenido encima */
+.fondo_paralelo > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animación de crecimiento y retroceso */
+@keyframes expandFirst {
+  0% {
+    width: 0%;
+  }
+  30% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes expandSecond {
+  0% {
+    width: 0%;
+  }
+  30% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+
+ @keyframes bounce {
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+      transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -30px, 0);
+    }
+    70% {
+      transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -15px, 0);
+    }
+    90% {
+      transform: translate3d(0, -4px, 0);
+    }
+  }
+
+
+

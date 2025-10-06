@@ -1,0 +1,205 @@
+.banner_nosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 30px;
+  padding: 50px 5%;
+}
+
+.banner_nosotros .item_interno {
+  padding: 0 20px;
+  max-width: 600px;
+}
+
+.titulo_general {
+  color: #043399;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 1.25rem;
+  color: #111827;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.parrafo {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.destacado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #043399;
+  font-weight: bold;
+}
+
+.imagen_interna img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.seccion_nosotros {
+  background-color: #f9fafb;
+}
+
+.grid_section_nosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 30px;
+  padding: 50px 5%;
+  color: #043399;
+  text-align: center !important;
+}
+
+.grid_section_nosotros h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #043399;
+  font-weight: bold;
+}
+
+.section_icono {
+  width: 120px;
+  height: 120px;
+  background-color: #043399;
+  color: white; /* o blanco si usas bg azul */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s;
+}
+
+.section_icono:hover {
+  transform: scale(1.05);
+  background-color: #043399;
+}
+
+.grid_section_nosotros i {
+  font-size: 3rem;
+}
+
+.div_titulos {
+  padding-top: 20px;
+  color: #111827;
+}
+
+.div_titulos h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #043399;
+}
+
+.grid_visiones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center !important;
+  justify-items: center;
+  gap: 30px;
+  padding: 50px 5%;
+  color: #111827;
+  width: 100%;
+}
+
+.grid_visiones .item_1 {
+  background-image: url("../img/fondos/logo_puntuado.png");
+  background-size: contain; /* O "cover" según necesidad */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid_visiones img {
+  border-radius: 10px;
+}
+
+.grid_visiones .item_1 .titulo {
+  color: #043399;
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+.grid_visiones .sub {
+  padding-bottom: 20px;
+}
+
+.grid_icon {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  gap: 10px; /* Espacio entre el ícono y el texto */
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.grid_icon i {
+  font-size: 1.5rem;
+  color: #043399;
+  font-weight: bold;
+}
+
+.grid_icon h1 {
+  font-size: 1.5rem;
+  color: #043399;
+  font-weight: bold;
+}
+
+.tit_vis {
+  padding-bottom: 20px;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+  .banner_nosotros {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px 5%;
+  }
+
+  .banner_nosotros .item_interno {
+    padding: 0;
+  }
+
+  .destacado {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: #043399;
+    font-weight: bold;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .grid_section_nosotros {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .grid_visiones {
+    grid-template-columns: 1fr;
+  }
+}

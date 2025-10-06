@@ -1,0 +1,582 @@
+.grid_doble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
+  padding: 5% 0%;
+  justify-items: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.coin,
+.dollar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.coin:hover,
+.dollar:hover {
+  background-color: #111827;
+  color: white;
+}
+
+.boton_informativo {
+  background-color: #043399;
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px 15px 5px 15px;
+  border-radius: 20px;
+}
+.boton_informativo:hover {
+  background: #111827;
+  color: white;
+  padding: 7px 20px 7px 20px;
+}
+
+.grid_cuatro {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 columnas iguales */
+  column-gap: 25px;
+  row-gap: 15px;
+  padding: 5% 10%;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+}
+
+.titulo_cuatro {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.titulo_elegirnos {
+  color: #043399;
+  font-weight: bold;
+  font-size: 1.5rem !important;
+}
+
+.titulo_cuatro .unico {
+  font-size: 1.5rem;
+  color: #111827;
+  padding-bottom: 5px;
+}
+
+.titulo_cuatro p {
+  font-size: 1.1rem;
+  color: #111827;
+  padding-bottom: 25px;
+}
+
+.borde_elegirnos {
+  border: 3px solid #111827;
+  width: 300px;
+  padding: 10px;
+  height: 220px;
+  border-radius: 20px;
+  background-color: #f3f4f6;
+}
+
+.borde_elegirnos .icono {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+  color: #111827;
+}
+
+.borde_elegirnos .icono:hover {
+  color: #111827;
+}
+
+.subtitulo_elegirnos {
+  color: #043399;
+  font-weight: bold;
+  font-size: 1.1rem !important;
+  padding-bottom: 10px;
+}
+
+.subtitulo_elegirnos:hover {
+  color: #111827;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  row-gap: 15px;
+  text-align: center;
+}
+
+.borde_superior_grilla {
+  border-top: 3px solid #111827;
+}
+
+.borde_superior_grilla h1 {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: #111827;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.borde_superior_grilla a {
+  background-color: #111827;
+  color: white;
+  padding: 10px 50px 10px 50px;
+  border-radius: 20px;
+}
+
+.borde_superior_grilla a:hover {
+  background-color: #043399;
+  padding: 12px 52px 12px 52px;
+}
+
+.section_slider_moneda {
+  background-image: url(../img/fondos/fondo_moneda.png);
+  /* background-color: #111827 ; */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Fondo */
+.section_slider_billete {
+  background-image: url(../img/fondos/fondo_billete_Mesa.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: #111827; */
+}
+
+/* Títulos */
+.titulo_sliders {
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.titulo_sliders .subtitulo {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.titulo_sliders .titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.titulo_sliders .descripcion {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.titulo_sliders .btn_info {
+  background-color: #043399;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* Slide */
+.swiper {
+  padding-bottom: 40px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Tarjeta del producto */
+.tarjeta_producto {
+  background: transparent;
+  color: white;
+  max-width: 300px;
+  text-align: center;
+}
+
+.tarjeta_producto h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta_producto p {
+  font-size: 0.95rem;
+  margin: 1rem 0;
+}
+
+.tarjeta_producto a {
+  background-color: #043399;
+  color: white;
+  padding: 6px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Imagen */
+.div_imagen_billete {
+  background-color: white;
+  width: 289px;
+  height: 320px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.div_imagen_billete img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navegación */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(26, 86, 219, 0.8);
+}
+
+.boletin {
+  padding: 5% 0% 5% 0%;
+  color: #111827 !important;
+}
+
+.boletin .titulo_boletin {
+  color: #111827;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 40px;
+  text-decoration: underline;
+}
+
+.titulo_boletin i {
+  font-size: 19px !important;
+}
+
+.grid_boletin {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: start;
+  row-gap: 25px;
+  text-align: left;
+  padding-top: 25px;
+}
+
+.item_boletin {
+  border-left: 3px solid #111827;
+}
+
+.contenedor_boletin {
+  padding: 8% 5% 5% 5%;
+}
+
+.contenedor_boletin h1 {
+  font-size: 1.4rem;
+  color: #043399;
+  font-weight: bold;
+}
+
+.contenedor_boletin h6 {
+  text-align: justify !important;
+}
+
+.contenedor_boletin p {
+  padding-top: 15px;
+}
+
+.seccion_boletin {
+  margin-bottom: 40px;
+}
+
+.seccion_boletin h2 {
+  padding-top: 50px !important;
+  font-size: 2rem;
+  color: #111827;
+}
+
+.seccion_boletin .description {
+  color: #111827;
+  font-size: 1.2rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  flex: 1;
+}
+
+.input-container .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #9ca3af; /* gris suave */
+  pointer-events: none;
+}
+
+.input-container .input-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.input-container input[type="email"] {
+  width: 100%;
+  padding: 10px 16px 10px 40px; /* espacio izquierdo para el icono */
+  border: 1px solid #d1d5db; /* gris claro */
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s, box-shadow 0.3s;
+  color: #111827; /* texto oscuro */
+  background-color: #fff;
+}
+
+.input-container input[type="email"]::placeholder {
+  color: #9ca3af; /* gris placeholder */
+}
+
+.input-container input[type="email"]:focus {
+  border-color: #111827;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.6);
+}
+
+.seccion_boletin button {
+  padding: 5px 15px 5px 15px;
+}
+
+.seccion_boletin button:hover {
+  background-color: #111827 !important;
+}
+
+.div_matenimiento {
+  background-image: url("../img/fondos/fondo_mantenimiento.png");
+  /* background-color: #111827; */
+  margin-top: 1%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.grid_mantenimiento {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  justify-items: center;
+  gap: 25px;
+  text-align: left;
+  padding: 4% 2%;
+}
+
+/* Estilo compartido para video e imagen */
+.grid_mantenimiento video,
+.grid_mantenimiento img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+/* Títulos y párrafos */
+.grid_mantenimiento h1 {
+  color: white;
+  font-size: 1.5rem;
+  padding-bottom: 15px;
+}
+
+.grid_mantenimiento p {
+  color: white;
+  padding-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Estilo para lista */
+.grid_mantenimiento ul {
+  color: white;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  list-style: disc;
+}
+
+.grid_mantenimiento ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Botones */
+.grid_mantenimiento a {
+  color: white;
+  background-color: #043399;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-top: 20px !important;
+}
+
+.grid_mantenimiento a:hover {
+  background-color: #e3a008;
+}
+.grid_mantenimiento video,
+.grid_mantenimiento img {
+  width: 100%;
+  max-width: 400px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6); /* sombra blanca suave */
+}
+
+@media (max-width: 1300px) {
+  .grid_cuatro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid_doble {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 12px;
+  }
+  .grilla {
+    row-gap: 0px;
+  }
+
+  .grilla_billete {
+    row-gap: 0px;
+  }
+
+  .grid_boletin {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .grid_boletin {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+
+  .grid_mantenimiento {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .grid_mantenimiento h1,
+  .grid_mantenimiento p,
+  .grid_mantenimiento ul {
+    text-align: center;
+  }
+
+  .grid_mantenimiento ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .grid_mantenimiento a {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .grid_cuatro {
+    display: grid;               
+    grid-template-columns: 1fr;
+    column-gap: 12px;
+  }
+
+  .titulo_cuatro {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .borde_superior_grilla a {
+    background-color: #111827;
+    font-size: 14px;
+    display: inline-block; /* o block si quieres toda la línea */
+    word-wrap: break-word; /* permite cortar palabras largas */
+    overflow-wrap: break-word; /* soporte moderno */
+    white-space: normal; /* asegura que el texto se pueda partir */
+    box-sizing: border-box; /* incluye padding dentro del ancho total */
+  }
+
+  .titulo_sliders a {
+    font-size: 14px;
+    padding: 10px 15px;
+    display: inline-block; /* o block si quieres toda la línea */
+    word-wrap: break-word; /* permite cortar palabras largas */
+    overflow-wrap: break-word; /* soporte moderno */
+    white-space: normal; /* asegura que el texto se pueda partir */
+    box-sizing: border-box; /* incluye padding dentro del ancho total */
+    max-width: 100%; /* evita que se pase del contenedor */
+  }
+
+  .titulo_sliders .titulo {
+    font-size: 1.5rem;
+  }
+
+  .tarjeta_producto {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tarjeta_producto h1 {
+    font-size: 1.4rem;
+  }
+
+  .div_imagen_billete {
+    width: 90%;
+    height: auto;
+    max-width: 289px;
+  }
+
+  .div_imagen_billete img {
+    height: auto;
+    max-height: 320px;
+  }
+
+  .tarjeta_producto p,
+  .tarjeta_producto a {
+    width: 90%;
+  }
+}

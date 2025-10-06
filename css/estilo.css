@@ -1,0 +1,202 @@
+/* ------------------------- */
+/* 🟦 NAVIGATION BAR - HEADER */
+/* ------------------------- */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.grid-personal {
+
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 20;
+  transition: all 0.1s ease-in-out;
+  font-size: 16px !important;
+}
+
+.grid-personal.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+}
+
+.nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+  z-index: 10;
+}
+
+/* Clase que se agrega al hacer scroll */
+.nav.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.container_nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navegador {
+  display: flex;
+  
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navegador div {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+}
+
+
+.nav-item {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+}
+
+
+/* ---------- Dropdown ---------- */
+.dropdown {
+  position: relative;
+  z-index: 9999; /* 🔥 Muy alto para estar encima de todo */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1f2937;
+  padding: 10px 0;
+  min-width: 200px;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.dropdown.open .dropdown-menu {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.dropdown-menu div {
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-menu div:hover {
+  background-color: #374151;
+}
+
+
+
+
+/* ---------- Responsive NAV ---------- */
+@media (max-width: 768px) {
+  .navegador {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: right;
+    padding: 10px 0;
+  }
+  .navegador div {
+    font-size: 20px;
+}
+
+ 
+  .navegador.active {
+    display: flex;
+  }
+
+
+  .menu-toggle {
+    display: flex;
+  }
+
+ .dropdown-menu {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+
+  .dropdown-menu div {
+    padding-left: 30px;
+    font-size: 17px;
+  }
+  .grid-personal{
+    font-size: 17px !important;
+  }
+}
+
+
+.container_nav{
+      z-index: 999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

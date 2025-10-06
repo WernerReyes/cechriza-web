@@ -1,0 +1,114 @@
+.fondo_procesamiento_billete {
+    background-image: url('../img/banner/banner_clasificadora_billete.png');
+    background-size: cover;              /* Ajusta la imagen al tamaño del div */
+    background-position: center center;  /* Centra la imagen */
+    background-repeat: no-repeat;        /* Evita que se repita */
+    padding-top: 3%;
+    padding-bottom: 20%;
+}
+
+
+.grid{
+      display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.grid .titulo{
+    color: white;
+    font-size: 1.6rem;
+      padding-bottom: 10px;
+}
+
+.grid .subtitulo{
+    color: white;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+.grid p{   
+    padding-bottom: 10px;
+}
+
+.grid a{
+    padding: 5px 15px 5px 15px;
+    background-color: #f59c31;
+    color: white;
+    border-radius: 10px;
+}
+
+.grid a:hover{
+    padding: 5px 15px 5px 15px;
+    background-color: #1A56DB;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.grid_promocion{
+      display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+ column-gap: 50px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: black;
+    text-align: center;
+
+
+}
+
+
+.grid_promocion i {
+    font-size: 4rem;
+    padding-bottom: 20px;
+    color: #043399;
+}
+
+.grid_promocion i:hover {
+    color: #f59c31;
+}
+
+
+
+.div_icono{
+    padding: 4% 2% 4% 2%;
+    height: 220px;
+     box-shadow: 0 6px 5px rgba(7, 18, 114, 0.8);
+     border-radius: 10px;
+     border: 1px solid #043399;
+}
+
+.div_icono:hover{
+    background-color: white;
+    scale: 1.02;
+}
+
+.div_icono .titulo{
+    color: #f59c31;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    
+    .fondo_procesamiento_billete {
+    background-image: url('../img/portada/contadora_billete_cechriza.jpg');    
+    }
+
+.grid_promocion{
+
+  grid-template-columns: 1fr ;
+     row-gap: 50px;
+}
+
+
+}
