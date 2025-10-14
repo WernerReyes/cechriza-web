@@ -110,7 +110,9 @@
         const phone = "51999999999"; // Reemplaza con tu número
         const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
-        chat.style.display = "none"; // Ocultar después de enviar
+       chat.style.display = "none"; // Ocultar después de enviar
+       btn.classList.remove("whatsapp-button-clicked");
+        btn.style.animation = "bounce 3.5s infinite";
         document.getElementById("whatsapp-message").value = "";
       }
     });
