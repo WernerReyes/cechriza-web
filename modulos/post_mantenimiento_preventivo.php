@@ -102,7 +102,7 @@
       </ul>
     </div>
 
-    <a href="#contacto" class="btn_postventa">Solicitar Servicio</a>
+    <a href="contacto" class="btn_postventa">Solicitar Servicio</a>
   </div>
 </div>
 

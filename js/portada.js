@@ -45,7 +45,7 @@
   setInterval(() => {
     index = (index + 1) % slides.length;
     showSlide(index);
-  }, 5000);
+  }, 8000);
 
   // Activación manual con miniaturas
   thumbnails.forEach((thumb, i) => {

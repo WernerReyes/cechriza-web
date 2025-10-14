@@ -65,7 +65,7 @@
 
           <div class="nav-item"><a href="post_mantenimiento_preventivo">Servicios Post Venta</a></div>
 
-          <div class="nav-item"><a href="noticias">Noticias</a></div>
+          <!-- <div class="nav-item"><a href="noticias">Noticias</a></div> -->
           <div class="nav-item"><a href="contacto">Contacto</a></div>
         </div>
       </div>

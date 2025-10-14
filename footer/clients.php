@@ -6,11 +6,13 @@
 
   <div class="swiper swiper-clientes">
     <div class="swiper-wrapper">
-      <div class="swiper-slide item_cliente"><img src="img/clientes/banco_falabella.png" alt="Banco Falabella"></div>
       <div class="swiper-slide item_cliente"><img src="img/clientes/bcp-logo.png" alt="BCP"></div>
-      <div class="swiper-slide item_cliente"><img src="img/clientes/caja_arequipa.webp" alt="Caja Arequipa"></div>
-      <div class="swiper-slide item_cliente"><img src="img/clientes/caja_trujillo.png" alt="Caja Trujillo"></div>
-      <div class="swiper-slide item_cliente"><img src="img/clientes/prosegur.jpg" alt="Prosegur"></div>
+      <div class="swiper-slide item_cliente"><img src="img/clientes/bbva-logo.png" alt="BBVA"></div>
+      <div class="swiper-slide item_cliente"><img src="img/clientes/scotiabank-logo.png" alt="Scotiabank"></div>
+      <div class="swiper-slide item_cliente"><img src="img/clientes/santander-logo.png" alt="Santander"></div>
+      <div class="swiper-slide item_cliente"><img src="img/clientes/hermes-logo.png" alt="Hermes"></div>
+      <div class="swiper-slide item_cliente"><img src="img/clientes/atlantic-city-logo.png" alt="Atlantic City"></div>
+      <div class="swiper-slide item_cliente"><img src="img/clientes/golden-palace-logo.png" alt="Golden Palace"></div>
     </div>
   </div>
 </div>

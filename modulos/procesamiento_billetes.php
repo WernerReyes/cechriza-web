@@ -22,7 +22,7 @@ require_once 'data/procesamiento_billetes.php';
         financieras, <br> incrementando la eficiencia y reduciendo errores operativos. Perfectos para bancos, casas de
         cambio y empresas que requieren alto rendimiento.
       </p>
-      <a href="">Descargar Presentación</a>
+      <!-- <a href="">Descargar Presentación</a> -->
     </div>
   </div>
 
@@ -54,7 +54,7 @@ require_once 'data/procesamiento_billetes.php';
             <div class="icono">
               <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <h3 class="font-bold text-lg mt-2 titulo">Detección Avanzada de Billetes Falsos</h3>
+            <h3 class="font-bold text-lg mt-2 titulo">Detección Avanzada de Billetes Sospechosos</h3>
             <p class="text-sm mt-1">
               Integra sistemas con sensores UV, MG, IR y CIS que aseguran autenticidad en cada transacción y protegen tu
               negocio contra pérdidas.
@@ -76,6 +76,19 @@ require_once 'data/procesamiento_billetes.php';
           </div>
         </div>
 
+        <!-- Beneficio 4 -->
+        <div>
+          <div class="div_icono">
+            <div class="icono">
+              <i class="fa-solid fa-stopwatch"></i>
+            </div>
+            <h3 class="font-bold text-lg mt-2 titulo">Mejora de Procesos y Reducción de Tiempos</h3>
+            <p class="text-sm mt-1">
+              Optimiza cada etapa del manejo de efectivo, minimizando errores y acelerando el procesamiento. Obtén resultados más rápidos y precisos en tus operaciones diarias.
+            </p>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -89,7 +102,7 @@ require_once 'data/procesamiento_billetes.php';
     <div class="div_procesamiento">
 
       <div class="item_1">
-        <h1 class="titulo_lista">Soluciones Profesionales para el Procesamiento de Billetes</h1>
+        <h1 class="titulo_lista">Soluciones para el Procesamiento de Billetes</h1>
 
         <div class="tabs">
           <?php foreach ($equipment_functions as $index => $function): ?>
@@ -144,7 +157,7 @@ require_once 'data/procesamiento_billetes.php';
 
 
 <?php 
- require_once "footer/clients.php";
+//  require_once "footer/clients.php";
   require_once "footer/contact.php";
  ?>
 

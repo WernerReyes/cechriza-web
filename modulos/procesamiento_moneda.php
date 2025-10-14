@@ -22,7 +22,7 @@ require_once 'data/procesamiento_monedas.php';
         Ideales para bancos, entidades de transporte, recaudación de peajes y cualquier organización que maneje grandes
         volúmenes de efectivo físico.
       </p>
-      <a href="detalle_equipo">Descargar Presentación</a>
+      <!-- <a href="detalle_equipo">Descargar Presentación</a> -->
     </div>
   </div>
 
@@ -82,7 +82,7 @@ require_once 'data/procesamiento_monedas.php';
     <div class="div_procesamiento">
 
       <div class="item_1">
-        <h1 class="titulo_lista">Soluciones Profesionales para el Procesamiento de Moneda</h1>
+        <h1 class="titulo_lista">Soluciones para el Procesamiento de Moneda</h1>
 
         <div class="tabs">
           <?php foreach ($equipment_functions as $index => $function): ?>
@@ -138,7 +138,7 @@ require_once 'data/procesamiento_monedas.php';
 
 
 <?php 
- require_once "footer/clients.php";
+//  require_once "footer/clients.php";
   require_once "footer/contact.php";
  ?>
 

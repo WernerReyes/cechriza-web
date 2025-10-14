@@ -78,7 +78,7 @@
     </div>
 
     <!-- Cobertura -->
-    <div>
+    <!-- <div>
       <div class="borde_elegirnos shadow-xl shadow-blue-950">
         <div class="p-10">
           <i class="fa-solid fa-plane-arrival icono"></i>
@@ -86,7 +86,7 @@
           <p>Presencia en todo el Perú para atenderte donde estés.</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 

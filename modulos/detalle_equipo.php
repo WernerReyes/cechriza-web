@@ -235,7 +235,7 @@ $typeText = $type === 'billete' ? 'Billetes' : 'Monedas';
 
   <?php endif; ?>
 <?php 
- require_once "footer/clients.php";
+//  require_once "footer/clients.php";
   require_once "footer/contact.php";
  ?>
 

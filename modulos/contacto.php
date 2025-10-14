@@ -28,6 +28,6 @@
 
 
 <?php 
- require_once "footer/clients.php";
+//  require_once "footer/clients.php";
   require_once "footer/contact.php";
  ?>

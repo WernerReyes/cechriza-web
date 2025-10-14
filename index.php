@@ -12,7 +12,7 @@ $rutas_permitidas = [
   'procesamiento_moneda',
   'procesamiento_billetes',
   'post_mantenimiento_preventivo',
-  'noticias',
+  // 'noticias',
   'detalle_equipo',
 ];
 
