@@ -105,12 +105,12 @@
         <!-- Botones -->
       </div>
 
-      
-
-      
 
 
-      
+
+
+
+
 
       <style>
         .svg-container {
@@ -235,7 +235,7 @@
           /* Cambia de center a flex-start */
           align-items: flex-start;
           gap: 30px;
-        
+
           flex-wrap: wrap;
           align-items: center;
           position: relative;
@@ -248,7 +248,7 @@
           flex-shrink: 0;
           flex-basis: 280px;
 
-          padding: 25px;
+          padding: 15px;
           background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
           color: #2c3e50;
           border-radius: 8px;
@@ -261,7 +261,7 @@
           /* margin-bottom: 240px; */
           position: absolute;
           right: 0;
-          top: 30%;
+          top: 27%;
           /* Animación de entrada */
           opacity: 0;
           visibility: hidden;
@@ -325,13 +325,16 @@
           .map-container {
             min-width: 100%;
             max-width: 100%;
+           
           }
 
           #info-box {
             flex-basis: auto;
             width: 100%;
             max-width: 500px;
-            order: -1;
+            order: 2;
+
+
             /* Coloca la info box arriba en móviles */
           }
 
