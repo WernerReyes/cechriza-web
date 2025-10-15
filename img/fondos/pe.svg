@@ -62,6 +62,15 @@
         #CALLAO { fill: #A7C5C9; } 
     
     </style>
+
+    <symbol id="icono-ubicacion" viewBox="0 0 40 50">
+  <path d="M20,0 C11.2,0 4,7.2 4,16 C4,28 20,50 20,50 C20,50 36,28 36,16 C36,7.2 28.8,0 20,0 Z" fill="#0000FF"/>
+  
+  <circle cx="20" cy="16" r="10" fill="#FFFFFF"/>
+  
+  <text x="20" y="19" font-family="Arial, sans-serif" font-size="5" fill="#0000FF" text-anchor="middle" font-weight="bold">CECHRIZA</text>
+</symbol>
+
   </defs>
 
  <g id="features">
@@ -202,30 +211,58 @@
     <circle class="Junín" cx="503.6" cy="603.2" id="PEJUN"/>
   </g>
   <g id="labels">
-    <text x="725" y="922.1">Tacna</text>
-    <text x="720" y="636.2">Madre de Dios</text>
-    <text x="509.8" y="235">Loreto</text>
+    <text x="730" y="935">Tacna</text>
+    <text x="720" y="650">Madre de Dios</text>
+    <text x="520" y="290">Loreto</text>
     <text x="355.5" y="297.7">Amazonas</text>
     <text x="320" y="399.3">Cajamarca</text>
     <text x="250" y="231.6">Tumbes</text>
-    <text x="228.7" y="292.7">Piura</text>
-    <text x="556.4" y="524.3">Ucayali</text>
-    <text x="740" y="789.7">Puno</text>
+    <text x="250" y="305">Piura</text>
+    <text x="580" y="545">Ucayali</text>
+    <text x="740" y="812">Puno</text>
     <text x="720" y="880.6">Moquegua</text>
-    <text x="601.6" y="826.4">Arequipa</text>
+    <text x="640" y="860">Arequipa</text>
     <text x="462.9" y="751.8">Ica</text>
     <text x="410" y="600">Lima</text>
-    <text x="396.5" y="636.4" font-size="9">Callao</text>
+    <text x="396.5" y="650" font-size="9">Callao</text>
     <text x="370.1" y="503.3">Áncash</text>
-    <text x="300.5" y="435.4">La Libertad</text>
+    <text x="320" y="445">La Libertad</text>
     <text x="252.4" y="371.9">Lambayeque</text>
     <text x="620" y="690.1">Cusco</text>
     <text x="535" y="755">Ayacucho</text>
-    <text x="600" y="735.7">Apurímac</text>
+    <text x="600" y="750">Apurímac</text>
     <text x="520" y="686.7">Huancavelica</text>
     <text x="410" y="394">San Martín</text>
     <text x="448" y="520.5">Huánuco</text>
-    <text x="490" y="550.1">Pasco</text>
-    <text x="490" y="610">Junín</text>
+    <text x="500" y="565">Pasco</text>
+    <text x="490" y="625">Junín</text>
   </g>
+
+<g id="iconos-personalizados">
+  <use href="#icono-ubicacion" x="335.5" y="248" width="40" height="35"/><!--Amazonas -->
+  <use href="#icono-ubicacion" x="350" y="460" width="40" height="35"/><!--Ancash -->
+  <use href="#icono-ubicacion" x="579" y="705" width="40" height="35"/> <!--Apurimac -->
+  <use href="#icono-ubicacion" x="621.6" y="810" width="40" height="35"/> <!--Arequipa -->
+  <use href="#icono-ubicacion" x="520" y="710" width="40" height="35"/><!--Ayacucho -->
+  <use href="#icono-ubicacion" x="300" y="350" width="40" height="35"/><!--Cajamarca -->
+  <use href="#icono-ubicacion" x="388" y="612" width="25" height="25"/><!--Callao -->
+  <use href="#icono-ubicacion" x="600" y="646" width="40" height="35"/><!--cusco -->
+  <use href="#icono-ubicacion" x="485" y="642" width="40" height="35"/><!--Huancavelica -->
+  <use href="#icono-ubicacion" x="428" y="475" width="40" height="35"/> <!--Huanuco -->
+  <use href="#icono-ubicacion" x="440" y="705" width="40" height="35"/><!--ICA -->
+  <use href="#icono-ubicacion" x="470" y="580" width="40" height="35"/><!--Junin -->
+  <use href="#icono-ubicacion" x="310" y="400" width="40" height="35"/><!--La Libertar -->
+  <use href="#icono-ubicacion" x="240" y="326.9" width="40" height="35"/><!--Lamabayeque -->
+  <use href="#icono-ubicacion" x="390" y="554" width="40" height="35"/><!--Lima -->
+  <use href="#icono-ubicacion" x="499.8" y="210" width="40" height="85"/><!--Loreto -->
+  <use href="#icono-ubicacion" x="705.7" y="600" width="40" height="35"/><!--Madre de Dios -->
+  <use href="#icono-ubicacion" x="690" y="840" width="40" height="30"/><!--Moquegua -->
+  <use href="#icono-ubicacion" x="476.3" y="520" width="40" height="35"/><!--Pasco -->
+  <use href="#icono-ubicacion" x="228.7" y="260" width="40" height="35"/><!--Piura -->
+  <use href="#icono-ubicacion" x="720" y="765" width="40" height="35"/><!--Puno -->
+  <use href="#icono-ubicacion" x="390" y="349" width="40" height="35"/><!--San Martin -->
+  <use href="#icono-ubicacion" x="715" y="890" width="40" height="35"/><!--Tacna -->
+  <use href="#icono-ubicacion" x="216.8" y="190" width="40" height="35"/><!--Tumbes -->
+  <use href="#icono-ubicacion" x="560" y="500" width="40" height="35"/><!--Ucayali -->
+</g>
 </svg>

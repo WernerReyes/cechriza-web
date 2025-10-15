@@ -235,7 +235,7 @@
           /* Cambia de center a flex-start */
           align-items: flex-start;
           gap: 30px;
-          padding: 20px;
+        
           flex-wrap: wrap;
           align-items: center;
           position: relative;
@@ -260,6 +260,8 @@
           /* margin-left: -360px; */
           /* margin-bottom: 240px; */
           position: absolute;
+          right: 0;
+          top: 30%;
           /* Animación de entrada */
           opacity: 0;
           visibility: hidden;
