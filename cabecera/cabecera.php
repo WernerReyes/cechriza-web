@@ -189,7 +189,8 @@
 
       for (const link of links) {
         if (link.getAttribute("href") === activeLink || link.getAttribute("href") === activeLink + "?id=" + id) {
-          link.classList.add("text-blue-800");
+          link.style.textDecoration = "underline";
+          link.style.textUnderlineOffset = "6px";
         }
       }
 
