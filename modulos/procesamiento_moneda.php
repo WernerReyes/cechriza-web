@@ -1,11 +1,12 @@
 <link rel="stylesheet" href="css/procesamiento_moneda.css">
 <link rel="stylesheet" href="css/lista_productos_moneda.css">
+<link rel="stylesheet" href="css/procesamiento.css">
 
 <?php
 require_once 'data/procesamiento_monedas.php';
 
 
-  ?>
+?>
 
 
 <div class="fondo_paralelo">
@@ -25,6 +26,75 @@ require_once 'data/procesamiento_monedas.php';
       <!-- <a href="detalle_equipo">Descargar Presentación</a> -->
     </div>
   </div>
+
+  
+
+
+
+  <div class="container">
+    <div class="div_procesamiento">
+
+      <div class="item_1">
+        <h1 class="titulo_lista">Soluciones para el Procesamiento de Moneda</h1>
+
+        <div class="tabs">
+          <?php foreach ($equipment_functions_monedas as $index => $function): ?>
+            <div class="tab" data-id="<?php echo $function->id; ?>">
+              <i class="fa-solid fa-square-caret-right"></i> <?php echo $function->name; ?>
+            </div>
+          <?php endforeach; ?>
+
+        </div>
+      </div>
+
+      <div class="item_2">
+        <div class="grid_search">
+          <div>
+            <!-- Barra de búsqueda -->
+            <div class="busqueda">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Buscar equipo o modelo..." id="searchInput">
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs_dinamicos">
+
+
+          <!-- Clasificadoras -->
+
+          <!-- Productos Clasificadora -->
+          <div class="grid_products">
+
+            <?php foreach ($equipments_monedas as $equipment): ?>
+              <a href="detalle_equipo?id=<?php echo $equipment->id; ?>">
+                <div data-function="<?php echo $equipment->function_id; ?>">
+                  <div class="item_producto">
+                    <div class="imagen">
+                      <img src="<?php echo $equipment->image; ?>" alt="<?php echo $equipment->name; ?>"
+                        class="w-auto h-48">
+                    </div>
+                    <h1><?php echo $equipment->name; ?></h1>
+                    <p><?php echo $equipment->description; ?></p>
+                    <!-- <a href="detalle_equipo?id=<?php echo $equipment->id; ?>">Detalle de Producto</a> -->
+                  </div>
+                </div>
+              </a>
+            <?php endforeach; ?>
+
+          </div>
+          <!-- END Productos Clasificadora -->
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br/>
+  <br/>
+
 
   <section class="promocion">
     <div class="container">
@@ -77,77 +147,17 @@ require_once 'data/procesamiento_monedas.php';
   </section>
 
 
-
-  <div class="container">
-    <div class="div_procesamiento">
-
-      <div class="item_1">
-        <h1 class="titulo_lista">Soluciones para el Procesamiento de Moneda</h1>
-
-        <div class="tabs">
-          <?php foreach ($equipment_functions as $index => $function): ?>
-            <div class="tab <?php echo $index === 0 ? 'active' : ''; ?>" data-id="<?php echo $function->id; ?>">
-              <i class="fa-solid fa-square-caret-right"></i> <?php echo $function->name; ?>
-            </div>
-          <?php endforeach; ?>
-
-        </div>
-      </div>
-
-      <div class="item_2">
-        <div class="grid_search">
-          <div>
-            <!-- Barra de búsqueda -->
-            <div class="busqueda">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Buscar equipo o modelo..." id="searchInput">
-            </div>
-          </div>
-        </div>
-
-        <div class="tabs_dinamicos">
-
-
-          <!-- Clasificadoras -->
-
-          <!-- Productos Clasificadora -->
-          <div class="grid_products">
-
-            <?php foreach ($equipments as $equipment): ?>
-              <div data-function="<?php echo $equipment->function_id; ?>">
-                <div class="item_producto">
-                  <div class="imagen">
-                    <img src="<?php echo $equipment->image; ?>" alt="<?php echo $equipment->name; ?>" class="w-auto h-48">
-                  </div>
-                  <h1><?php echo $equipment->name; ?></h1>
-                  <p><?php echo $equipment->description; ?></p>
-                  <a href="detalle_equipo?id=<?php echo $equipment->id; ?>">Detalle de Producto</a>
-                </div>
-              </div>
-            <?php endforeach; ?>
-
-          </div>
-          <!-- END Productos Clasificadora -->
-
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-<?php 
-//  require_once "footer/clients.php";
+  <?php
+  //  require_once "footer/clients.php";
   require_once "footer/contact.php";
- ?>
+  ?>
 
 
 
   <script>
     const gridProducts = document.querySelector('.grid_products');
-    const equipmentFunctions = <?php echo json_encode($equipment_functions); ?>;
-    const equipments = <?php echo json_encode($equipments); ?>;
+    const equipmentFunctions = <?php echo json_encode($equipment_functions_monedas); ?>;
+    const equipments = <?php echo json_encode($equipments_monedas); ?>;
     let equipmentFiltered = [];
     let searchTerm = "";
 
@@ -155,9 +165,19 @@ require_once 'data/procesamiento_monedas.php';
 
     // Load inicial
     document.addEventListener('DOMContentLoaded', () => {
-      const tabActive = document.querySelector('.tab.active');
-      const activeFunctionId = tabActive ? tabActive.getAttribute('data-id') : null
-      filterByFunctionAndSearch(activeFunctionId);
+      const params = new URLSearchParams(window.location.search);
+      const activeFunctionId = params.get("id");
+
+
+      // const activeFunctionId = tabActive ? tabActive.getAttribute('data-id') : null
+      filterByFunctionAndSearch(+activeFunctionId);
+
+      console.log("ID recibido:", +activeFunctionId);
+
+      const tabActive = document.querySelector('.tab[data-id="' + activeFunctionId + '"]');
+      if (tabActive) {
+        tabActive.classList.add('active');
+      }
     });
 
 
@@ -211,15 +231,26 @@ require_once 'data/procesamiento_monedas.php';
         const itemDiv = document.createElement('div');
         itemDiv.setAttribute('data-function', eq.function_id);
 
-        itemDiv.innerHTML = `
-          <div class="item_producto">
-            <div class="imagen">
-              <img src="${eq.image}" alt="${eq.name}">
-            </div>
-            <h1>${eq.name}</h1>
-            <p>${eq.description}</p>
-            <a href="detalle_equipo?id=${eq.id}&amp;type=moneda">Detalle de Producto</a>
-          </div>
+         itemDiv.innerHTML = `
+        <a style="background-color: transparent;" href="detalle_equipo?id=${eq.id}&amp;type=moneda">
+          <div class="wrapper">
+    <div class="container">
+      <div class="top"
+        style="background: url(${eq.image}) no-repeat center center; -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%;"
+      ></div>
+      <h1 class="title">${eq.name}</h1>
+    </div>
+    <div class="inside">
+      <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
+      <div class="contents">
+        <div>
+
+          Sistema automático de clasificación y enfajado de billetes Kisan (K6 Strapper).
+        </div>
+      </div>
+    </div>
+  </div>
+        </a>
         `;
 
         gridProducts.appendChild(itemDiv);

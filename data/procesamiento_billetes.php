@@ -1,7 +1,7 @@
 <?php
 require_once 'classes/equipment.php';
 
-$equipment_functions = array(
+$equipment_functions_bill = array(
     new EquipmentFunction("6", "Valorizadoras"),
     new EquipmentFunction("1", "Clasificadoras"),
     new EquipmentFunction("2", "Sistema de Depósito"),
@@ -11,7 +11,7 @@ $equipment_functions = array(
 );
 
 
-$equipments = array(
+$equipments_bill = array(
     new Equipment(
         "1",
         "kisan - Newton 30",
@@ -166,80 +166,85 @@ $equipments = array(
         "Sistema operativo" => "Windows 10 IoT Enterprise, brindando plataforma robusta y actualizable para software de caja fuerte inteligente."
     ]),
 
-    // TODO: Complete using official descriptions from Secure Innovation
-    new Equipment('25', 'Ibox 547', 'Contenedor inteligente de alta seguridad para billetes.', 'Recoja y entregue efectivo de forma segura con esta caja inteligente de protección de efectivo de alta capacidad. La tecnología de degradación de tinta iBox protege a sus activos y su personal, además que mantiene a los ladrones sin oportunidad y sin peligro para los transeuntes.', 'img/equipments/secure_innovation/ibox_547.png', 5, [
-        'Procedencia' => 'Inglaterra',
-        'Dimensiones (Ancho/Alto/Profundidad)' => '31.7x16.2x54.7 cm',
-        'Peso' => '8 kg',
-        'Capacidad' => '6,000 billetes',
-        'Seguridad' => 'Degradado del contenido con tinta
-Revestimiento anticortes,
-Detección de líquidos,
-Sensores de movimiento,
-Temporizadores de transporte y
-Grabación por caja negra con
-Registro de fecha y hora',
-        'Opcionales' => 'Rastreo: seguimiento completo del iBox por satélite, GSM y RF.
-Marcadores por trazas y ADN: suministrados previa petición.
-Control remoto: por RF y GSM.',
-
-    ]),
-
     new Equipment(
-        "40",
-        "Ibox 617",
-        "Contenedor inteligente de alta seguridad para billetes de gran capacidad.",
-        "Proteja su efectivo en tránsito y proteja a sus empleados de amenazas. Diseñadas para detectar y responder a ataques físicos, las cajas de protección de efectivo de iBox mancharán el efectivo con tinta de seguridad permanente. Su personal de efectivo en tránsito puede reducir el riesgo de ser herido, sabiendo que a los ladrones se les negará cualquier recompensa por su delito.",
-        "img/equipments/secure_innovation/ibox_617.png",
+        '25',
+        'Ibox 547',
+        'Contenedor inteligente de alta seguridad para proteger el dinero en efectivo almacenado y
+        transportado',
+        'Recoja y entregue efectivo de forma segura con esta caja inteligente de protección de efectivo de alta capacidad. La tecnología de degradación de tinta iBox protege a sus activos y su personal, además que mantiene a los ladrones sin oportunidad y sin peligro para los transeuntes.',
+        'img/equipments/secure_innovation/ibox_547.png',
         5,
+        
         [
-            "Procendencia" => "Inglaterra",
-            "Dimensiones (Ancho/Alto/Profundidad)" => "31.7x16.2x61.7 cm",
-            "Peso" => "9 kg",
-            "Capacidad" => "8,000 billetes",
-            "Seguridad" => "Degradado del contenido con tinta
-Revestimiento anticortes,
-Detección de líquidos,
-Sensores de movimiento,
-Temporizadores de transporte y
-Grabación por caja negra con
-Registro de fecha y hora",
-            "Opcionales" => "Rastreo: seguimiento completo del iBox por satélite, GSM y RF.
-Marcadores por trazas y ADN: suministrados previa petición.
-Control remoto: por RF y GSM."
-        ],
-    ),
-
+            'Protección activa de billetes' => 'Incorpora un sistema IBNS (Intelligent Banknote Neutralization System) que mancha/entinta los billetes con tinta de seguridad indeleble ante aperturas no autorizadas, inutilizando su valor y desincentivando robos (hasta 100% de billetes manchados en caso de ataque).',
+            'Seguridad electrónica' => 'Utiliza llaves digitales criptográficas (“Digital Key”) para su apertura legítima; elimina llaves físicas y sus riesgos. Cada caja iBox solo se abre con autorización remota o con códigos de un solo uso, reduciendo drásticamente el riesgo de conspiración interna o coacción.',
+            'Sensores integrados' => 'Detectan golpes, vibraciones, intentos de taladro o corte, variaciones de ambiente; cualquier intento de manipulación fuera de protocolo activa inmediatamente los mecanismos de neutralización y puede emitir alarmas al centro de control vía comunicación inalámbrica.',
+            'Construcción física' => 'Maleta/cassette blindado altamente resistente (materiales compuestos y acero endurecido) pero ligero para transporte; a prueba de fuego y agua en grado moderado para proteger contenido; equipados con cerraduras electrónicas y precintos electrónicos que registran cualquier apertura.',
+            'Conectividad y seguimiento' => 'Modulos GSM/GPS integrados que permiten rastreo en tiempo real de la unidad durante tránsito; reporte en vivo del estado (cerrado/abierto, armado/desarmado) a una plataforma central de monitoreo (posibilidad de integración con Remote Planet de Secure Innovation).',
+            'Uso en cajeros automáticos (ATM)' => 'La iBox puede funcionar como cassette inteligente dentro del ATM, protegiendo el efectivo almacenado con neutralización activa (“a2m active” de Secure Innovation) o como dispositivo de despliegue rápido (“a2m passive”) instalable en cajeros existentes para elevar su seguridad sin modificar la máquina completamente.',
+            'Beneficios operativos' => 'Reduce drásticamente robos en tránsito y manipulación interna no autorizada; optimiza la logística CIT al permitir apertura remota sincronizada (se abre solo al llegar a bóveda, etc.); su uso disuade ataques violentos, mejorando la seguridad del personal y del valor transportado.',
+            'Modelos' => 'Modelo cerrado para transporte / Modelo con boqueta para recaudaciones'
+            ]
+        ),
+        
+        // TODO: Complete using official descriptions from Secure Innovation
     new Equipment(
-        "123",
-        "Ibox RDS",
-        "Recolecciones múltiples y seguras de efectivo. iBox RDS es una caja/valija de seguridad inteligente de doble propósito.",
-        "Con los sistemas de protección de efectivo de Spinnaker®, cualquier ataque físico a las cajas iBox resultará en la liberación de la tinta de seguridad sobre los billetes y/o valores contenidos en ella. Con esto se disminuye en gran medida el riesgo de los operadores al manejar y entregar cajas con valores, ya que cualquier intento de apertura no autorizada activará la tinta en la caja, dejando todo su contenido inservible.",
-        "img/equipments/secure_innovation/ibox_rds.png",
-        5,
-        [
-            "Doble compartimento" => "Dos compartimentos independientes en una sola unidad: uno para depósitos (recolección de billetes) y otro para transporte seguro (almacenamiento protegido).",
-            "Depósito seguro" => "El compartimento de depósito permite a los usuarios realizar múltiples recolecciones de billetes durante el día, asegurando que cada depósito quede protegido inmediatamente tras su inserción.",
-            "Transporte protegido" => "El compartimento de transporte está diseñado para almacenar el efectivo recolectado de manera segura hasta su entrega en bóveda o centro de procesamiento, con mecanismos de seguridad avanzados.",
-            "Tecnología IBNS" => "Incorpora un sistema IBNS (Intelligent Banknote Neutralization System) que mancha/entinta los billetes con tinta de seguridad indeleble ante aperturas no autorizadas, inutilizando su valor y desincentivando robos.",
-            "Seguridad electrónica" => "Utiliza llaves digitales criptográficas (“Digital Key”) para su apertura legítima; elimina llaves físicas y sus riesgos. Cada caja iBox solo se abre con autorización remota o con códigos de un solo uso.",
-            "Sensores integrados" => "Detectan golpes, vibraciones, intentos de taladro o corte, variaciones de ambiente; cualquier intento de manipulación fuera de protocolo activa inmediatamente los mecanismos de neutralización y puede emitir alarmas al centro de control vía comunicación inalámbrica.",
-            "Construcción física" => "Maleta/cassette blindado altamente resistente (materiales compuestos y acero endurecido) pero ligero para transporte; a prueba de fuego y agua en grado moderado para proteger contenido; equipados con cerraduras electrónicas y precintos electrónicos que registran cualquier apertura.",
-            "Conectividad y seguimiento" => "Módulos GSM/GPS integrados que permiten rastreo en tiempo real de la unidad durante tránsito; reporte en vivo del estado (cerrado/abierto, armado/desarmado) a una plataforma central de monitoreo (posibilidad de integración con Remote Planet de Secure Innovation).",
-            "Beneficios operativos" => "Optimiza la logística CIT al permitir múltiples depósitos seguros durante el día sin necesidad de abrir la caja; reduce riesgos asociados a manejo interno y transporte; mejora la seguridad del personal y del valor transportado."
-        ]
-    ),
+    "40",
+    "iBox 617",
+    "Contenedor inteligente de transporte de efectivo con neutralización por tinta (IBNS) y apertura gestionada digitalmente.",
+    "La iBox 617 es una caja de transporte de efectivo de alta seguridad utilizada en operaciones de transporte de valores (CIT). Incorpora el sistema IBNS (Intelligent Banknote Neutralization System), que libera tinta de seguridad indeleble sobre los billetes en caso de manipulación o apertura no autorizada, inutilizándolos completamente. Además, emplea el sistema Digital Key para una apertura controlada electrónicamente sin necesidad de llaves físicas, reduciendo riesgos de robo interno o externo. Su carcasa reforzada y sus sensores integrados de movimiento, vibración y taladro garantizan una protección integral durante el traslado del efectivo.",
+    "img/equipments/secure_innovation/ibox_617.png",
+    5,
+    [
+        "Sistema de neutralización" => "IBNS (Intelligent Banknote Neutralization System) que mancha los billetes ante apertura no autorizada.",
+        "Gestión de apertura" => "Llaves digitales cifradas (Digital Key) o códigos de un solo uso.",
+        "Sensores integrados" => "Golpes, vibraciones, intentos de perforación o corte, apertura forzada.",
+        "Registro de eventos" => "Almacenamiento de datos de apertura, cierre y manipulación con fecha y hora.",
+        "Conectividad opcional" => "Módulos GSM/GPS para rastreo y monitoreo en tiempo real.",
+        "Construcción" => "Carcasa reforzada de acero y materiales compuestos, resistente a impactos y cortes.",
+        "Dimensiones / Peso / Capacidad" => "Dependen del modelo; versiones típicas alrededor de 30x16x60 cm y capacidad comercial media.",
+        "Uso principal" => "Transporte seguro de efectivo entre puntos de recaudación, bóvedas y cajeros."
+    ]
+),
 
-    new Equipment("13", "A2M ATM Cash Protection", "Sistema avanzado de protección y transporte de efectivo.", "Sistema avanzado de protección y transporte de efectivo. La iBox de Secure Innovation es un contenedor inteligente de alta seguridad para billetes, utilizado en transporte de caudales y cajeros automáticos. Previene fraudes internos, robos y asaltos a transportadores mediante tecnología de neutralización de billetes (por entintado) y apertura controlada digitalmente. Es la forma más segura de almacenar o mover efectivo, asegurando que en caso de intento de apertura no autorizada, el contenido quede inutilizado y los delincuentes disuadidos.", "img/equipments/secure_innovation/a2m.png", 5, [
-        "Protección activa de billetes" => "Incorpora un sistema IBNS (Intelligent Banknote Neutralization System) que mancha/entinta los billetes con tinta de seguridad indeleble ante aperturas no autorizadas, inutilizando su valor y desincentivando robos (hasta 100% de billetes manchados en caso de ataque).",
-        "Seguridad electrónica" => "Utiliza llaves digitales criptográficas (“Digital Key”) para su apertura legítima; elimina llaves físicas y sus riesgos. Cada caja iBox solo se abre con autorización remota o con códigos de un solo uso, reduciendo drásticamente el riesgo de conspiración interna o coacción.",
-        "Sensores integrados" => "Detectan golpes, vibraciones, intentos de taladro o corte, variaciones de ambiente; cualquier intento de manipulación fuera de protocolo activa inmediatamente los mecanismos de neutralización y puede emitir alarmas al centro de control vía comunicación inalámbrica.",
-        "Construcción física" => "Maleta/cassette blindado altamente resistente (materiales compuestos y acero endurecido) pero ligero para transporte; a prueba de fuego y agua en grado moderado para proteger contenido; equipados con cerraduras electrónicas y precintos electrónicos que registran cualquier apertura.",
-        "Conectividad y seguimiento" => "Módulos GSM/GPS integrados que permiten rastreo en tiempo real de la unidad durante tránsito; reporte en vivo del estado (cerrado/abierto, armado/desarmado) a una plataforma central de monitoreo (posibilidad de integración con Remote Planet de Secure Innovation).",
-        "Uso en cajeros automáticos (ATM)" => "La iBox puede funcionar como cassette inteligente dentro del ATM, protegiendo el efectivo almacenado con neutralización activa (“a2m active” de Secure Innovation) o como dispositivo de despliegue rápido (“a2m passive”) instalable en cajeros existentes para elevar su seguridad sin modificar la máquina completamente.",
-        "Beneficios operativos" => "Reduce drásticamente robos en tránsito y manipulación interna no autorizada; optimiza la logística CIT al permitir apertura remota sincronizada (se abre solo al llegar a bóveda, etc.); su uso disuade ataques violentos, mejorando la seguridad del personal y del valor transportado.",
-        "Modelos disponibles" => "Modelo cerrado para transporte y modelo con boqueta para recaudaciones, adaptándose a distintas necesidades de operación y logística."
-    ]),
+new Equipment(
+    "123",
+    "iBox RDS",
+    "Caja inteligente de doble compartimento para depósitos múltiples y transporte seguro de efectivo.",
+    "La iBox RDS es una solución de recolección y transporte de efectivo con doble compartimento, diseñada para permitir múltiples depósitos durante el día sin abrir el compartimento de transporte. Integra el sistema IBNS que neutraliza los billetes en caso de intento de robo o apertura no autorizada, sensores de ataque y opciones de rastreo GPS/GSM. Su estructura reforzada y su apertura controlada electrónicamente la convierten en una herramienta confiable para optimizar la logística de efectivo en empresas con alto flujo de depósitos.",
+    "img/equipments/secure_innovation/ibox_rds.png",
+    5,
+    [
+        "Tipo de caja" => "Doble compartimento (depósito + transporte protegido).",
+        "Neutralización" => "IBNS con tinta de seguridad indeleble ante manipulaciones o aperturas forzadas.",
+        "Seguridad electrónica" => "Cerraduras digitales, precintos electrónicos y control remoto de apertura.",
+        "Sensores" => "Impacto, vibración, taladro, corte y apertura no autorizada.",
+        "Rastreo" => "GPS y GSM opcional para monitoreo en tiempo real.",
+        "Construcción física" => "Cuerpo blindado de acero endurecido y materiales compuestos resistentes a fuego y agua moderada.",
+        "Capacidad" => "Variable según modelo (depósito y transporte separados).",
+        "Aplicación principal" => "Depósito diario en puntos de venta y transporte seguro a bóveda central."
+    ]
+),
+
+new Equipment(
+    "13",
+    "A2M ATM Cash Protection",
+    "Sistema de protección activa y pasiva para efectivo en cajeros automáticos (ATM).",
+    "La gama A2M de Secure Innovation ofrece soluciones avanzadas de protección de efectivo para cajeros automáticos. La versión A2M Active proporciona monitorización continua y neutralización inteligente de billetes mediante IBNS, comunicándose con el centro de control a través de sistemas cifrados. La versión A2M Passive es una unidad slimline que se instala fácilmente en los cassettes del ATM y libera tinta o adhesivo al detectar un ataque, inutilizando el efectivo sin reducir la capacidad del cajero. Ambas versiones están diseñadas y probadas contra ataques reales, garantizando la seguridad del efectivo y del personal.",
+    "img/equipments/secure_innovation/a2m.png",
+    5,
+    [
+        "Versiones disponibles" => "A2M Active (monitoreo y comunicación continua) y A2M Passive (protección simple de bajo costo).",
+        "Sistema de neutralización" => "IBNS por tinta indeleble o mezcla adhesiva según modelo.",
+        "Monitorización (A2M Active)" => "Supervisión continua del estado del cajero y comunicación cifrada con la central.",
+        "Instalación (A2M Passive)" => "Dispositivo de instalación rápida que no reduce la capacidad del cassette del ATM.",
+        "Pruebas de seguridad" => "Probado frente a ataques físicos y explosivos.",
+        "Construcción" => "Diseño compacto, resistente y adaptable a la mayoría de cassettes de cajeros.",
+        "Integración" => "Compatible con sistemas de monitoreo remoto de Secure Innovation (p.ej. Hub+).",
+        "Uso principal" => "Protección de efectivo en cajeros automáticos ante robos o ataques violentos."
+    ]
+),
+
     // TODO
 
 

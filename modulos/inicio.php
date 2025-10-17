@@ -9,31 +9,23 @@ require_once "modulos/slider_principal.php";
 <div class="fondo_paralelo">
 
 
-  <div class="flex-container">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">5</div>
-  </div>
-
-
-
-  <div class="flex items-center">
+  <div
+   style="padding: 60px 0;"
+  class="md:flex items-center justify-center">
 
     <!-- Bloque principal -->
     <div class="titulo_cuatro">
-      <div class="p-10">
-        <h1 class="titulo_elegirnos pb-10">¿Por qué elegirnos?</h1>
+      <div class="flex flex-col items-center justify-cente text-center">
+        <h1 class="titulo_elegirnos">¿Por qué elegirnos?</h1>
         <h1 class="unico"> <strong>Aliados en tu gestión de efectivo</strong> </h1>
-        <p>Ofrecemos tecnología confiable, soporte técnico nacional y soluciones adaptadas a tu operación.</p>
+        <p class="">Ofrecemos tecnología confiable, soporte técnico nacional y soluciones adaptadas a tu operación.</p>
 
       </div>
     </div>
 
     <!-- Calidad y Seguridad -->
     <div class="flex-container">
-      <div class="">
+      <div class="item">
         <div class="borde_elegirnos shadow-xl shadow-blue-950">
           <div class="p-10">
             <i class="fas fa-lock icono"></i>
@@ -44,7 +36,7 @@ require_once "modulos/slider_principal.php";
       </div>
 
       <!-- Variedad de Equipos -->
-      <div>
+      <div class="item">
         <div class="borde_elegirnos shadow-xl shadow-blue-950">
           <div class="p-10">
             <i class="fa-solid fa-server icono"></i>
@@ -55,7 +47,7 @@ require_once "modulos/slider_principal.php";
       </div>
 
       <!-- Mantenimiento Especializado -->
-      <div>
+      <div class="item">
         <div class="borde_elegirnos shadow-xl shadow-blue-950">
           <div class="p-10">
             <i class="fas fa-tools icono"></i>
@@ -66,7 +58,7 @@ require_once "modulos/slider_principal.php";
       </div>
 
       <!-- Asesoría Personalizada -->
-      <div>
+      <div class="item">
         <div class="borde_elegirnos shadow-xl shadow-blue-950">
           <div class="p-10">
             <i class="fa-solid fa-users-viewfinder icono"></i>
@@ -77,7 +69,7 @@ require_once "modulos/slider_principal.php";
       </div>
 
       <!-- Alquiler y Venta -->
-      <div>
+      <div class="item">
         <div class="borde_elegirnos shadow-xl shadow-blue-950">
           <div class="p-10">
             <i class="fa-solid fa-user-gear icono"></i>
@@ -237,8 +229,8 @@ require_once "modulos/slider_principal.php";
 
  -->
 
-  <div class="boletin">
-    <div class="container mt-10">
+  <div class="boletin !p-0">
+    <div class="container">
       <h1 class="titulo_boletin">
         Propuesta de Valor
       </h1>
@@ -387,7 +379,7 @@ require_once "modulos/slider_principal.php";
 
 
 
-  <section class="py-12 px-4 text-center  seccion_boletin">
+  <!-- <section class="py-12 px-4 text-center  seccion_boletin">
     <h2 class=" font-bold text-gray-900 mb-4">Suscríbete al boletín de CECHRIZA</h2>
     <p class="description">
       Recibe noticias, promociones y las últimas novedades sobre nuestros equipos de conteo, detección y mantenimiento
@@ -395,7 +387,7 @@ require_once "modulos/slider_principal.php";
     </p>
 
     <form class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto p-6">
-      <!-- Input con ícono -->
+   
       <div class="input-container">
         <span class="input-icon">
           <svg viewBox="0 0 20 20">
@@ -406,7 +398,7 @@ require_once "modulos/slider_principal.php";
         <input type="email" placeholder="Ingresa tu correo">
       </div>
 
-      <!-- Botón -->
+     
       <button type="submit"
         class="bg-blue-600  text-white font-semibold px-5 py-2.5 rounded-lg transition duration-300 w-full sm:w-auto">
         Suscribirse
@@ -418,7 +410,7 @@ require_once "modulos/slider_principal.php";
       <a href="#" class="text-blue-600 ">Términos del servicio</a> y
       <a href="#" class="text-blue-600 ">Política de privacidad</a>.
     </p>
-  </section>
+  </section> -->
 
 
 

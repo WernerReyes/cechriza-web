@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 25px;
-  padding: 5% 0%;
+  /* padding: 5% 0%; */
   justify-items: center;
 }
 
@@ -51,16 +51,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .item {
   flex: 0 0 calc(33.33% - 10px);
-  background: #4a90e2;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 8px;
 }
 
 

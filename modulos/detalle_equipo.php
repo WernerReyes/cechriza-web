@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="css/procesamiento_billete.css">
 <link rel="stylesheet" href="css/detalle_equipo.css">
+<link rel="stylesheet" href="css/procesamiento.css">
 
 
 <?php
@@ -13,12 +14,12 @@ if ($id && $type) {
   $functionsList = [];
   if ($type === 'billete') {
     require_once "data/procesamiento_billetes.php";
-    $equipmentsList = $equipments; // Equipos de billetes
-    $functionsList = $equipment_functions;
+    $equipmentsList = $equipments_bill; // Equipos de billetes
+    $functionsList = $equipment_functions_bill;
   } elseif ($type === 'moneda') {
     require_once "data/procesamiento_monedas.php";
-    $equipmentsList = $equipments; // Equipos de monedas
-    $functionsList = $equipment_functions;
+    $equipmentsList = $equipments_monedas; // Equipos de monedas
+    $functionsList = $equipment_functions_monedas;
   } else {
     // Tipo no válido, manejar el error según sea necesario
     die("Tipo de equipo no válido.");
@@ -209,13 +210,27 @@ $typeText = $type === 'billete' ? 'Billetes' : 'Monedas';
 
               <!-- Slide 1 -->
               <div class="swiper-slide">
-                <div class="card_slide">
-                  <img src="<?php echo $equipment->image; ?>" alt="<?php echo $equipment->name; ?>">
-                  <h1><?php echo $equipment->name; ?></h1>
-                  <p><?php echo $equipment->description; ?></p>
-                  <a href="detalle_equipo?id=<?php echo $equipment->id; ?>&amp;type=<?php echo $type; ?>">Detalle de
-                    Equipo</a>
-                </div>
+                <a style="background-color: transparent;"
+                  href="detalle_equipo?id=<?php echo $equipment->id; ?>&amp;type=<?php echo $type; ?>">
+                  <div class="wrapper">
+                    <div class="container">
+                      <div class="top"
+                        style="background: url(<?php echo $equipment->image; ?>) no-repeat center center; -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%;">
+                      </div>
+                      <h1 class="title"><?php echo $equipment->name; ?></h1>
+                    </div>
+                    <div class="inside">
+                      <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
+                      <div class="contents">
+                        <div>
+
+                          <?php echo $equipment->description; ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <!-- </div> -->
               </div>
             <?php endforeach; ?>
 
@@ -234,10 +249,10 @@ $typeText = $type === 'billete' ? 'Billetes' : 'Monedas';
     </div>
 
   <?php endif; ?>
-<?php 
-//  require_once "footer/clients.php";
+  <?php
+  //  require_once "footer/clients.php";
   require_once "footer/contact.php";
- ?>
+  ?>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>

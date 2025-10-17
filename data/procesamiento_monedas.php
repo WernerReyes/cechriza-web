@@ -1,7 +1,7 @@
 <?php
 require_once 'classes/equipment.php';
 
-$equipment_functions = array(
+$equipment_functions_monedas = array(
     new EquipmentFunction(4, "Contadoras"),
     new EquipmentFunction(5, "Valorizadoras"),
     new EquipmentFunction(1, "Clasificadoras"),
@@ -12,7 +12,7 @@ $equipment_functions = array(
 );
 
 
-$equipments = array(
+$equipments_monedas = array(
     new Equipment(2, "Cima - CDS802", "Sistema de depósito y reciclaje de monedas para tiendas medianas.", "Sistema de depósito y reciclaje de monedas para tiendas medianas. La CIMA CDS802 es una unidad de reciclaje de monedas de alto rendimiento pensada para pequeños y medianos comercios y salas de entretenimiento. Permite preparar rápidamente el fondo de monedas para cajas registradoras cada día y almacenar de forma segura la recaudación en monedas al cierre, reduciendo drásticamente el tiempo en tesorería. Con conexión en línea, optimiza la colaboración entre retail, bancos y CIT para reposición y recogida de monedas.", "img/equipments/cima/cds802.png", 3, [
         "Aceptación" => "Hasta 50 monedas por inserción (boca de entrada diseñada para lotes manejables, evita atascos iniciales).",
         "Velocidad de proceso" => "~3 monedas/segundo en conteo (180 monedas/min). Aunque la velocidad bruta parece menor que un depositador puro, el sistema recicla simultáneamente.",

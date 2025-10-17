@@ -21,6 +21,7 @@
   <body>
 
 
+
     <!-- Grid superior -->
     <div class="grid-personal p-6 bg-gray-900 text-center text-white">
       <div><i class="fa-brands fa-whatsapp"></i> <strong>014760909 / 014760348</strong> </div>
@@ -48,11 +49,118 @@
 
           <!-- Dropdown 1 -->
           <div class="nav-item dropdown">
-            <div class="dropdown-toggle">Soluciones ▾</div>
+            <!-- <div class="dropdown-toggle">Soluciones ▾</div>
             <div class="dropdown-menu">
-              <div><a href="procesamiento_billetes">Procesamiento de Billetes</a></div>
-              <div><a href="procesamiento_moneda">Procesamiento de Monedas</a></div>
+              <div><a href="procesamiento_billetes" class="dropdown-toggle">Procesamiento de Billetes</a></div>
+              <div><a href="procesamiento_moneda" class="dropdown-item">Procesamiento de Monedas</a></div>
+            </div> -->
+
+            <!-- class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" -->
+            <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown" type="button">
+              <div class="flex items-center gap-2">
+
+                Soluciones <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </div>
+            </button>
+
+            <!-- Dropdown menu -->
+            <div id="multi-dropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+              <ul class="p-10 text-sm" aria-labelledby="multiLevelDropdownButton">
+
+                <li>
+                  <a id="doubleDropdownButton1" data-dropdown-toggle="doubleDropdown1"
+                    data-dropdown-placement="right-start" type="button"
+                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+
+                    Procesamiento
+                    de Billetes
+
+
+                    <svg class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                    </svg>
+                  </a>
+
+
+
+
+
+
+                  <div id="doubleDropdown1"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+
+
+
+                    <ul class="p-10 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton1">
+                      <?php
+                      require_once 'data/procesamiento_billetes.php';
+
+                      foreach ($equipment_functions_bill as $category) {
+                        ?>
+
+                        <li>
+                          <a href=<?php echo "procesamiento_billetes?id=" . $category->id; ?>
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            <?php echo $category->name; ?>
+                          </a>
+                        </li>
+
+                      <?php } ?>
+                    </ul>
+                  </div>
+                </li>
+
+
+                <li>
+                  <a id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown"
+                    data-dropdown-placement="right-start" type="button"
+                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+
+                    Procesamiento
+                    de Monedas
+
+
+                    <svg class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                    </svg>
+                  </a>
+
+
+
+
+                  <div id="doubleDropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                    <ul class="p-10 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                      <?php
+                      require_once 'data/procesamiento_monedas.php';
+
+                      foreach ($equipment_functions_monedas as $category) {
+                        ?>
+
+                        <li>
+                          <a href=<?php echo "procesamiento_moneda?id=" . $category->id; ?>
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            <?php echo $category->name; ?>
+                          </a>
+                        </li>
+
+                      <?php } ?>
+                    </ul>
+                  </div>
+                </li>
+
+              </ul>
             </div>
+
           </div>
 
           <!-- Dropdown 2 -->
@@ -75,9 +183,12 @@
     <script>
       const links = document.querySelectorAll("#navMenu a");
       const activeLink = window.location.pathname.split("/").pop();
-      
+
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+
       for (const link of links) {
-        if (link.getAttribute("href") === activeLink) {
+        if (link.getAttribute("href") === activeLink || link.getAttribute("href") === activeLink + "?id=" + id) {
           link.classList.add("text-blue-800");
         }
       }

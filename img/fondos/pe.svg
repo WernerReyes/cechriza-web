@@ -32,34 +32,37 @@
             stroke-width: 3px;
         }
       
+      #features{
+        fill:#E6E6E6;
+      }
       /* --- Colores por ID en tonos pastel --- */
-        #PETAC { fill: #fAD1D6; } /* Tacna (Rojo -> Rosa claro) */
-        #PEMDD { fill: #B8E4C0; } /* Madre de Dios (Verde -> Verde menta) */
-        #PELOR { fill: #FFF8D6; } /* Loreto (Amarillo -> Amarillo pálido) */
-        #PEAMA { fill: #B4C3ED; } /* Amazonas (Azul -> Azul claro) */
-        #PECAJ { fill: #FDD5B6; } /* Cajamarca (Naranja -> Durazno) */
-        #PETUM { fill: #D9A7E5; } /* Tumbes (Morado -> Lavanda) */
-        #PEPIU { fill: #BFFBFA; } /* Piura (Cian -> Cian claro) */
-        #PEUCA { fill: #FBB1F4; } /* Ucayali (Magenta -> Rosado) */
-        #PEPUN { fill: #E8FCA6; } /* Puno (Lima -> Lima pálido) */
-        #PEMOQ { fill: #FDE7E7; } /* Moquegua (Rosa -> Rosa muy pálido) */
-        #PEARE { fill: #99D9D9; } /* Arequipa (Teal -> Aguamarina) */
-        #PEICA { fill: #F3E4FF; } /* Ica (Lila -> Lila pálido) */
-        #PELIM { fill: #E1CBAE; } /* Lima Province (Marrón -> Arena) */
-        #PELMA { fill: #FFFAC8; } /* Lima (Beige - ya es claro) */
-        #PECAL { fill: #D99999; } /* Callao (Granate -> Salmón oscuro) */
-        #PEANC { fill: #DFFFEA; } /* Áncash (Menta -> Menta muy claro) */
-        #PELAL { fill: #D9D999; } /* La Libertad (Oliva -> Verde pálido) */
-        #PELAM { fill: #FFEEDD; } /* Lambayeque (Durazno -> Crema) */
-        #PECUS { fill: #9999D3; } /* Cusco (Azul marino -> Azul acero claro) */
-        #PEAYA { fill: #CCCCCC; } /* Ayacucho (Gris -> Gris claro) */
-        #PEAPU { fill: #99E5E5; } /* Apurímac (Turquesa -> Turquesa claro) */
-        #PEHUV { fill: #EDFBAF; } /* Huancavelica (Chartreuse -> Amarillo verdoso pálido) */
-        #PESAM { fill: #FDD5E9; } /* San Martín (Rosa -> Rosa pastel) */
-        #PEHUC { fill: #B6DCD7; } /* Huánuco (Verde azulado -> Verde agua) */
-        #PEPAS { fill: #E8E8E8; } /* Pasco (Plata -> Plata claro) */
-        #PEJUN { fill: #A7C5C9; } /* Junín (Azul oscuro -> Azul grisáceo) */
-        #CALLAO { fill: #A7C5C9; } 
+        #PETAC:hover { fill: #fAD1D6; } /* Tacna (Rojo -> Rosa claro) */
+        #PEMDD:hover { fill: #B8E4C0; } /* Madre de Dios (Verde -> Verde menta) */
+        #PELOR:hover { fill: #FFF8D6; } /* Loreto (Amarillo -> Amarillo pálido) */
+        #PEAMA:hover { fill: #B4C3ED; } /* Amazonas (Azul -> Azul claro) */
+        #PECAJ:hover { fill: #FDD5B6; } /* Cajamarca (Naranja -> Durazno) */
+        #PETUM:hover { fill: #D9A7E5; } /* Tumbes (Morado -> Lavanda) */
+        #PEPIU:hover { fill: #BFFBFA; } /* Piura (Cian -> Cian claro) */
+        #PEUCA:hover { fill: #FBB1F4; } /* Ucayali (Magenta -> Rosado) */
+        #PEPUN:hover { fill: #E8FCA6; } /* Puno (Lima -> Lima pálido) */
+        #PEMOQ:hover { fill: #FDE7E7; } /* Moquegua (Rosa -> Rosa muy pálido) */
+        #PEARE:hover { fill: #99D9D9; } /* Arequipa (Teal -> Aguamarina) */
+        #PEICA:hover { fill: #F3E4FF; } /* Ica (Lila -> Lila pálido) */
+        #PELIM:hover { fill: #E1CBAE; } /* Lima Province (Marrón -> Arena) */
+        #PELMA:hover { fill: #FFFAC8; } /* Lima (Beige - ya es claro) */
+        #PECAL:hover { fill: #D99999; } /* Callao (Granate -> Salmón oscuro) */
+        #PEANC:hover { fill: #DFFFEA; } /* Áncash (Menta -> Menta muy claro) */
+        #PELAL:hover { fill: #D9D999; } /* La Libertad (Oliva -> Verde pálido) */
+        #PELAM:hover { fill: #FFEEDD; } /* Lambayeque (Durazno -> Crema) */
+        #PECUS:hover { fill: #9999D3; } /* Cusco (Azul marino -> Azul acero claro) */
+        #PEAYA:hover { fill: #CCCCCC; } /* Ayacucho (Gris -> Gris claro) */
+        #PEAPU:hover { fill: #99E5E5; } /* Apurímac (Turquesa -> Turquesa claro) */
+        #PEHUV:hover { fill: #EDFBAF; } /* Huancavelica (Chartreuse -> Amarillo verdoso pálido) */
+        #PESAM:hover { fill: #FDD5E9; } /* San Martín (Rosa -> Rosa pastel) */
+        #PEHUC:hover { fill: #B6DCD7; } /* Huánuco (Verde azulado -> Verde agua) */
+        #PEPAS:hover { fill: #E8E8E8; } /* Pasco (Plata -> Plata claro) */
+        #PEJUN:hover { fill: #A7C5C9; } /* Junín (Azul oscuro -> Azul grisáceo) */
+        #CALLAO:hover { fill: #A7C5C9; } 
     
     </style>
 
