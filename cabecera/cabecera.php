@@ -23,7 +23,7 @@
 
 
     <!-- Grid superior -->
-    <div class="grid-personal p-6 bg-gray-900 text-center text-white">
+    <div class="grid-personal pt-20 bg-gray-900 text-center text-white">
       <div><i class="fa-brands fa-whatsapp"></i> <strong>014760909 / 014760348</strong> </div>
       <div><i class="fa-solid fa-magnifying-glass-location"></i> <strong>Av. San Luis 2930, San Borja</strong> </div>
       <div><i class="fa-solid fa-envelope"></i> <strong>ventas@cechriza.com</strong> </div>
@@ -98,7 +98,7 @@
 
 
 
-                    <ul class="p-10 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton1">
+                    <ul class="p-10 flex flex-col gap-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton1">
                       <?php
                       require_once 'data/procesamiento_billetes.php';
 
@@ -139,7 +139,7 @@
 
                   <div id="doubleDropdown"
                     class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-                    <ul class="p-10 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                    <ul class="p-10 text-sm flex flex-col gap-2 text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
                       <?php
                       require_once 'data/procesamiento_monedas.php';
 
@@ -148,7 +148,7 @@
 
                         <li>
                           <a href=<?php echo "procesamiento_moneda?id=" . $category->id; ?>
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            class="block px-4 py-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                             <?php echo $category->name; ?>
                           </a>
                         </li>
