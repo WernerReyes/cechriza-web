@@ -55,7 +55,7 @@
               <div><a href="procesamiento_moneda" class="dropdown-item">Procesamiento de Monedas</a></div>
             </div> -->
 
-            <!-- class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" -->
+            <!-- class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800" -->
             <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown" type="button">
               <div class="flex items-center gap-2">
 
@@ -69,13 +69,13 @@
 
             <!-- Dropdown menu -->
             <div id="multi-dropdown"
-              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
               <ul class="p-10 text-sm" aria-labelledby="multiLevelDropdownButton">
 
                 <li>
                   <a id="doubleDropdownButton1" data-dropdown-toggle="doubleDropdown1"
                     data-dropdown-placement="right-start" type="button"
-                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">
 
                     Procesamiento
                     de Billetes
@@ -94,11 +94,11 @@
 
 
                   <div id="doubleDropdown1"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                    class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
 
 
 
-                    <ul class="p-10 flex flex-col gap-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton1">
+                    <ul class="p-10 flex flex-col gap-2 text-sm text-gray-700 text-gray-200" aria-labelledby="doubleDropdownButton1">
                       <?php
                       require_once 'data/procesamiento_billetes.php';
 
@@ -107,7 +107,7 @@
 
                         <li>
                           <a href=<?php echo "procesamiento_billetes?id=" . $category->id; ?>
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            class="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">
                             <?php echo $category->name; ?>
                           </a>
                         </li>
@@ -121,7 +121,7 @@
                 <li>
                   <a id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown"
                     data-dropdown-placement="right-start" type="button"
-                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">
 
                     Procesamiento
                     de Monedas
@@ -138,8 +138,8 @@
 
 
                   <div id="doubleDropdown"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-                    <ul class="p-10 text-sm flex flex-col gap-2 text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                    class="z-10 hidden  divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
+                    <ul class="p-10 text-sm flex flex-col gap-2 text-gray-700 text-gray-200" aria-labelledby="doubleDropdownButton">
                       <?php
                       require_once 'data/procesamiento_monedas.php';
 
@@ -148,7 +148,7 @@
 
                         <li>
                           <a href=<?php echo "procesamiento_moneda?id=" . $category->id; ?>
-                            class="block px-4 py-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            class="block px-4 py-4 hover:bg-gray-100 bg-gray-600 text-white">
                             <?php echo $category->name; ?>
                           </a>
                         </li>
