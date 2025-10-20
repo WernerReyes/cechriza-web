@@ -69,7 +69,7 @@
 
             <!-- Dropdown menu -->
             <div id="multi-dropdown"
-              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
+              class="z-10 hidden  divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
               <ul class="p-10 text-sm" aria-labelledby="multiLevelDropdownButton">
 
                 <li>
@@ -98,7 +98,7 @@
 
 
 
-                    <ul class="p-10 flex flex-col gap-2 text-sm text-gray-700 text-gray-200" aria-labelledby="doubleDropdownButton1">
+                    <ul class="p-10 flex flex-col gap-2 text-sm text-gray-200" aria-labelledby="doubleDropdownButton1">
                       <?php
                       require_once 'data/procesamiento_billetes.php';
 
@@ -139,7 +139,7 @@
 
                   <div id="doubleDropdown"
                     class="z-10 hidden  divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
-                    <ul class="p-10 text-sm flex flex-col gap-2 text-gray-700 text-gray-200" aria-labelledby="doubleDropdownButton">
+                    <ul class="p-10 flex flex-col gap-2 text-sm text-gray-200" aria-labelledby="doubleDropdownButton">
                       <?php
                       require_once 'data/procesamiento_monedas.php';
 
@@ -148,7 +148,7 @@
 
                         <li>
                           <a href=<?php echo "procesamiento_moneda?id=" . $category->id; ?>
-                            class="block px-4 py-4 hover:bg-gray-100 bg-gray-600 text-white">
+                            class="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">
                             <?php echo $category->name; ?>
                           </a>
                         </li>
