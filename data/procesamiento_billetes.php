@@ -168,7 +168,7 @@ $equipments_bill = array(
 
     new Equipment(
         '25',
-        'Ibox 547',
+        'Ibox - 547',
         'Contenedor inteligente de alta seguridad para proteger el dinero en efectivo almacenado y
         transportado',
         'Recoja y entregue efectivo de forma segura con esta caja inteligente de protección de efectivo de alta capacidad. La tecnología de degradación de tinta iBox protege a sus activos y su personal, además que mantiene a los ladrones sin oportunidad y sin peligro para los transeuntes.',
@@ -190,7 +190,7 @@ $equipments_bill = array(
         // TODO: Complete using official descriptions from Secure Innovation
     new Equipment(
     "40",
-    "iBox 617",
+    "IBox - 617",
     "Contenedor inteligente de transporte de efectivo con neutralización por tinta (IBNS) y apertura gestionada digitalmente.",
     "La iBox 617 es una caja de transporte de efectivo de alta seguridad utilizada en operaciones de transporte de valores (CIT). Incorpora el sistema IBNS (Intelligent Banknote Neutralization System), que libera tinta de seguridad indeleble sobre los billetes en caso de manipulación o apertura no autorizada, inutilizándolos completamente. Además, emplea el sistema Digital Key para una apertura controlada electrónicamente sin necesidad de llaves físicas, reduciendo riesgos de robo interno o externo. Su carcasa reforzada y sus sensores integrados de movimiento, vibración y taladro garantizan una protección integral durante el traslado del efectivo.",
     "img/equipments/secure_innovation/ibox_617.png",
@@ -209,7 +209,7 @@ $equipments_bill = array(
 
 new Equipment(
     "123",
-    "iBox RDS",
+    "IBox - RDS",
     "Caja inteligente de doble compartimento para depósitos múltiples y transporte seguro de efectivo.",
     "La iBox RDS es una solución de recolección y transporte de efectivo con doble compartimento, diseñada para permitir múltiples depósitos durante el día sin abrir el compartimento de transporte. Integra el sistema IBNS que neutraliza los billetes en caso de intento de robo o apertura no autorizada, sensores de ataque y opciones de rastreo GPS/GSM. Su estructura reforzada y su apertura controlada electrónicamente la convierten en una herramienta confiable para optimizar la logística de efectivo en empresas con alto flujo de depósitos.",
     "img/equipments/secure_innovation/ibox_rds.png",

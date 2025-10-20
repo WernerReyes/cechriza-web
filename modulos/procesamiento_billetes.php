@@ -285,3 +285,166 @@ require_once 'data/procesamiento_billetes.php';
 
   </script>
 
+
+
+
+
+  <div class="wrapper">
+    <div class="container">
+      <div class="top"></div>
+      <h1 class="title">Kisan - K5-A</h1>
+    </div>
+    <div class="inside">
+      <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
+      <div class="contents">
+        <div>
+
+          Sistema automático de clasificación y enfajado de billetes Kisan (K6 Strapper).
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <style>
+    .wrapper {
+      width: 300px;
+      height: 290px;
+      background: white;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px 10px 10px 10px;
+      box-shadow: 0;
+      transform: scale(0.95);
+      transition: box-shadow 0.5s, transform 0.5s;
+
+      &:hover {
+        transform: scale(1);
+        box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+
+        .top {
+          height: 250px;
+          width: 100%;
+          background: url(${eq.image}) no-repeat center center;
+          -webkit-background-size: 100%;
+          -moz-background-size: 100%;
+          -o-background-size: 100%;
+          background-size: 100%;
+        }
+
+        .title {
+          font-size: 1.1rem;
+          color: #333;
+          margin-bottom: 10px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        .bottom {
+        
+          width: 200%;
+          height: 20%;
+          transition: transform 0.5s;
+
+          &.clicked {
+            transform: translateX(-50%);
+          }
+
+          h1 {
+            margin: 0;
+            padding: 0;
+          }
+
+          p {
+            margin: 0;
+            padding: 0;
+          }
+
+
+
+
+        }
+      }
+
+      .inside {
+        z-index: 9;
+        background-color:	rgba(0, 0, 0, 0.6);
+	opacity:1;
+	backdrop-filter:				blur(0px);
+	-webkit-backdrop-filter:	blur(0px);
+	filter:						blur(0px);
+        width: 140px;
+        height: 140px;
+        position: absolute;
+        top: -70px;
+        right: -70px;
+        ;
+        border-radius: 0px 0px 200px 200px;
+        transition: all 0.5s, border-radius 2s, top 1s;
+        overflow: hidden;
+
+        .icon {
+          
+          position: absolute;
+          right: 85px;
+          top: 85px;
+          color: white;
+          opacity: 1;
+        }
+
+        &:hover {
+          
+          width: 100%;
+          right: 0;
+          top: 0;
+          border-radius: 0;
+          height: 80%;
+
+          .icon {
+            opacity: 0;
+            right: 15px;
+            top: 15px;
+          }
+
+          .contents {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            transform: translateY(0);
+          }
+        }
+
+        .contents {
+          padding: 5%;
+          opacity: 0;
+          visibility: hidden;
+          transform: scale(0.5);
+          transform: translateY(-200%);
+          transition: opacity 0.2s, transform 0.8s;
+
+          div {
+         
+            text-align: center;
+            color: white;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+        }
+
+           
+      }
+    }
+  </style>
+
+  

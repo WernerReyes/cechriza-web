@@ -6,7 +6,7 @@
     <div class="slide-content">
       <h1>Soluciones Inteligentes</h1>
       <h4>Automatización de efectivo</h4>
-      <p>Somos líderes en el manejo de dinero con más de 30 años de experiencia. Nuestra tecnología garantiza eficiencia y seguridad para tu negocio.</p>
+      <p>Somos líderes en el manejo de dinero con más de 20 años de experiencia. Nuestra tecnología garantiza eficiencia y seguridad para tu negocio.</p>
       <button>Ver productos</button> 
     </div>
     <img class="invisible" src="img/kisan_kd_100.png" alt="">

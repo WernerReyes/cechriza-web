@@ -94,7 +94,7 @@
 
 
                   <div id="doubleDropdown1"
-                    class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
+                    class="dropdown-menu z-10 hidden divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
 
 
 
@@ -105,9 +105,10 @@
                       foreach ($equipment_functions_bill as $category) {
                         ?>
 
-                        <li>
-                          <a href=<?php echo "procesamiento_billetes?id=" . $category->id; ?>
-                            class="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">
+
+                        <li
+                          class="block px-2 py-1 hover:px-4 hover:py-3 hover:text-lg hover:bg-gray-600 hover:text-white transition-all duration-150 ease-out">
+                          <a class="block w-full" href="<?php echo 'procesamiento_billetes?id=' . $category->id; ?>">
                             <?php echo $category->name; ?>
                           </a>
                         </li>
@@ -116,6 +117,18 @@
                     </ul>
                   </div>
                 </li>
+
+                <style>
+                  .dropdown-menu ul li:hover a {
+                    padding: 0.5rem 0.2rem;
+                    /* estado hover (px-4 py-3) */
+                    background: #4b5563;
+                    /* gray-600 */
+                    color: #ffffff;
+                    transform: translateX(4px);
+                    /* opcional: pequeño desplazamiento */
+                  }
+                </style>
 
 
                 <li>
@@ -138,7 +151,7 @@
 
 
                   <div id="doubleDropdown"
-                    class="z-10 hidden  divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
+                    class="dropdown-menu z-10 hidden  divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
                     <ul class="p-10 flex flex-col gap-2 text-sm text-gray-200" aria-labelledby="doubleDropdownButton">
                       <?php
                       require_once 'data/procesamiento_monedas.php';

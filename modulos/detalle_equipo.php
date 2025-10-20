@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="css/procesamiento_billete.css">
 <link rel="stylesheet" href="css/detalle_equipo.css">
-<link rel="stylesheet" href="css/procesamiento.css">
 
 
 <?php
@@ -210,27 +209,13 @@ $typeText = $type === 'billete' ? 'Billetes' : 'Monedas';
 
               <!-- Slide 1 -->
               <div class="swiper-slide">
-                <a style="background-color: transparent;"
-                  href="detalle_equipo?id=<?php echo $equipment->id; ?>&amp;type=<?php echo $type; ?>">
-                  <div class="wrapper">
-                    <div class="container">
-                      <div class="top"
-                        style="background: url(<?php echo $equipment->image; ?>) no-repeat center center; -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%;">
-                      </div>
-                      <h1 class="title"><?php echo $equipment->name; ?></h1>
-                    </div>
-                    <div class="inside">
-                      <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
-                      <div class="contents">
-                        <div>
-
-                          <?php echo $equipment->description; ?>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <!-- </div> -->
+                <div class="card_slide">
+                  <img src="<?php echo $equipment->image; ?>" alt="<?php echo $equipment->name; ?>">
+                  <h1><?php echo $equipment->name; ?></h1>
+                  <p><?php echo $equipment->description; ?></p>
+                  <a href="detalle_equipo?id=<?php echo $equipment->id; ?>&amp;type=<?php echo $type; ?>">Detalle de
+                    Equipo</a>
+                </div>
               </div>
             <?php endforeach; ?>
 
@@ -249,10 +234,10 @@ $typeText = $type === 'billete' ? 'Billetes' : 'Monedas';
     </div>
 
   <?php endif; ?>
-  <?php
-  //  require_once "footer/clients.php";
+<?php 
+//  require_once "footer/clients.php";
   require_once "footer/contact.php";
-  ?>
+ ?>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
