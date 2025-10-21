@@ -289,22 +289,7 @@ require_once 'data/procesamiento_billetes.php';
 
 
 
-  <div class="wrapper">
-    <div class="container">
-      <div class="top"></div>
-      <h1 class="title">Kisan - K5-A</h1>
-    </div>
-    <div class="inside">
-      <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
-      <div class="contents">
-        <div>
-
-          Sistema automático de clasificación y enfajado de billetes Kisan (K6 Strapper).
-        </div>
-      </div>
-    </div>
-  </div>
-
+ 
 
 
   <style>

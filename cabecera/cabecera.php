@@ -31,6 +31,7 @@
 
     <div class="nav bg-gray-900">
       <div class="container container_nav bg-gray-900">
+        <div class="logo-container">
         <div class="logo">
           <img src="img/cechriza.png" alt="Logo CECHRIZA" />
         </div>
@@ -40,6 +41,7 @@
           <span></span>
           <span></span>
           <span></span>
+        </div>
         </div>
 
         <!-- Menú principal -->
@@ -94,7 +96,7 @@
 
 
                   <div id="doubleDropdown1"
-                    class="dropdown-menu z-10 hidden divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
+                    class=" z-10 hidden divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
 
 
 
@@ -140,7 +142,7 @@
 
 
                   <div id="doubleDropdown"
-                    class="dropdown-menu z-10 hidden  divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
+                    class="z-10 hidden  divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
                     <ul class="p-10 flex flex-col gap-2 text-sm text-gray-200" aria-labelledby="doubleDropdownButton">
                       <?php
                       require_once 'data/procesamiento_monedas.php';

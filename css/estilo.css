@@ -143,6 +143,30 @@ body {
 
 /* ---------- Responsive NAV ---------- */
 @media (max-width: 768px) {
+  .nav .logo-container {
+    /* height: 40px; */
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .nav .logo {
+    /* height: 40px; */
+  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .nav .menu-toggle {
+    margin-left: auto;
+  }
+
   .navegador {
     display: none;
     flex-direction: column;
@@ -171,6 +195,21 @@ body {
     padding: 0;
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  #doubleDropdown1, #doubleDropdown {
+    position: static;
+    left: 2rem !important;
+    /* background-color: transparent; */
+    box-shadow: none;
+    padding: 0;
+    top: 4rem !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  #doubleDropdown {
+    top: 6rem !important;
   }
 
 
