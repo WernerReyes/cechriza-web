@@ -43,12 +43,12 @@
         </div>
 
         <!-- Menú principal -->
-        <div class="navegador" id="navMenu">
-          <div class="nav-item"><a href="inicio">Inicio</a></div>
-          <div class="nav-item"><a href="nosotros">Nosotros</a></div>
+        <div class="navegador flex items-center" id="navMenu">
+          <div class="nav-item nav-hover hover-principal"><a href="inicio">Inicio</a></div>
+          <div class="nav-item nav-hover hover-principal"><a href="nosotros">Nosotros</a></div>
 
           <!-- Dropdown 1 -->
-          <div class="nav-item dropdown">
+          <div class="nav-item nav-hover hover-principal dropdown">
             <!-- <div class="dropdown-toggle">Soluciones ▾</div>
             <div class="dropdown-menu">
               <div><a href="procesamiento_billetes" class="dropdown-toggle">Procesamiento de Billetes</a></div>
@@ -72,7 +72,7 @@
               class="z-10 hidden  divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
               <ul class="p-10 text-sm" aria-labelledby="multiLevelDropdownButton">
 
-                <li>
+                <li class="nav-hover">
                   <a id="doubleDropdownButton1" data-dropdown-toggle="doubleDropdown1"
                     data-dropdown-placement="right-start" type="button"
                     class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">
@@ -107,7 +107,7 @@
 
 
                         <li
-                          class="block px-2 py-1 hover:px-4 hover:py-3 hover:text-lg hover:bg-gray-600 hover:text-white transition-all duration-150 ease-out">
+                          class="nav-hover block px-2 py-1 hover:px-4 hover:py-3 hover:text-lg hover:bg-gray-600 hover:text-white transition-all duration-150 ease-out">
                           <a class="block w-full" href="<?php echo 'procesamiento_billetes?id=' . $category->id; ?>">
                             <?php echo $category->name; ?>
                           </a>
@@ -118,20 +118,9 @@
                   </div>
                 </li>
 
-                <style>
-                  .dropdown-menu ul li:hover a {
-                    padding: 0.5rem 0.2rem;
-                    /* estado hover (px-4 py-3) */
-                    background: #4b5563;
-                    /* gray-600 */
-                    color: #ffffff;
-                    transform: translateX(4px);
-                    /* opcional: pequeño desplazamiento */
-                  }
-                </style>
 
 
-                <li>
+                <li class="nav-hover">
                   <a id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown"
                     data-dropdown-placement="right-start" type="button"
                     class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">
@@ -159,7 +148,7 @@
                       foreach ($equipment_functions_monedas as $category) {
                         ?>
 
-                        <li>
+                        <li class="nav-hover">
                           <a href=<?php echo "procesamiento_moneda?id=" . $category->id; ?>
                             class="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">
                             <?php echo $category->name; ?>
@@ -184,10 +173,10 @@
             </div>
           </div> -->
 
-          <div class="nav-item"><a href="post_mantenimiento_preventivo">Servicios Post Venta</a></div>
+          <div class="nav-item nav-hover hover-principal"><a href="post_mantenimiento_preventivo">Servicios Post Venta</a></div>
 
           <!-- <div class="nav-item"><a href="noticias">Noticias</a></div> -->
-          <div class="nav-item"><a href="contacto">Contacto</a></div>
+          <div class="nav-item nav-hover hover-principal"><a href="contacto">Contacto</a></div>
         </div>
       </div>
     </div>
@@ -209,3 +198,25 @@
 
 
     </script>
+
+
+    <style>
+      .nav-hover:hover {
+        padding: 0.4rem 0.3rem;
+        /* estado hover (px-4 py-3) */
+        background: #4b5563;
+        border-radius: 0.375rem;
+        /* gray-600 */
+        color: #ffffff;
+        /* transform: translateX(1px); */
+        transition: all 0.3s ease;
+        /* opcional: pequeño desplazamiento */
+        
+      }
+
+      .hover-principal:hover {
+       
+        /* estado hover (px-4 py-3) */
+        background: oklch(0.25 .034 264.665);
+      }
+    </style>
