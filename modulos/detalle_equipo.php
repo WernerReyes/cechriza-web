@@ -62,8 +62,21 @@ $typeText = $type === 'billete' ? 'Billetes' : 'Monedas';
         <img src="<?php echo $equipmentSelected->image; ?>" alt="<?php echo $equipmentSelected->name; ?>"
           class="imagen_principal">
         <div class="grilla_imagenes">
-          <div><img src="<?php echo $equipmentSelected->image; ?>" alt="<?php echo $equipmentSelected->name; ?>"
-              class="miniatura"></div>
+          
+         <div>
+            <img src="<?php echo $equipmentSelected->image; ?>" alt="<?php echo $equipmentSelected->name; ?>"
+              class="miniatura active">
+            
+            </div>
+            <?php if (count($equipmentSelected->additional_images) > 0) {
+              foreach ($equipmentSelected->additional_images as $img) {
+                echo '<div><img src="' . $img . '" alt="' . $equipmentSelected->name . '" class="miniatura"></div>';
+              }
+            } 
+            
+            ?>
+          
+
           <!-- <div><img src="img/scan_coin_303.png" alt="Vista lateral Newton 30" class="miniatura"></div> -->
           <!-- <div><img src="img/scan_coin_dtc6.png" alt="Panel de control Newton 30" class="miniatura"></div> -->
         </div>
@@ -270,6 +283,8 @@ $typeText = $type === 'billete' ? 'Billetes' : 'Monedas';
 
 
   <script>
+    
+
     document.querySelectorAll('.miniatura').forEach(img => {
       img.addEventListener('click', function () {
         const src = this.getAttribute('src');

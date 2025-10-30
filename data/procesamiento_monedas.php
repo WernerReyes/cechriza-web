@@ -11,6 +11,19 @@ $equipment_functions_monedas = array(
 
 );
 
+// TODO:
+//* IMAGES
+// KS NT3
+// MAGNER 165
+// MAGNER 915
+// MAGNER 2000 
+//* PDF
+// Missing Pelican serie 300
+
+//? 
+// PDF: DP-8150
+
+
 
 $equipments_monedas = array(
     new Equipment(2, "Cima - CDS802", "Sistema de depósito y reciclaje de monedas para tiendas medianas.", "Sistema de depósito y reciclaje de monedas para tiendas medianas. La CIMA CDS802 es una unidad de reciclaje de monedas de alto rendimiento pensada para pequeños y medianos comercios y salas de entretenimiento. Permite preparar rápidamente el fondo de monedas para cajas registradoras cada día y almacenar de forma segura la recaudación en monedas al cierre, reduciendo drásticamente el tiempo en tesorería. Con conexión en línea, optimiza la colaboración entre retail, bancos y CIT para reposición y recogida de monedas.", "img/equipments/cima/cds802.png", 3, [
@@ -40,7 +53,9 @@ $equipments_monedas = array(
         "Seguridad y construcción" => "Probablemente el chasis más robusto de la serie, con mismas certificaciones de safe (5 mm acero, cerraduras electrónicas); puede incluir sensores adicionales para monitoreo del estado de mecanismos dado el altísimo throughput esperado.",
         "Uso proyectado" => "Forma parte de la solución integrada con SDM505S (reciclador de billetes de 5 tambores de 500 c/u + bolsa 4.000). La combinación SDM505 + CDS804 ofrece la mayor capacidad de reciclaje de efectivo del catálogo: hasta ~3.500 billetes reciclables + 4.000 en bolsa y ~18.000 monedas reciclables + abundante almacenamiento de excedente, adecuada para megatiendas, parques temáticos, operadores de transporte con altísimo manejo diario de efectivo. (Incluye mejoras para seguridad, velocidad y ergonomía en esos casos de uso).",
         "Nota" => "Al ser un modelo de altísima capacidad, su disponibilidad suele ser bajo pedido para integradores (no un “producto estándar” ampliamente distribuido), y sus especificaciones finales pueden variar según la implementación específica requerida por el cliente. (En términos generales, toma la base del CDS803 y la amplía en capacidad y personalización)."
-    ]),
+    ], 
+    'manuales/CDS-804-italiano.pdf'
+),
     new Equipment(6, "Ct Coin - Pelican 301", "Contadora de monedas mixta compacta con función de rechazo.", "Contadora de monedas mixta compacta con función de rechazo. La Pelican 301 es el modelo básico de la serie Pelican, capaz de contar monedas mezcladas y separar las no deseadas en un cajón de rechazo. Permite procesar múltiples denominaciones simultáneamente con alta precisión y fiabilidad, siendo ideal para conteos rápidos donde no se requiere separación por valor físico, sino totalización por importe.", "img/equipments/ct_coin/pelican_301.png", 5, [
         "Modo de operación" => "Conteo de monedas mezcladas con cálculo de valor total, sin clasificación a distintas salidas (todas las monedas válidas se dirigen al recipiente principal, monedas extrañas/falsas a cajón de rechazo).",
         "Velocidad" => "Similar a Pelican 309, hasta ~1.100 monedas/minuto, manteniendo rapidez en conteos de bolsas/cajas de monedas mezcladas.",
@@ -53,7 +68,7 @@ $equipments_monedas = array(
     ]),
     // new Equipment(19, "Scan Coin 313", "Contadora de monedas bancaria con alimentador automático.", "img/equipments/scan_coin/313.png", 4),
     //* Contadoras
-    new Equipment(20, "Scan Coin - DTC1", "Valorizadora de monedas de escritorio.", "Valorizadora de monedas de escritorio . La SCAN COIN DTC1 es una máquina compacta de alto rendimiento que reconoce y suma el valor de las monedas depositadas de manera automática. Procesa a una alta velocidad, identificando todas las denominaciones y detectando falsificaciones. Muestra en pantalla el valor total contado, así como el número de piezas por denominación, ofreciendo una solución precisa y segura para la valorización de monedas.", "img/equipments/scan_coin/dtc1.png", 5, [
+    new Equipment(20, "Scan Coin - DTC1", "Valorizadora de monedas de escritorio.", "Valorizadora de monedas de escritorio . La SCAN COIN DTC1 es una máquina compacta de alto rendimiento que reconoce y suma el valor de las monedas depositadas de manera automática. Procesa a una alta velocidad, identificando todas las denominaciones y detectando falsificaciones. Muestra en pantalla el valor total contado, así como el número de piezas por denominación, ofreciendo una solución precisa y segura para la valorización de monedas.", "img/FOTOS EQUIPOS/SC DTC1/DTC 1 - ANGULO 1.jpg", 5, [
         "Velocidad de conteo por valor" => "Hasta ~600 monedas por minuto (rapidez líder en su categoría de tamaño compacto).",
         "Rango de reconocimiento" => "Configurada para reconocer todas las denominaciones de la moneda objetivo (p.ej., en Perú: S/0,10; 0,20; 0,50; 1; 2; 5), pudiendo programarse para otras divisas según requerimiento. Detecta y rechaza automáticamente monedas que no correspondan a ninguna de las denominaciones esperadas.",
         "Salidas físicas" => "1 salida principal donde caen todas las monedas válidas contadas (monedas mezcladas juntas una vez contabilizadas) + 1 casillero/cajón de rechazo para monedas extrañas o no reconocidas (falsas, foráneas, dañadas fuera de especificación). No clasifica en múltiples cajetines, solo separa rechazo.",
@@ -63,7 +78,12 @@ $equipments_monedas = array(
         "Calibración flexible" => "Admite ajuste de parámetros de diámetro (14–31 mm) y espesor (0,8–3,5 mm) para adaptarse a los tamaños de las monedas a procesar, garantizando alta precisión en la discriminación de cada denominación.",
         "Seguridad y mantenimiento" => "Acceso rápido para remover obstrucciones; mecanismo confiable para años de uso (tecnología sueca). Su implementación reduce errores humanos en conteos de monedas y agiliza la labor del personal al entregar un desglose automático del efectivo en moneda fraccionaria."
     ], 
-    'manuales/SCAN COIN DTC1-DTC6-DTC9 (2).pdf'
+    'manuales/SCAN COIN DTC1-DTC6-DTC9 (2).pdf',
+    [
+        "img/FOTOS EQUIPOS/SC DTC1/DTC 1 - ANGULO 2.jpg",
+        "img/FOTOS EQUIPOS/SC DTC1/DTC 1 - ANGULO 3.jpg",
+        // "img/FOTOS EQUIPOS/SC DTC1/DTC 1 - ANGULO 4.jpg"
+    ]
 ),
     new Equipment(11, "Magner - 915", "Contadora de monedas portátil y versátil.", "Contadora de monedas portátil y versátil. La Magner 915 permite contar y embolsar/arrollar todas las denominaciones de monedas con rapidez (hasta 2.500 monedas/min), brindando resultados exactos y operación sencilla. Su construcción robusta asegura fiabilidad en entornos de alto uso, como bancos, casinos y comercios", "img/equipments/magner/915.png", 4, [
         "Velocidad" => "Hasta ~1.800 monedas/minuto (conteo rápido con precisión verificadora integrada).",
@@ -107,7 +127,7 @@ $equipments_monedas = array(
     ]),
 
     //*Clasificadoras
-    new Equipment(12, "Scan Coin - DTC6", "Clasificadora de monedas de uso rudo, de chasis durable.", "Clasificadora de monedas de uso rudo, de chasis durable. La SCAN COIN DTC6 procesa monedas con rapidez clasificándolas en 6 salidas, mejorando la eficiencia sin sacrificar precisión. Incorpora pantalla táctil y teclado para fácil operación, y sensores avanzados que aseguran años de excelente desempeño.", "img/equipments/scan_coin/dtc6.png", 1, [
+    new Equipment(12, "Scan Coin - DTC6", "Clasificadora de monedas de uso rudo, de chasis durable.", "Clasificadora de monedas de uso rudo, de chasis durable. La SCAN COIN DTC6 procesa monedas con rapidez clasificándolas en 6 salidas, mejorando la eficiencia sin sacrificar precisión. Incorpora pantalla táctil y teclado para fácil operación, y sensores avanzados que aseguran años de excelente desempeño.", "img/FOTOS EQUIPOS/SC DTC6/DTC 6 - ANGULO 1.jpg", 1, [
         "Velocidad" => "~600 monedas/minuto (Procesamiento veloz y preciso de monedas).",
         "Clasificación" => "Hasta 6 cajetines de salida para clasificar monedas por denominación; opcional adaptador para llenar directamente bolsas desde las salidas.",
         "Durabilidad" => "Construcción robusta para trabajo pesado, garantizando larga vida útil incluso con volúmenes altos de monedas.",
@@ -115,6 +135,10 @@ $equipments_monedas = array(
         "Interfaz de usuario" => "Pantalla táctil a color y teclado integrados que facilitan la configuración de denominaciones, lotes y operación general.",
         "Eficiencia" => "Maximiza la productividad al tiempo que asegura la precisión en el conteo por valor; opcionalmente puede instalarse un segundo solenoide para separar una segunda moneda/divisa, fichas o tokens en una salida adicional de rechazo.",
         "Especificaciones físicas" => "Dimensiones aprox. 50×44×28 cm; peso ~22 kg; alimentación 90-260 V AC."
+    ], null, [
+        "img/FOTOS EQUIPOS/SC DTC6/DTC 6 - ANGULO 2.jpg",
+        "img/FOTOS EQUIPOS/SC DTC6/DTC 6 - ANGULO 3.jpg",
+        "img/FOTOS EQUIPOS/SC DTC6/DTC 6 - ANGULO 4.jpg"
     ]),
     new Equipment(5, "Ct Coin - Pelican 309", "Máquina contadora y clasificadora de monedas de alto rendimiento.", "Máquina contadora y clasificadora de monedas de alto rendimiento. La Pelican 309 puede contar y clasificar hasta 9 denominaciones diferentes de monedas con gran velocidad, rechazando automáticamente monedas extrañas o falsas, lo que la hace ideal para entornos que manejan grandes cantidades de monedas con precisión.","img/equipments/ct_coin/pelican_309.png", 1, [
         "Velocidad" => "Hasta ~1.100 monedas/minuto.",
@@ -123,7 +147,9 @@ $equipments_monedas = array(
         "Características adicionales" => "Reducción de ruido (materiales que disminuyen ~30% el sonido); sensor de inclinación para fácil limpieza del riel; topes programables por número o peso de monedas; función de embolsado y entubado para preparar bolsas o rollos de monedas.",
         "Interfaz" => "Pantalla de 2 líneas que muestra denominaciones y totales; controles sencillos para configuración de lotes y tarifas (programable sistema de cobro si aplica).",
         "Construcción" => "Diseño robusto y duradero (diseño galardonado B&O) apto para uso profesional intensivo."
-    ]),
+    ], 
+    'manuales/Pelican 309.pdf'
+),
     new Equipment(13, "Scan Coin - DTC9", "Clasificadora de monedas de alta resistencia similar al modelo DTC6 pero con mayor capacidad de salidas.", "Clasificadora de monedas de alta resistencia similar al modelo DTC6 pero con mayor capacidad de salidas. La SCAN COIN DTC9 clasifica monedas en hasta 9 cajetines, a una alta velocidad con la misma durabilidad y precisión.", "img/equipments/scan_coin/dtc9.png", 1, [
         "Velocidad" => "~600 monedas/minuto (Rápida clasificación de monedas mezcladas).",
         "Clasificación" => "Hasta 9 salidas para diferentes denominaciones de moneda (clasifica 9 tipos); cajetín/bandeja de rechazo para monedas no identificadas o fuera de especificación.",
@@ -140,7 +166,9 @@ $equipments_monedas = array(
         "Overflow/excedentes" => "Monedas sobrantes que no caben en tolvas se desvían a almacenamiento de excedente (bolsa plástica hasta 15 kg o bolsa de lona 18 kg, e incluso carrito de monedas ~30.000 unidades).",
         "Seguridad y conectividad" => "Estructura de caja fuerte (acero 5 mm); predisposición para pantalla táctil de 10″ y impresora; software CAOS/C-Link para monitoreo y conexión en línea (protocolo XFS disponible) facilitando integración con sistemas de banco/CIT.",
         "Beneficios operativos" => "Reduce drásticamente el tiempo de preparación de sencillo y cuadre de caja; optimiza la cooperación minorista-banco-CIT vía conexión remota con reportes y estadísticas completas del flujo de monedas."
-    ]),
+    ], 
+    'manuales/ICX Active-9 ES.pdf'
+),
     new Equipment(7, "Cummins - Jetsort LX", "Clasificadora de monedas de alta velocidad y gran capacidad.", "Clasificadora de monedas de alta velocidad y gran capacidad. La JetSort LX ofrece conteo y clasificación ultra rápidos con mas de 4000 monedas por minuto, incluye detección efectiva de monedas extrañas o falsas, operación intuitiva mediante pantalla táctil y confiabilidad comprobada para procesamiento continuo de monedas en bancos y centros de efectivo.","img/equipments/cummins/jetsort_lx.png", 1, [
         "Velocidad de clasificación" => "Hasta ~4.100 monedas/minuto (mezcladas).",
         "Capacidad de entrada" => "Hasta ~5.000 monedas en tolva de alimentación (alimentación por gravedad o bandeja elevadora).",
@@ -151,7 +179,9 @@ $equipments_monedas = array(
         "Capacidades adicionales" => "Seguimiento de usuarios/IDs (hasta 400 cuentas diferentes); reportes de totales por usuario y tipo de moneda; opciones de seguimiento de medios (moneda, rollos, etc.).",
         "Capacidades físicas" => "Capacidad de rechazo ~300 monedas; capacidad por bolsa configurable; admite bolsas plásticas o de tela de varios tamaños.",
         "Conectividad" => "3 puertos USB estándar (para periféricos como impresora, pantalla remota, teclado, etc.)."
-    ]),
+    ], 
+    'manuales/Cummins-Allison-JetSort-LX-Coin-Counter-Intl-Euro-Brochure.pdf'
+),
     new Equipment(15, "Scan Coin - ICP", "Clasificadora de monedas de altísimo rendimiento para volúmenes masivos.", "Clasificadora de monedas de altísimo rendimiento para volúmenes masivos. El SCAN COIN ICP Active-9 es el único equipo capaz de clasificar 9 denominaciones en bolsas separadas simultáneamente, utilizando tecnología avanzada de sensores para brindar un procesamiento de monedas rápido, preciso y versátil. Rechaza automáticamente monedas o fichas no válidas y su construcción robusta permite procesar más de un millón de monedas por turno de forma continua.", "img/equipments/scan_coin/icp.png", 1, [
         "Capacidad de clasificación" => "Hasta 9 denominaciones diferentes, cada una dirigida a una bolsa separada para su recolección (salidas a bolsas individuales).",
         "Velocidad de procesamiento" => "Clasificación continua de monedas a alta velocidad (capaz de superar 2.000+ monedas/min en operación sostenida; diseñada para >1.000.000 de monedas por turno sin interrupciones).",
