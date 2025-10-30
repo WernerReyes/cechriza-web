@@ -40,6 +40,7 @@
   padding: 5px 15px 5px 15px;
   border-radius: 20px;
 }
+
 .boton_informativo:hover {
   background: #111827;
   color: white;
@@ -62,7 +63,8 @@
 
 .grid_cuatro {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 4 columnas iguales */
+  grid-template-columns: repeat(5, 1fr);
+  /* 4 columnas iguales */
   column-gap: 25px;
   row-gap: 15px;
   padding: 5% 10%;
@@ -96,19 +98,33 @@
   padding-bottom: 25px;
 }
 
+/* gap-3 =    */
+
 .borde_elegirnos {
   border: 3px solid #111827;
-  width: 300px;
+  /* width: 300px; */
+  width: calc(300px - 10px);
   padding: 10px;
   height: 220px;
   border-radius: 20px;
   background-color: #f3f4f6;
 }
 
+@media (max-width: 640px) {
+  .borde_elegirnos {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+}
+
+
+
 .borde_elegirnos .icono {
   font-size: 2.5rem;
   padding-bottom: 10px;
   color: #111827;
+  margin: 0 auto;
 }
 
 .borde_elegirnos .icono:hover {
@@ -357,7 +373,8 @@
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  color: #9ca3af; /* gris suave */
+  color: #9ca3af;
+  /* gris suave */
   pointer-events: none;
 }
 
@@ -369,17 +386,21 @@
 
 .input-container input[type="email"] {
   width: 100%;
-  padding: 10px 16px 10px 40px; /* espacio izquierdo para el icono */
-  border: 1px solid #d1d5db; /* gris claro */
+  padding: 10px 16px 10px 40px;
+  /* espacio izquierdo para el icono */
+  border: 1px solid #d1d5db;
+  /* gris claro */
   border-radius: 8px;
   font-size: 14px;
   transition: border 0.3s, box-shadow 0.3s;
-  color: #111827; /* texto oscuro */
+  color: #111827;
+  /* texto oscuro */
   background-color: #fff;
 }
 
 .input-container input[type="email"]::placeholder {
-  color: #9ca3af; /* gris placeholder */
+  color: #9ca3af;
+  /* gris placeholder */
 }
 
 .input-container input[type="email"]:focus {
@@ -468,6 +489,7 @@
 .grid_mantenimiento a:hover {
   background-color: #e3a008;
 }
+
 .grid_mantenimiento video,
 .grid_mantenimiento img {
   width: 100%;
@@ -475,7 +497,8 @@
   height: 480px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6); /* sombra blanca suave */
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6);
+  /* sombra blanca suave */
 }
 
 @media (max-width: 1300px) {
@@ -492,6 +515,7 @@
     grid-template-columns: 1fr;
     column-gap: 12px;
   }
+
   .grilla {
     row-gap: 0px;
   }
@@ -532,7 +556,7 @@
   }
 
   .grid_cuatro {
-    display: grid;               
+    display: grid;
     grid-template-columns: 1fr;
     column-gap: 12px;
   }
@@ -545,22 +569,33 @@
   .borde_superior_grilla a {
     background-color: #111827;
     font-size: 14px;
-    display: inline-block; /* o block si quieres toda la línea */
-    word-wrap: break-word; /* permite cortar palabras largas */
-    overflow-wrap: break-word; /* soporte moderno */
-    white-space: normal; /* asegura que el texto se pueda partir */
-    box-sizing: border-box; /* incluye padding dentro del ancho total */
+    display: inline-block;
+    /* o block si quieres toda la línea */
+    word-wrap: break-word;
+    /* permite cortar palabras largas */
+    overflow-wrap: break-word;
+    /* soporte moderno */
+    white-space: normal;
+    /* asegura que el texto se pueda partir */
+    box-sizing: border-box;
+    /* incluye padding dentro del ancho total */
   }
 
   .titulo_sliders a {
     font-size: 14px;
     padding: 10px 15px;
-    display: inline-block; /* o block si quieres toda la línea */
-    word-wrap: break-word; /* permite cortar palabras largas */
-    overflow-wrap: break-word; /* soporte moderno */
-    white-space: normal; /* asegura que el texto se pueda partir */
-    box-sizing: border-box; /* incluye padding dentro del ancho total */
-    max-width: 100%; /* evita que se pase del contenedor */
+    display: inline-block;
+    /* o block si quieres toda la línea */
+    word-wrap: break-word;
+    /* permite cortar palabras largas */
+    overflow-wrap: break-word;
+    /* soporte moderno */
+    white-space: normal;
+    /* asegura que el texto se pueda partir */
+    box-sizing: border-box;
+    /* incluye padding dentro del ancho total */
+    max-width: 100%;
+    /* evita que se pase del contenedor */
   }
 
   .titulo_sliders .titulo {

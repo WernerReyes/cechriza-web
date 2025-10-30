@@ -1,5 +1,6 @@
 <?php
 
+// require_once "data/procesamiento_billetes.php";
 require_once "modulos/slider_principal.php";
 ?>
 
@@ -11,11 +12,11 @@ require_once "modulos/slider_principal.php";
 
   <div
    style="padding: 60px 0;"
-  class="md:flex items-center justify-center">
+  class="flex flex-col items-center justify-center container">
 
     <!-- Bloque principal -->
     <div class="titulo_cuatro">
-      <div class="flex flex-col items-center justify-cente text-center">
+      <div class="flex flex-col items-center justify-center text-center">
         <h1 class="titulo_elegirnos">¿Por qué elegirnos?</h1>
         <h1 class="unico"> <strong>Aliados en tu gestión de efectivo</strong> </h1>
         <p class="">Ofrecemos tecnología confiable, soporte técnico nacional y soluciones adaptadas a tu operación.</p>
@@ -24,10 +25,10 @@ require_once "modulos/slider_principal.php";
     </div>
 
     <!-- Calidad y Seguridad -->
-    <div class="flex-container">
-      <div class="item">
-        <div class="borde_elegirnos shadow-xl shadow-blue-950">
-          <div class="p-10">
+    <div class="flex gap-3 flex-wrap justify-center">
+      <div class="">
+        <div class="borde_elegirnos  shadow-xl shadow-blue-950">
+          <div class="p-10 flex flex-col items-center justify-center text-center">
             <i class="fas fa-lock icono"></i>
             <h1 class="subtitulo_elegirnos"> <strong>Confianza y Certificación</strong></h1>
             <p>Distribuimos equipos certificados por las marcas más reconocidas del sector bancario.</p>
@@ -36,9 +37,9 @@ require_once "modulos/slider_principal.php";
       </div>
 
       <!-- Variedad de Equipos -->
-      <div class="item">
+      <div class="">
         <div class="borde_elegirnos shadow-xl shadow-blue-950">
-          <div class="p-10">
+          <div class="p-10 flex flex-col items-center justify-center text-center">
             <i class="fa-solid fa-server icono"></i>
             <h1 class="subtitulo_elegirnos"> <strong>Soluciones Diversificadas</strong></h1>
             <p>Desde contadoras hasta clasificadoras inteligentes, para bancos, empresas y retail.</p>
@@ -47,9 +48,9 @@ require_once "modulos/slider_principal.php";
       </div>
 
       <!-- Mantenimiento Especializado -->
-      <div class="item">
+      <div class="">
         <div class="borde_elegirnos shadow-xl shadow-blue-950">
-          <div class="p-10">
+          <div class="p-10 flex flex-col items-center justify-center text-center">
             <i class="fas fa-tools icono"></i>
             <h1 class="subtitulo_elegirnos"><strong>Soporte Técnico a Nivel Nacional</strong> </h1>
             <p>Ingenieros especializados brindan atención y mantenimiento preventivo y correctivo.</p>
@@ -58,9 +59,9 @@ require_once "modulos/slider_principal.php";
       </div>
 
       <!-- Asesoría Personalizada -->
-      <div class="item">
+      <div class="">
         <div class="borde_elegirnos shadow-xl shadow-blue-950">
-          <div class="p-10">
+          <div class="p-10 flex flex-col items-center justify-center text-center">
             <i class="fa-solid fa-users-viewfinder icono"></i>
             <h1 class="subtitulo_elegirnos"> <strong>Consultoría Especializada</strong></h1>
             <p>Analizamos tu flujo de efectivo para recomendarte la mejor solución.</p>
@@ -69,9 +70,9 @@ require_once "modulos/slider_principal.php";
       </div>
 
       <!-- Alquiler y Venta -->
-      <div class="item">
+      <div class="">
         <div class="borde_elegirnos shadow-xl shadow-blue-950">
-          <div class="p-10">
+          <div class="p-10 flex flex-col items-center justify-center text-center">
             <i class="fa-solid fa-user-gear icono"></i>
             <h1 class="subtitulo_elegirnos"><strong>Alquiler y Venta Flexibles </strong> </h1>
             <p>Planes a medida según tus necesidades operativas y presupuesto.</p>
@@ -96,6 +97,8 @@ require_once "modulos/slider_principal.php";
 
 
   <div class="container borde_superior_grilla">
+
+  
     <div class="grilla">
 
       <div>
@@ -105,11 +108,11 @@ require_once "modulos/slider_principal.php";
         </h1>
       </div>
 
-      <div>
+      <!-- <div>
         <a href="nosotros" class="shadow-xl shadow-blue-950">
           Conoce más sobre nuestra propuesta de valor
         </a>
-      </div>
+      </div> -->
 
     </div>
   </div>
@@ -117,8 +120,8 @@ require_once "modulos/slider_principal.php";
 
 
 
-  <div class="container ">
-    <div class="grid_doble">
+  <div class="container">
+    <!-- <div class="grid_doble">
 
       <div class="item">
         <div class="shadow-xl shadow-blue-950 coin">
@@ -139,7 +142,296 @@ require_once "modulos/slider_principal.php";
         <a href="procesamiento_moneda" class="mt-10 boton_informativo">Mas información</a>
       </div>
 
-    </div>
+    
+
+    </div> -->
+
+
+
+    
+
+<!-- From Uiverse.io by Bodyhc --> 
+ <div
+  style="margin-bottom: 10px"
+ class="w-fit flex flex items-center justify-end gap-3">
+   <label class="toggle-switch">
+    <input type="checkbox" id="myToggle">
+    <span class="slider"></span>
+  </label>
+  <h2 id="toggleLabel">Billetes </h2>
+ </div>
+
+
+     <div id="bills" class="swiper mySwiper">
+       <?php
+$categoriesById = [];
+foreach ($equipment_functions_bill as $fun) {
+
+    $categoriesById[intval($fun->id)] = $fun;
+  
+}
+?>
+    <div class="swiper-wrapper">
+
+     <?php foreach ($equipments_bill as $item): ?>
+          <?php $category = $categoriesById[$item->function_id] ?? null; ?>
+          <div class="swiper-slide">
+            <a class="producto" href="detalle_equipo?id=<?=$item->id?>&type=billete">
+      <img src="<?= $item->image ?>" class="w-auto h-48" alt="KD10">
+      <h2><?= $item->name ?></h2>
+      <p><?= $item->description ?></p>
+      <div class="etiquetas">
+        
+      <span class="etiqueta"><?= $category ? $category->name : 'Sin categoría' ?></span>
+        <span class="etiqueta">
+          <i class="fa-solid fa-money-bill"></i>
+        </span>
+      </div>
+     </a>
+     </div>
+        <?php endforeach; ?>
+  </div>
+  </div>
+
+
+  <div id="coins" style="display: none;" class="swiper mySwiper">
+     <?php
+$categoriesById = [];
+foreach ($equipment_functions_monedas as $fun) {
+
+    $categoriesById[intval($fun->id)] = $fun;
+  
+}
+?>
+    <div class="swiper-wrapper">
+
+     <?php foreach ($equipments_monedas as $item): ?>
+          <?php $category = $categoriesById[$item->function_id] ?? null; ?>
+          <div class="swiper-slide">
+            <a class="producto" href="detalle_equipo?id=<?=$item->id?>&type=moneda">
+      <img src="<?= $item->image ?>"  alt="KD10">
+      <h2><?= $item->name ?></h2>
+      <p><?= $item->description ?></p>
+      <div class="etiquetas">
+        
+      <span class="etiqueta"><?= $category ? $category->name : 'Sin categoría' ?></span>
+        <span class="etiqueta">
+          
+<i class="fa-solid fa-coins"></i>
+        </span>
+      </div>
+     </a>
+     </div>
+        <?php endforeach; ?>
+  </div>
+  </div>
+
+
+    
+ <script>
+  const toggle = document.getElementById("myToggle");
+  const label = document.getElementById("toggleLabel");
+  const bills = document.getElementById("bills");
+  const coins = document.getElementById("coins");
+  toggle.addEventListener("change", () => {
+    label.textContent = toggle.checked ? "Monedas" : "Billetes";
+    if (toggle.checked) {
+      bills.style.display = "none";
+      coins.style.display = "block";
+    } else {
+       bills.style.display = "block";
+      coins.style.display = "none";
+    }
+  });
+</script>
+    
+
+
+  <!-- <div class="swiper-slide">Slide 9</div>  -->
+  
+  <style>
+
+    
+
+  
+    .catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .producto {
+    flex: 1 1 50%;
+    background-color: #f0f0f0;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    box-sizing: border-box;
+    transition: all 0.4s ease; /* transición suave */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .producto img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* animación en imagen */
+     filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)); /* sin sombra inicial */
+  }
+/* width: 100%;
+    height: 100%;
+    object-fit: contain; */
+  .producto h2 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    color: #222;
+    transition: color 0.4s ease;
+  }
+
+  .producto p {
+    color: #444;
+    margin-bottom: 20px;
+    transition: color 0.4s ease;
+  }
+
+  .etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .etiqueta {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    background-color: #fff;
+    transition: all 0.4s ease;
+  }
+
+  /* --- Efectos al hacer hover --- */
+  .producto:hover {
+    background-color: #4b7cc7ff;
+    color: #fff;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .producto:hover h2 {
+    color: #fff;
+  }
+
+  .producto:hover p {
+    color: #e0e0e0;
+  }
+
+  .producto:hover .etiqueta {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+
+  .producto:hover img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px black); /* halo azul acoplado */
+  }
+
+  @media (max-width: 768px) {
+    .producto {
+      flex: 1 1 100%;
+    }
+  }
+
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+ 
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #043399;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #043399;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+  
+
+  </style>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+       breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
   </div>
 
 

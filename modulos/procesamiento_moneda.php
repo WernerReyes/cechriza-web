@@ -8,7 +8,7 @@ require_once 'data/procesamiento_monedas.php';
 
 ?>
 
-
+ 
 <div class="fondo_paralelo">
 
   <div class="">
@@ -64,25 +64,7 @@ require_once 'data/procesamiento_monedas.php';
           <!-- Clasificadoras -->
 
           <!-- Productos Clasificadora -->
-          <div class="grid_products">
-
-            <?php foreach ($equipments_monedas as $equipment): ?>
-              <a href="detalle_equipo?id=<?php echo $equipment->id; ?>">
-                <div data-function="<?php echo $equipment->function_id; ?>">
-                  <div class="item_producto">
-                    <div class="imagen">
-                      <img src="<?php echo $equipment->image; ?>" alt="<?php echo $equipment->name; ?>"
-                        class="w-auto h-48">
-                    </div>
-                    <h1><?php echo $equipment->name; ?></h1>
-                    <p><?php echo $equipment->description; ?></p>
-                    <!-- <a href="detalle_equipo?id=<?php echo $equipment->id; ?>">Detalle de Producto</a> -->
-                  </div>
-                </div>
-              </a>
-            <?php endforeach; ?>
-
-          </div>
+         <div class="grid_products"></div>
           <!-- END Productos Clasificadora -->
 
 
@@ -96,55 +78,49 @@ require_once 'data/procesamiento_monedas.php';
   <br/>
 
 
-  <section class="promocion">
-    <div class="container">
-      <div class="grid_promocion">
+ <section class="promocion">
+  <div class="container">
+    <div class="grid_promocion">
 
-        <!-- Beneficio 1 -->
-        <div>
-          <div class="div_icono">
-            <div class="icono">
-              <i class="fa-solid fa-coins"></i>
-            </div>
-            <h3 class="font-bold text-lg mt-2 titulo">Optimización del Tiempo de Conteo</h3>
-            <p class="text-sm mt-1">
-              Reduce significativamente el tiempo requerido para clasificar y contabilizar grandes cantidades de monedas
-              con equipos de alta velocidad y confiabilidad.
-            </p>
+      <div class="item">
+        <div class="div_icono">
+          <div class="icono">
+            <i class="fa-solid fa-coins"></i>
           </div>
+          <h3 class="titulo">Optimización del Tiempo de Conteo</h3>
+          <p>
+            Reduce significativamente el tiempo requerido para clasificar y contabilizar grandes cantidades de monedas con equipos de alta velocidad y confiabilidad.
+          </p>
         </div>
+      </div>
 
-        <!-- Beneficio 2 -->
-        <div>
-          <div class="div_icono">
-            <div class="icono">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <h3 class="font-bold text-lg mt-2 titulo">Verificación de Autenticidad Garantizada</h3>
-            <p class="text-sm mt-1">
-              Detecta monedas falsas o no reconocidas mediante sensores electromagnéticos y de densidad. Aumenta la
-              seguridad en cada transacción.
-            </p>
+      <div class="item">
+        <div class="div_icono">
+          <div class="icono">
+            <i class="fa-solid fa-shield-halved"></i>
           </div>
+          <h3 class="titulo">Verificación de Autenticidad Garantizada</h3>
+          <p>
+            Detecta monedas falsas o no reconocidas mediante sensores electromagnéticos y de densidad. Aumenta la seguridad en cada transacción.
+          </p>
         </div>
+      </div>
 
-        <!-- Beneficio 3 -->
-        <div>
-          <div class="div_icono">
-            <div class="icono">
-              <i class="fa-solid fa-chart-line"></i>
-            </div>
-            <h3 class="font-bold text-lg mt-2 titulo">Gestión Eficiente del Flujo de Caja</h3>
-            <p class="text-sm mt-1">
-              Controla el flujo de efectivo con reportes detallados, clasificación por denominación y conexión con
-              sistemas administrativos.
-            </p>
+      <div class="item">
+        <div class="div_icono">
+          <div class="icono">
+            <i class="fa-solid fa-chart-line"></i>
           </div>
+          <h3 class="titulo">Gestión Eficiente del Flujo de Caja</h3>
+          <p>
+            Controla el flujo de efectivo con reportes detallados, clasificación por denominación y conexión con sistemas administrativos.
+          </p>
         </div>
+      </div>
 
       </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 
   <?php
@@ -155,106 +131,97 @@ require_once 'data/procesamiento_monedas.php';
 
 
   <script>
-    const gridProducts = document.querySelector('.grid_products');
-    const equipmentFunctions = <?php echo json_encode($equipment_functions_monedas); ?>;
-    const equipments = <?php echo json_encode($equipments_monedas); ?>;
-    let equipmentFiltered = [];
-    let searchTerm = "";
+  // Tu script completo y optimizado
 
-    //* EVENTS
+const gridProducts = document.querySelector('.grid_products');
+const equipmentFunctions = <?php echo json_encode($equipment_functions_monedas); ?>;
+const equipments = <?php echo json_encode($equipments_monedas); ?>;
+let equipmentFiltered = [];
+let searchTerm = "";
 
-    // Load inicial
-    document.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(window.location.search);
-      const activeFunctionId = params.get("id");
+//* EVENTS
 
+// Load inicial - Ahora se encarga del primer renderizado
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const activeFunctionId = params.get("id");
 
-      // const activeFunctionId = tabActive ? tabActive.getAttribute('data-id') : null
-      filterByFunctionAndSearch(+activeFunctionId);
+    filterByFunctionAndSearch(activeFunctionId ? +activeFunctionId : null);
 
-      console.log("ID recibido:", +activeFunctionId);
-
-      const tabActive = document.querySelector('.tab[data-id="' + activeFunctionId + '"]');
-      if (tabActive) {
+    const tabActive = document.querySelector(`.tab[data-id="${activeFunctionId}"]`);
+    if (tabActive) {
         tabActive.classList.add('active');
-      }
-    });
+    }
+});
 
-
-    // Change tab
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+// Change tab
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
 
         const functionId = tab.getAttribute('data-id');
         filterByFunctionAndSearch(functionId);
-      });
     });
+});
 
+// Search
+document.getElementById('searchInput').addEventListener('input', function() {
+    // Se elimina "gridProducts.innerHTML = ''" de aquí porque la función principal ya lo hace.
+    searchTerm = this.value.toLowerCase();
 
-    // Search
-    document.getElementById('searchInput').addEventListener('input', function () {
-      const filtro = this.value.toLowerCase();
+    const tabActive = document.querySelector('.tab.active');
+    const activeFunctionId = tabActive ? tabActive.getAttribute('data-id') : null;
+    filterByFunctionAndSearch(activeFunctionId);
+});
 
-      gridProducts.innerHTML = ""; // Limpia el contenedor antes de agregar nuevos elementos
+//* FUNCTIONS
 
-      searchTerm = filtro;
+function filterByFunctionAndSearch(functionId) {
+    // 1. Aplicar filtros
+    let filtered = [...equipments]; // Empezar con todos los equipos
 
-      const tabActive = document.querySelector('.tab.active');
-      const activeFunctionId = tabActive ? tabActive.getAttribute('data-id') : null
-      filterByFunctionAndSearch(activeFunctionId);
-    })
-
-
-
-    //* FUNCTIONS
-
-    function filterByFunctionAndSearch(functionId) {
-      equipmentFiltered = [...equipments]; // Reinicia el filtro
-
-      if (functionId) {
-        equipmentFiltered = equipmentFiltered.filter(eq => eq.function_id === parseInt(functionId));
-      }
-
-      if (searchTerm) {
-        equipmentFiltered = equipmentFiltered.filter(eq => {
-          const titulo = eq.name.toLowerCase();
-          const descripcion = eq.description.toLowerCase();
-          return titulo.includes(searchTerm) || descripcion.includes(searchTerm);
-        });
-      }
-
-      gridProducts.innerHTML = ""; // Limpia el contenedor antes de agregar nuevos elementos
-
-      equipmentFiltered.forEach(eq => {
-        const itemDiv = document.createElement('div');
-        itemDiv.setAttribute('data-function', eq.function_id);
-
-         itemDiv.innerHTML = `
-        <a style="background-color: transparent;" href="detalle_equipo?id=${eq.id}&amp;type=moneda">
-          <div class="wrapper">
-    <div class="container">
-      <div class="top"
-        style="background: url(${eq.image}) no-repeat center center; -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%;"
-      ></div>
-      <h1 class="title">${eq.name}</h1>
-    </div>
-    <div class="inside">
-      <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
-      <div class="contents">
-        <div>
-
-          Sistema automático de clasificación y enfajado de billetes Kisan (K6 Strapper).
-        </div>
-      </div>
-    </div>
-  </div>
-        </a>
-        `;
-
-        gridProducts.appendChild(itemDiv);
-      });
+    if (functionId) {
+        filtered = filtered.filter(eq => eq.function_id === parseInt(functionId));
     }
 
+    if (searchTerm) {
+        filtered = filtered.filter(eq => {
+            const name = eq.name.toLowerCase();
+            const description = eq.description.toLowerCase();
+            return name.includes(searchTerm) || description.includes(searchTerm);
+        });
+    }
+
+    // 2. Limpiar el contenedor (se hace una sola vez)
+    gridProducts.innerHTML = "";
+
+    // 3. Renderizar los resultados
+    filtered.forEach(eq => {
+        const itemDiv = document.createElement('div');
+        // No es necesario el data-function aquí, ya que el filtrado es por JS
+        
+        itemDiv.innerHTML = `
+          <a class="product-link" href="detalle_equipo?id=${eq.id}&type=moneda">
+            <div class="wrapper">
+              <div class="container">
+                <div class="top">
+                  <img src="${eq.image}" alt="${eq.name}">
+                </div>
+                <h1 class="title">${eq.name}</h1>
+              </div>
+              <div class="inside">
+                <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
+                <div class="contents">
+                  <div>
+                    ${eq.description}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        `;
+        gridProducts.appendChild(itemDiv);
+    });
+}
   </script>

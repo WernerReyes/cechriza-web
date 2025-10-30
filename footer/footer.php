@@ -107,7 +107,7 @@
     sendBtn.addEventListener("click", () => {
       const message = document.getElementById("whatsapp-message").value.trim();
       if (message) {
-        const phone = "51999999999"; // Reemplaza con tu número
+        const phone = "941082289"; // Reemplaza con tu número
         const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
        chat.style.display = "none"; // Ocultar después de enviar

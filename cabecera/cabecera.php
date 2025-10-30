@@ -24,84 +24,51 @@
 
     <!-- Grid superior -->
     <div class="grid-personal pt-20 bg-gray-900 text-center text-white">
-      <div><i class="fa-brands fa-whatsapp"></i> <strong>014760909 / 014760348</strong> </div>
+      <div><i class="fa-brands fa-whatsapp"></i> <strong>01-4760909 / 941082289</strong> </div>
       <div><i class="fa-solid fa-magnifying-glass-location"></i> <strong>Av. San Luis 2930, San Borja</strong> </div>
       <div><i class="fa-solid fa-envelope"></i> <strong>ventas@cechriza.com</strong> </div>
     </div>
 
-    <div class="nav bg-gray-900">
-      <div class="container container_nav bg-gray-900">
-        <div class="logo-container">
+    
+     
+
+   <nav id="menu" class="bg-gray-900">
+    <div id="menu-container" class="container container_nav">
+    <div  id="logo-container">
         <div class="logo">
           <img src="img/cechriza.png" alt="Logo CECHRIZA" />
         </div>
 
         <!-- Botón hamburguesa -->
-        <div class="menu-toggle" id="toggleMenu">
+       
+        </div>
+  <!-- <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label> -->
+  <!-- <input type="checkbox" id="tm"> -->
+    <div class="menu-toggle" id="tm">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        </div>
-
-        <!-- Menú principal -->
-        <div class="navegador flex items-center" id="navMenu">
-          <div class="nav-item nav-hover hover-principal"><a href="inicio">Inicio</a></div>
-          <div class="nav-item nav-hover hover-principal"><a href="nosotros">Nosotros</a></div>
-
-          <!-- Dropdown 1 -->
-          <div class="nav-item nav-hover hover-principal dropdown">
-            <!-- <div class="dropdown-toggle">Soluciones ▾</div>
-            <div class="dropdown-menu">
-              <div><a href="procesamiento_billetes" class="dropdown-toggle">Procesamiento de Billetes</a></div>
-              <div><a href="procesamiento_moneda" class="dropdown-item">Procesamiento de Monedas</a></div>
-            </div> -->
-
-            <!-- class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800" -->
-            <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown" type="button">
-              <div class="flex items-center gap-2">
-
-                Soluciones <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="none" viewBox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="m1 1 4 4 4-4" />
-                </svg>
-              </div>
-            </button>
-
-            <!-- Dropdown menu -->
-            <div id="multi-dropdown"
-              class="z-10 hidden  divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
-              <ul class="p-10 text-sm" aria-labelledby="multiLevelDropdownButton">
-
-                <li class="nav-hover">
-                  <a id="doubleDropdownButton1" data-dropdown-toggle="doubleDropdown1"
-                    data-dropdown-placement="right-start" type="button"
-                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">
-
-                    Procesamiento
+  <ul class="main-menu clearfix">
+    
+    <li class="nav-item"><a href="inicio">Inicio</a></li>
+    <li class="nav-item"><a href="nosotros">Nosotros</a></li>
+    <li class="nav-item"><a href="#">Soluciones
+        <span class="drop-icon">▾</span>
+        <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+      </a>
+      <input type="checkbox" id="sm1">
+      <ul class="sub-menu">
+        <li class="nav-item"><a href="procesamiento_billetes"> Procesamiento
                     de Billetes
+            <span class="drop-icon">▾</span>
+            <label title="Toggle Drop-down" class="drop-icon" for="sm3">▾</label>
+          </a>
+          <input type="checkbox" id="sm3">
+          <ul class="sub-menu">
+         
 
-
-                    <svg class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                      fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="m1 9 4-4-4-4" />
-                    </svg>
-                  </a>
-
-
-
-
-
-
-                  <div id="doubleDropdown1"
-                    class=" z-10 hidden divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
-
-
-
-                    <ul class="p-10 flex flex-col gap-2 text-sm text-gray-200" aria-labelledby="doubleDropdownButton1">
-                      <?php
+           <?php
                       require_once 'data/procesamiento_billetes.php';
 
                       foreach ($equipment_functions_bill as $category) {
@@ -109,83 +76,58 @@
 
 
                         <li
-                          class="nav-hover block px-2 py-1 hover:px-4 hover:py-3 hover:text-lg hover:bg-gray-600 hover:text-white transition-all duration-150 ease-out">
-                          <a class="block w-full" href="<?php echo 'procesamiento_billetes?id=' . $category->id; ?>">
+                          class="nav-item">
+                          <a href="<?php echo 'procesamiento_billetes?id=' . $category->id; ?>">
                             <?php echo $category->name; ?>
                           </a>
                         </li>
 
                       <?php } ?>
-                    </ul>
-                  </div>
-                </li>
+                        
+          </ul>
+        </li>
 
-
-
-                <li class="nav-hover">
-                  <a id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown"
-                    data-dropdown-placement="right-start" type="button"
-                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">
-
-                    Procesamiento
+        <li class="nav-item"><a href="procesamiento_moneda"> Procesamiento
                     de Monedas
+            <span class="drop-icon">▾</span>
+            <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+          </a>
+          <input type="checkbox" id="sm2">
+          <ul class="sub-menu">
+         
 
-
-                    <svg class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                      fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="m1 9 4-4-4-4" />
-                    </svg>
-                  </a>
-
-
-
-
-                  <div id="doubleDropdown"
-                    class="z-10 hidden  divide-y divide-gray-100 rounded-lg shadow-sm w-44 bg-gray-700">
-                    <ul class="p-10 flex flex-col gap-2 text-sm text-gray-200" aria-labelledby="doubleDropdownButton">
-                      <?php
+           <?php
                       require_once 'data/procesamiento_monedas.php';
 
                       foreach ($equipment_functions_monedas as $category) {
                         ?>
 
-                        <li class="nav-hover">
-                          <a href=<?php echo "procesamiento_moneda?id=" . $category->id; ?>
-                            class="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">
+
+                        <li
+                          class="nav-item">
+                          <a href="<?php echo 'procesamiento_moneda?id=' . $category->id; ?>">
                             <?php echo $category->name; ?>
                           </a>
                         </li>
 
                       <?php } ?>
-                    </ul>
-                  </div>
-                </li>
+                        
+          </ul>
+        </li>
+        
+      </ul>
+    </li>
+    <li class="nav-item"><a href="post_mantenimiento_preventivo">Servicios Post Venta</a></li>
+    <li class="nav-item"><a href="contacto">Contacto</a></li>
+  </ul>
+  </div>
+ 
+</nav>
 
-              </ul>
-            </div>
-
-          </div>
-
-          <!-- Dropdown 2 -->
-          <!-- <div class="nav-item dropdown">
-            <div class="dropdown-toggle">Servicios Post Venta ▾</div>
-            <div class="dropdown-menu">
-              <div><a href="post_mantenimiento_preventivo">Mantenimiento Preventivo</a></div>
-            </div>
-          </div> -->
-
-          <div class="nav-item nav-hover hover-principal"><a href="post_mantenimiento_preventivo">Servicios Post Venta</a></div>
-
-          <!-- <div class="nav-item"><a href="noticias">Noticias</a></div> -->
-          <div class="nav-item nav-hover hover-principal"><a href="contacto">Contacto</a></div>
-        </div>
-      </div>
-    </div>
-
+<br>
 
     <script>
-      const links = document.querySelectorAll("#navMenu a");
+      const links = document.querySelectorAll("#menu a");
       const activeLink = window.location.pathname.split("/").pop();
 
       const params = new URLSearchParams(window.location.search);
@@ -193,8 +135,11 @@
 
       for (const link of links) {
         if (link.getAttribute("href") === activeLink || link.getAttribute("href") === activeLink + "?id=" + id) {
-          link.style.textDecoration = "underline";
-          link.style.textUnderlineOffset = "6px";
+          // link.style.textDecoration = "underline";
+          // link.style.textUnderlineOffset = "6px";
+
+          link.style.backgroundColor = "white";
+          link.style.color = "#101828";
         }
       }
 
@@ -203,22 +148,260 @@
 
 
     <style>
-      .nav-hover:hover {
-        padding: 0.4rem 0.3rem;
-        /* estado hover (px-4 py-3) */
-        background: #4b5563;
-        border-radius: 0.375rem;
-        /* gray-600 */
-        color: #ffffff;
-        /* transform: translateX(1px); */
-        transition: all 0.3s ease;
-        /* opcional: pequeño desplazamiento */
-        
-      }
+      
+#menu ul {
+  margin: 0;
+  padding: 0;
+  
+}
 
-      .hover-principal:hover {
-       
-        /* estado hover (px-4 py-3) */
-        background: oklch(0.25 .034 264.665);
-      }
+#menu .main-menu {
+  display: none;
+ 
+}
+
+#tm:checked + .main-menu {
+  display: block;
+}
+
+#menu input[type="checkbox"], 
+#menu ul span.drop-icon {
+  display: none;
+}
+
+#menu li, 
+#toggle-menu, 
+#menu .sub-menu {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, .05);
+}
+
+#menu li, 
+#toggle-menu {
+  border-width: 0 0 1px;
+}
+
+#menu .sub-menu {
+  background-color: #101828;
+  border-width: 1px 1px 0;
+  margin: 0 1em;
+}
+
+#menu .sub-menu li:last-child {
+  border-width: 0;
+}
+
+#menu li, 
+#toggle-menu, 
+#menu a {
+  position: relative;
+  display: block;
+  color: white;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .125);
+}
+
+
+
+#toggle-menu, 
+#menu a {
+  padding: 10px 15px;
+}
+
+#menu a {
+  transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
+}
+
+#menu a:hover {
+  background-color: white;
+  color: #101828;
+}
+
+#menu .sub-menu {
+  display: none;
+}
+
+#menu input[type="checkbox"]:checked + .sub-menu {
+  display: block;
+}
+
+#menu .sub-menu a:hover {
+  color: #101828;
+}
+
+#toggle-menu .drop-icon, 
+#menu li label.drop-icon {
+  position: absolute;
+  right: 1.5em;
+  top: 1.25em;
+}
+
+#menu label.drop-icon, #toggle-menu span.drop-icon {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  background-color: #101828;
+  text-shadow: 0 0 0 transparent;
+  color: rgba(255, 255, 255, .75);
+}
+
+#menu .drop-icon {
+  line-height: 1;
+}
+
+
+
+#menu {
+  width: 100%;
+  /* height: 80px; */
+  display: flex;
+  position: fixed;
+  z-index: 2000;
+  padding: 0 0 20px 0;
+
+  
+ 
+  /* top: 0; */
+
+}
+
+#menu .main-menu {
+  width: 100%;
+  
+  z-index: 1000;
+  display: none;
+  position: relative;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  
+
+
+  background-color: var(--bg-gray-900);
+}
+
+/* Limpieza de flotantes (en lugar de overflow:hidden) */
+#menu .main-menu::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#tm span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+}
+
+#menu-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  
+}
+
+#logo-container {
+  margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 64em) and (min-width: 52.01em) {
+
+  
+  #menu li {
+    width: 33.333%;
+  }
+
+  #menu .sub-menu li {
+    width: auto;
+  }
+
+ 
+}
+
+@media only screen and (min-width: 52em) {
+
+
+  #menu .main-menu {
+    margin-left: auto;
+    width: auto;
+    top: 0;
+    display: flex;
+    max-height: none;
+    overflow:  visible;
+    
+  }
+
+  
+  #logo-container {
+  margin: 0;
+}
+
+  #tm {
+    display: none;
+  }
+
+   /* Asegura que el fondo cubra toda la franja superior */
+  #menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+    z-index: -1;
+  }
+
+  #toggle-menu, 
+  #menu label.drop-icon {
+    display: none;
+  }
+
+  #menu ul span.drop-icon {
+    display: inline-block;
+  }
+
+  #menu li {
+    float: left;
+    border-width: 0 1px 0 0;
+  }
+
+  #menu .sub-menu li {
+    float: none;
+  }
+
+  #menu .sub-menu {
+    border-width: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 12em;
+    z-index: 3000;
+  }
+
+  #menu .sub-menu, 
+  #menu input[type="checkbox"]:checked + .sub-menu {
+    display: none;
+  }
+
+  #menu .sub-menu li {
+    border-width: 0 0 1px;
+  }
+
+  #menu .sub-menu .sub-menu {
+    top: 0;
+    left: 100%;
+  }
+
+  #menu li:hover > input[type="checkbox"] + .sub-menu {
+    display: block;
+  }
+}
+
     </style>
+
+

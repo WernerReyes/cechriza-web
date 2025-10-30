@@ -29,7 +29,8 @@ $equipments_bill = array(
             "Funciones" => "Maneja hasta 48 divisas; lectura dual de números de serie (OCR); detección de billetes deteriorados (fitness tipo “F”); detección de cara y orientación",
             "Conectividad" => "Puerto serial, LAN y USB",
             "Pantalla" => "Táctil de 4,3″ a color",
-        ]
+        ],
+        "manuales/BROCHURE - Newton 30.pdf"
     ),
     new Equipment("2", "Kisan - K5-A", "Clasificadora de billetes de 5 bolsillos (4 de clasificación + 1 de rechazo) de alta velocidad.", "Clasificadora de billetes de 5 bolsillos (4 de clasificación + 1 de rechazo) de alta velocidad. La Kisan K5A, con su diseño vertical compacto, es ideal para tesorerías y empresas de transporte de valores, permitiendo contar, autenticar y clasificar billetes por denominación y estado de forma rápida y eficiente.", "img/equipments/kisan/k5_a.png", 1, [
         "Bolsillos" => "4 de salida + 1 de rechazo",
@@ -41,7 +42,7 @@ $equipments_bill = array(
         "Funciones" => "Hasta 48 divisas; lectura de número de serie (OCR); clasificación fitness (tipo F); detección de cara y orientación; modo automático/mix hasta 20 denominaciones simultáneas",
         "Conectividad" => "Serial x3, LAN x2, USB (puerto OP)",
         "Pantalla" => "Panel táctil externo de 7″ (800×480)"
-    ]),
+    ], 'manuales/BROCHUREK5 A.pdf'),
     new Equipment("3", "Kisan - K6", "Clasificadora de billetes modular de alto volumen.", "
     Clasificadora de billetes modular de alto volumen. La Kisan K6 es una sorter multipocket (configuración base 4+2 bolsillos, expandible hasta 16+2) diseñada para procesar grandes cantidades de billetes con rapidez y precisión, autenticando y clasificando por estado de uso (fitness) para operaciones de tesorería intensivas.
     ", "img/equipments/kisan/k6.png", 1, [
@@ -122,7 +123,7 @@ $equipments_bill = array(
         "Integración y gestión" => "Plataforma CAOS/C-Link de CIMA para monitoreo remoto de niveles de efectivo en tiempo real, gestión de usuarios, reportes de depósitos y retiros; comunicación con sistemas de tienda o banco vía protocolos estándar (XFS, web services).",
         "Uso típico" => "Back office de grandes tiendas para automatizar cierre y apertura de cajas (los cajeros depositan al final del turno y retiran cambio al inicio, todo vía la recicladora); en bancos de gran afluencia para dispensar efectivo a cajeros humanos o ATMs de autoservicio con depósitos integrados."
     ]),
-    new Equipment("10", "Kisan - KD-10", "La KD-10 es una maquina compacta de velocidad media, diseñado para puntos de venta.", "La KD-10 es una maquina comapacta de velocidad media, diseñado para puntos de venta. Una caja fuerte inteligente ('smart safe') de front-office, ideal para tiendas, gasolineras, hoteles, restaurantes, etc. Maximiza la eficiencia y protege el efectivo contra mermas y errores humanos con tecnología de conteo inteligente a 5 billetes/seg, permitiendo a los cajeros realizar depósitos parciales seguros durante el día y agilizando el cierre de caja. Diseñada para integrarse a fácilmente a los sistemas del cliente.", "img/equipments/kisan/kd_10.png", 2, [
+    new Equipment("10", "Kisan - KD-10", "La KD-10 es una maquina compacta de velocidad media, diseñado para puntos de venta.", "La KD-10 es una maquina comapacta de velocidad media, diseñado para puntos de venta. Una caja fuerte inteligente ('smart safe') de front-office, ideal para tiendas, gasolineras, hoteles, restaurantes, etc. Maximiza la eficiencia y protege el efectivo contra mermas y errores humanos con tecnología de conteo inteligente a 5 billetes/seg, permitiendo a los cajeros realizar depósitos parciales seguros durante el día y agilizando el cierre de caja. Diseñada para integrarse a fácilmente a los sistemas del cliente.", "img/FOTOS EQUIPOS/KS DK 10/KISAN KD 10 - ANGULO 4.png", 2, [
         "Velocidad de procesamiento" => "Hasta ~5 billetes/segundo (aprox. 300 billetes/minuto) en modo depósito continuo, con aceptación de billetes uno a uno o fajos pequeños.",
         "Capacidad de entrada" => "Boca de depósito con alimentador de hasta 100 billetes por inserción; auto-arrastre de billetes en lote con lectura individual rápida.",
         "Capacidad de almacenamiento" => "Opciones de almacenamiento internas: cassette rígido apilador de 2.000 billetes o bolsa flexible (canvas) de hasta ~4.500 billetes, según configuración elegida (permite elegir entre mayor seguridad vs mayor capacidad).",
@@ -132,7 +133,9 @@ $equipments_bill = array(
         "Conectividad y control" => "Puertos USB y LAN, además de conectividad inalámbrica (WiFi/3G) para enviar datos a plataforma central; integración con sistemas POS/ERP para conciliación automática; plataforma remota permite monitorear estado, niveles de efectivo y enviar alertas de recogida necesarias.",
         "Alimentación eléctrica" => "100–240 V AC (universal); batería UPS opcional para respaldar breves cortes de energía sin interrumpir operación.",
         "Dimensiones compactas" => "~27 × 58 × 70 cm, peso ~46 kg, adecuado para instalación debajo o al lado de cajas registradoras."
-    ]),
+    ], 
+    'manuales/BROCHURE KD 10.pdf'
+),
     new Equipment("11", "Kisan - KD-20", "Solución de depósito de billetes de tamaño mediano para back-office.", "Solución de depósito de billetes de tamaño mediano para back-office. La Kisan KD20 es una caja fuerte inteligente ideal para trastienda de comercios, almacenes y restaurantes, que combina sensores de alto rendimiento, velocidad de conteo de 300 billetes/min y alimentación continua para depósitos ininterrumpidos. Su diseño mediano ofrece gran capacidad de depósito de hasta 10,000 billetes. Diseñada para integrarse fácilmente a los sistemas del cliente.", "img/equipments/kisan/kd_20.png", 2, [
         "Velocidad de procesamiento" => "~300 billetes/minuto (5 billetes/segundo) con alimentación continua (depósitos sin pausa gracias a su trayectoria simplificada de transporte).",
         "Capacidad de entrada" => "Acepta lotes de hasta 100 billetes por inserción; alimentación “bulk” ininterrumpida con entrada continua (el equipo puede tomar más billetes mientras procesa los anteriores).",
@@ -142,7 +145,9 @@ $equipments_bill = array(
         "Gestión remota" => "Conectividad USB, LAN y WiFi para integración con software de gestión de efectivo; actualizaciones remotas de firmware; reporte automático de depósitos al sistema central o banco (facilita acreditación de fondos).",
         "Dimensiones" => "Dos versiones según bolsa: configuración estándar (~45×58×70 cm) para bolsa pequeña, y versión alta (~45×58×100 cm) para bolsa de 10k; peso ~76 kg (2mm safe + 8mm puerta).",
         "Identificación de usuarios" => "Compatible con lectores de banda magnética, códigos de barras 2D y NFC para registrar quién realiza cada depósito; registro detallado de cada transacción almacenado en memoria para auditoría."
-    ]),
+    ], 
+    'manuales/BROCHURE KD 20.pdf'
+),
     new Equipment("12", "Kisan - KDL-100", "Sistema de depósito de billetes de alto volumen para entornos de back office en negocios retail medianos y grandes.", "Sistema de depósito de billetes de alto volumen para entornos de back office en negocios retail medianos y grandes. El KDL-100 está diseñado para operaciones con alto manejo de efectivo, ofreciendo validación de billetes a gran velocidad y monitoreo en tiempo real . Permite a los operadores realizar depósitos no supervisados en cualquier momento, almacenando de inmediato el efectivo validado en una caja fuerte, lo que reduce significativamente la exposición a pérdidas o robos y disminuye los costos de manejo de efectivo.", "img/equipments/kisan/kdl_100.png", 2, [
         "Tipo" => "Recicladora inteligente de billetes (depósito y dispensación en la misma unidad), permitiendo depósitos seguros y dispensación de efectivo reutilizando billetes aceptados.",
         "Dimensiones/Peso" => "Aprox. 45×50×122 cm; peso ~120 kg (caja fuerte integrada).",
@@ -164,7 +169,7 @@ $equipments_bill = array(
         "Conectividad y gestión" => "Puertos USB, LAN y conectividad inalámbrica (WiFi/3G) para reportar en tiempo real las transacciones a sistemas centralizados; servidor web interno y capacidad de gestión remota (actualizaciones de software, monitoreo de estado).",
         "Opcionales de identificación" => "Lector de tarjetas magnéticas o chip, teclado PIN y NFC para identificación segura de usuarios; módulo GSM para comunicaciones móviles redundantes.",
         "Sistema operativo" => "Windows 10 IoT Enterprise, brindando plataforma robusta y actualizable para software de caja fuerte inteligente."
-    ]),
+    ], 'manuales/BROCHUREKD 100.pdf'),
 
     new Equipment(
         '25',
@@ -258,7 +263,9 @@ new Equipment(
         "Pantalla y controles" => "Pantalla LCD (monocroma) clara con menú intuitivo; teclas de selección rápida para denominaciones y funciones; menú disponible en múltiples idiomas.",
         "Conectividad" => "Puertos LAN y USB para conexión a sistemas de caja/PC, volcado de datos y actualizaciones; puerto RS232 adicional para impresora de reportes o pantalla externa.",
         "Mantenimiento" => "Diseño heavy-duty con solo rodillos (sin correas de arrastre), reduciendo recambios y costos; tapas de acceso rápido para limpieza de sensores; autoregulación de rodillos para un transporte suave de billetes desgastados."
-    ]),
+    ], 
+    'manuales/Magner 2000 Brochure.pdf'
+),
     new Equipment("15", "Kisan - Newton 3", "Valorizadora de billetes compacta y eficiente.", "Valorizadora de billetes compacta y eficiente. La Kisan Newton 3 es una discriminadora de billetes multicurrencia diseñada para contar y autenticar billetes mezclados con rapidez en un formato de escritorio pequeño. Ideal para sucursales bancarias y cajas de comercio, la Newton 3 procesa billetes a 1.000 por minuto, detectando falsificaciones con sensores CIS a doble cara y mejorando la productividad diaria en el conteo de efectivo.", "img/equipments/kisan/newton_3.png", 6, [
         "Bolsillos" => "1 bolsillo de apilado (salida) + 1 bolsillo de rechazo (1+1 configuración)",
         "Capacidad de tolva" => "~500 billetes; capacidad de apilador ~200 billetes; rechazo ~50–100 billetes",
@@ -268,7 +275,9 @@ new Equipment(
         "Operación" => "Pantalla a color touch (aprox. 3,5–4″) para mostrar resultados, cantidades por denominación y menús; interfaz sencilla con botones de acceso rápido a modos (Mixed, Single, Count, Batch)",
         "Conectividad" => "Puertos USB y RS232 para actualización de software, conexión a PC/impresora; LAN para gestión en red si aplica (KBMS – Kisan Banknote Management System)",
         "Aplicación" => "Apta para conteo de ventanilla o tesorería interna con volúmenes medianos; su tamaño reducido y alta precisión la hacen una de las valorizadoras más populares para iniciar la automatización del conteo en pequeñas sucursales."
-    ]),
+    ], 
+    'manuales/Brochure Kisan Newton 3.pdf'
+),
     new Equipment("14", "Hyundai - MIB-11", "Valorizadora y clasificadora de billetes “fitness” de 2 bolsillos.", "Valorizadora y clasificadora de billetes “fitness” de 2 bolsillos. La Hyundai MIB-11 es una máquina discriminadora con 1 bolsillo de apilado y 1 de rechazo, que combina conteo por valor multicurrencia con evaluación del estado físico de los billetes. Procesa hasta 1200 billetes/minuto, con doble CIS para lectura de series, capaz de separar billetes por denominación, orientación y calidad (aptos vs inaptos), lo que la hace ideal para bancos que requieran cumplir estándares de recirculación de efectivo de bancos centrales.", "img/equipments/hyundai/mib_11.png", 6, [
         "Velocidad de conteo" => "Hasta 1.200 billetes/minuto en modo valorización y clasificación.",
         "Bolsillos" => "1 de apilado y 1 de rechazo, permitiendo separar billetes aptos/inaptos o por denominación.",
@@ -278,7 +287,9 @@ new Equipment(
         "Conectividad" => "Puertos USB y LAN para exportación de datos y actualización de software.",
         "Aplicaciones" => "Ideal para bancos y empresas que requieren cumplir normativas de recirculación de bancos centrales, con registro de series y reporte detallado de operaciones.",
         "Dimensiones/Peso" => "Compacta y ligera, adecuada para uso en mostrador o back office."
-    ]),
+    ], 
+    'manuales/Brochure Hyundai - MIB-11.pdf'
+),
     new Equipment(
         "16",
         "Kisan - K2-A",
@@ -311,7 +322,9 @@ new Equipment(
         "Conectividad y actualización" => "USB, RS232, RJ12, WLAN; actualización por USB/WLAN.",
         "Dimensiones/Peso" => "280×310×280 mm; 5,9 kg.",
         "Alimentación" => "110/220 V, 50/60 Hz; consumo 60 W."
-    ]),
+    ], 
+    'manuales/Magner-125-Brochure-2.pdf'
+),
 );
 
 

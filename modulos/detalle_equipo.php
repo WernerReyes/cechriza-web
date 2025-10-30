@@ -86,7 +86,9 @@ $typeText = $type === 'billete' ? 'Billetes' : 'Monedas';
           <li><i class="fa-solid fa-check"></i> Pantalla táctil a color y conectividad USB</li>
         </ul> -->
         <div class="grup_button">
-          <a href="brochure/newton_30.pdf" target="_blank">📄 Descargar brochure</a>
+          <a href="<?php echo $equipmentSelected->archivo_tecnicos; ?>" 
+           download
+          >📄 Descargar brochure</a>
           <a href="#contacto">💬 Cotizar</a>
         </div>
       </div>

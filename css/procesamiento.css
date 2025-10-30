@@ -1,8 +1,11 @@
+/* ==========================================================================
+   1. LAYOUT GENERAL Y BARRA LATERAL DE FILTROS
+   ========================================================================== */
+
 .div_procesamiento {
   display: grid;
   grid-template-columns: 25% 75%;
   align-items: start;
-  justify-items: center;
   padding-top: 3%;
   column-gap: 20px;
 }
@@ -14,7 +17,7 @@
   padding-bottom: 20px;
 }
 
-/* Tabs */
+/* --- Estilos para los Tabs de Filtro --- */
 .tabs {
   display: grid;
   grid-template-columns: 1fr;
@@ -25,72 +28,33 @@
 
 .tab {
   padding: 10px 20px;
-  background-color:white  ;
+  background-color: white;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
-
-  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-  border: 1px solid #f9f9f9;
-
-
+  transition: background-color 0.3s ease, border-left 0.3s ease;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+  border-left: 5px solid transparent; /* Borde inicial transparente */
 }
-
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-  /* max-width: 1500px; */
-  margin: auto;
-  gap: 15px;
-  
-}
-
-.item {
-  flex: 0 0 calc(33.33% - 10px);
-  min-height: 220px;
-  /* height: 100% ; */
-
-  height: auto;
-}
-
-
 
 .tab:hover {
-  background-color: #ddd;
+  background-color: #f0f0f0;
 }
 
 .tab.active {
   background-color: #181ca0;
   color: white;
   font-weight: bold;
-  border-left: 5px solid #ffc107;
+  border-left: 5px solid #ffc107; /* Borde amarillo para el tab activo */
 }
 
-/* Contenido dinámico */
-.tabs_dinamicos .tab_content {
-  display: none;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-}
-
-.tabs_dinamicos .tab_content.active {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Contenedor de item_2 */
+/* --- Contenedor de la sección derecha --- */
 .item_2 {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 100%;
 }
 
-/* Buscador */
+/* --- Barra de Búsqueda --- */
 .grid_search {
   display: flex;
   justify-content: flex-end;
@@ -121,259 +85,270 @@
   width: 150px;
 }
 
+
+/* ==========================================================================
+   2. GALERÍA DE PRODUCTOS Y TARJETAS INDIVIDUALES
+   ========================================================================== */
+
+/* --- Contenedor de la Galería --- */
 .grid_products {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr); */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* grid-auto-rows: 1fr; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  padding: 2rem;
-  justify-items: center;
+  padding: 30px;
+  align-items: stretch; /* Clave: Fuerza a todas las tarjetas de una fila a tener la misma altura */
   background-color: #f9f9f9;
-  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-  border-radius: 12px; /* Opcional, para bordes suaves */
-  border: 1px solid #f9f9f9;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
 }
 
-
-.item_producto {
-  display: flex;
-  flex: 1 1 calc(33.33% - 20px);
-  flex-direction: column;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 300px;
-  width: 100%;
-  height: 480px;
-}
-
-.item_producto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.item_producto .imagen img {
-  max-width: 100%;
-  height: 15rem;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-.item_producto h1 {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.item_producto p {
-  font-size: 0.95rem;
-  color: #666;
-  line-height: 1.4;
-}
-.item_producto a {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 6px;
-  width: fit-content;
-  margin: 0 auto;
-  background-color: #181ca0; /* Color corporativo */
-  color: #fff;
+/* --- Enlace que envuelve la tarjeta --- */
+.product-link {
+  display: flex; /* Permite que el wrapper interior se estire */
   text-decoration: none;
-  border-radius: 8px;
+  color: inherit;
+  height: 100%;
+}
+
+/* --- Tarjeta Individual (.wrapper) --- */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative; /* Necesario para el overlay .inside */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Contenedor Interno (imagen + título) --- */
+.wrapper .container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Ocupa el espacio vertical disponible */
+}
+
+
+/* --- Sección Superior (Imagen) --- */
+
+.wrapper .top {
+  height: 200px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+
+  /* --- LÍNEAS AÑADIDAS --- */
+  padding: 15px; /* Define el grosor del "marco" interior */
+  box-sizing: border-box; /* Asegura que el padding no aumente la altura total de 200px */
+}
+
+.wrapper .top img {
+  width: 100%;
+  height: 100%;
+  /* Cambia 'cover' por 'contain' */
+  object-fit: contain; 
+}
+
+.wrapper:hover .top img {
+  transform: scale(1.1); /* Efecto de zoom en la imagen */
+}
+
+/* --- Título del Producto --- */
+.wrapper .title {
+  padding: 20px 15px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #333;
+  flex-grow: 1; /* Se estira para llenar el espacio sobrante */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra verticalmente el texto del título */
+}
+
+/* --- Sección "Inside" (Overlay al Hover) --- */
+.wrapper .inside {
+  z-index: 10;
+  background: linear-gradient(135deg, #181ca0 0%, rgba(0, 0, 0, 0.7) 100%);
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  border-radius: 0 0 0 200px;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  overflow: hidden;
+}
+
+.wrapper .inside .icon {
+  position: absolute;
+  right: 80px;
+  top: 80px;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.wrapper:hover .inside {
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 0;
+  opacity: 0.95;
+}
+
+.wrapper:hover .inside .icon {
+  opacity: 0;
+}
+
+.wrapper .inside .contents {
+  padding: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease 0.1s, transform 0.6s ease 0.1s;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
   font-size: 0.95rem;
-  font-weight: 500;
-  margin-top: auto;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  line-height: 1.5;
 }
 
-.item_producto a:hover {
-  background-color: #0f1580;
-  transform: scale(1.05);
-  
+.wrapper:hover .inside .contents {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 
+/* ==========================================================================
+   3. RESPONSIVIDAD
+   ========================================================================== */
 
+@media (max-width: 992px) {
+  .div_procesamiento {
+    grid-template-columns: 30% 70%; /* Damos un poco más de espacio a los productos */
+  }
+  .grid_products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-/* Responsive */
 @media (max-width: 768px) {
   .div_procesamiento {
-    grid-template-columns: 1fr;
-  }
-
-  .grid_products{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Una sola columna: filtros arriba, productos abajo */
   }
 
   .titulo_lista {
     padding-top: 30px;
     text-align: center;
   }
-
-  .item {
-    flex: 0 0 calc(50% - 10px);
-  }
-
+  
   .grid_search {
-    justify-content: center;
+    justify-content: center; /* Centramos el buscador en móviles */
     margin-top: 20px;
   }
+}
 
-  .busqueda input {
-    width: 100px;
+@media (max-width: 576px) {
+  .grid_products {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
-  .item {
-    flex: 0 0 100%;
+  .grid_products {
+    grid-template-columns: 1fr; /* Una sola columna para las tarjetas */
+    padding: 15px;
+    gap: 20px;
+  }
+  
+  .wrapper .top {
+    height: 180px; /* Imágenes un poco más pequeñas en móviles */
+  }
+
+  .wrapper .title {
+    font-size: 1.1rem;
   }
 }
 
 
 
-.wrapper {
-      width: 300px;
-      height: 290px;
-      background: white;
-      margin: auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px 10px 10px 10px;
-      box-shadow: 0;
-      transform: scale(0.95);
-      transition: box-shadow 0.5s, transform 0.5s;
-
-      &:hover {
-        transform: scale(1);
-        box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
-      }
-
-      .container {
-        width: 100%;
-        height: 100%;
-
-        .top {
-          height: 250px;
-          width: 100%;
-          background: url(${eq.image}) no-repeat center center;
-          -webkit-background-size: 100%;
-          -moz-background-size: 100%;
-          -o-background-size: 100%;
-          background-size: 100%;
-        }
-
-        .title {
-          font-size: 1.1rem;
-          color: #333;
-          margin-bottom: 10px;
-          font-weight: 600;
-          text-align: center;
-        }
-
-        .bottom {
-
-          width: 200%;
-          height: 20%;
-          transition: transform 0.5s;
-
-          &.clicked {
-            transform: translateX(-50%);
-          }
-
-          h1 {
-            margin: 0;
-            padding: 0;
-          }
-
-          p {
-            margin: 0;
-            padding: 0;
-          }
 
 
 
+/* ==========================================================================
+   4. SECCIÓN DE BENEFICIOS (DINÁMICA Y HOMOGÉNEA)
+   ========================================================================== */
 
-        }
-      }
+.promocion {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
 
-      .inside {
-        z-index: 9;
-        background: linear-gradient(135deg, #181ca0 0%, rgba(0, 0, 0, 0.6) 100%);
-        opacity: 1;
-        backdrop-filter: blur(0px);
-        -webkit-backdrop-filter: blur(0px);
-        filter: blur(0px);
-        width: 140px;
-        height: 140px;
-        position: absolute;
-        top: -70px;
-        right: -70px;
-        ;
-        border-radius: 0px 0px 200px 200px;
-        transition: all 0.5s, border-radius 2s, top 1s;
-        overflow: hidden;
+.grid_promocion {
+  display: grid;
+  /* La magia para un diseño dinámico: */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
 
-        .icon {
+/* --- Estilo de cada tarjeta de beneficio --- */
+.promocion .item { /* <-- Ahora usamos el selector de clase .item, que es consistente */
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #eef0f2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-          position: absolute;
-          right: 85px;
-          top: 85px;
-          color: white;
-          opacity: 1;
-        }
+.promocion .item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
 
-        &:hover {
+/* --- Estilo del ícono --- */
+.promocion .item .icono {
+  font-size: 2.5rem;
+  color: #181ca0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8eaf6;
+  border-radius: 50%;
+}
 
-          width: 100%;
-          right: 0;
-          top: 0;
-          border-radius: 0;
-          height: 80%;
+/* --- Estilo de los textos --- */
+.promocion .item .titulo {
+  font-size: 1.15rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 
-          .icon {
-            opacity: 0;
-            right: 15px;
-            top: 15px;
-          }
-
-          .contents {
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1);
-            transform: translateY(0);
-          }
-        }
-
-        .contents {
-          padding: 5%;
-          opacity: 0;
-          visibility: hidden;
-          transform: scale(0.5);
-          transform: translateY(-200%);
-          transition: opacity 0.2s, transform 0.8s;
-
-          div {
-
-            text-align: center;
-            color: white;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-          }
-        }
-
-
-      }
-    }
+.promocion .item p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}

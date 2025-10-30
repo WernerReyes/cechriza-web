@@ -62,7 +62,9 @@ $equipments_monedas = array(
         "Silenciosa y compacta" => "Diseño de sobremesa (~37 cm ancho, 30 cm alto) con reducción de ruido implementada, apta para operar en área de atención al público sin molestias; peso ~15 kg, fácil de reubicar dentro de la oficina.",
         "Calibración flexible" => "Admite ajuste de parámetros de diámetro (14–31 mm) y espesor (0,8–3,5 mm) para adaptarse a los tamaños de las monedas a procesar, garantizando alta precisión en la discriminación de cada denominación.",
         "Seguridad y mantenimiento" => "Acceso rápido para remover obstrucciones; mecanismo confiable para años de uso (tecnología sueca). Su implementación reduce errores humanos en conteos de monedas y agiliza la labor del personal al entregar un desglose automático del efectivo en moneda fraccionaria."
-    ]),
+    ], 
+    'manuales/SCAN COIN DTC1-DTC6-DTC9 (2).pdf'
+),
     new Equipment(11, "Magner - 915", "Contadora de monedas portátil y versátil.", "Contadora de monedas portátil y versátil. La Magner 915 permite contar y embolsar/arrollar todas las denominaciones de monedas con rapidez (hasta 2.500 monedas/min), brindando resultados exactos y operación sencilla. Su construcción robusta asegura fiabilidad en entornos de alto uso, como bancos, casinos y comercios", "img/equipments/magner/915.png", 4, [
         "Velocidad" => "Hasta ~1.800 monedas/minuto (conteo rápido con precisión verificadora integrada).",
         "Modos de conteo" => "Continuo (libre), acumulativo (suma parcial/total) y lotes predefinidos; incluye 8 presets de batch programables vía teclado para empaquetar cantidades exactas por rollo/bolsa según denominación.",
@@ -72,7 +74,7 @@ $equipments_monedas = array(
         "Recuperación de atascos" => "Mecanismo automático que invierte o detiene momentáneamente para despejar obstrucciones, reanudando el conteo sin perder datos.",
         "Dimensiones/Peso" => "Compacta (aprox. 23 × 32 × 17 cm) y portátil (~8,5 kg); incluye asa para transporte fácil.",
         "Alimentación" => "110/220 V AC, ~40 W; operación silenciosa y de bajo mantenimiento."
-    ]),
+    ], 'manuales/Brochure-Magner-915 (1) (2).pdf'),
     new Equipment(16, "Scan Coin - 303", "Contadora de monedas compacta, confiable y portátil.", "Contadora de monedas compacta, confiable y portátil. La SCAN COIN SC 303 es una contadora universal diseñada para volúmenes medios de monedas, ofreciendo conteo rápido (hasta 2700 monedas/min) y la opción de embolsado o entubado. Gracias a su diseño ligero con asa de transporte, es ideal para sucursales bancarias, comercios y casinos que requieran movilidad y facilidad de uso en el conteo de efectivo metálico.", "img/equipments/scan_coin/303.png", 4, [
         "Velocidad" => "hasta ~2.700 monedas/minuto.",
         "Capacidad de tolva" => "Bandeja superior abatible con capacidad para unas 500–1.000 monedas (según tamaño); permite alimentación continua con recarga manual rápida.",
@@ -91,7 +93,9 @@ $equipments_monedas = array(
         "Construcción" => "Carcasa robusta y componentes internos reforzados, aptos para operación continua en entornos de volumen medio-alto; nivel de ruido controlado para uso en oficina.",
         "Uso versátil" => "Adecuada tanto para conteo puro de mezclas (dando total por valor cuando se procesa una denominación a la vez) como para separación parcial usando off-sort; ideal en combinación con clasificadoras si se requiere incrementar velocidad de un solo tipo de moneda.",
         "Dimensiones/Peso" => "Formato de sobremesa, peso moderado que permite reubicación ocasional; alimentación multi-voltaje para adaptabilidad global."
-    ]),
+    ], 
+    'manuales/BROCHURE SC 360.pdf'
+),
     new Equipment(18, "Scan Coin - 3003", "Contadora de monedas de alta capacidad para grandes volúmenes.", "Contadora de monedas de alta capacidad para grandes volúmenes. La SCAN COIN SC 3003 fue desarrollada para contar rápidamente grandes cantidades de monedas de forma eficiente y confiable. Es una máquina robusta tipo industrial, capaz de procesar hasta 3.500 monedas por minuto, con funciones inteligentes como separación de monedas de diferente tamaño y opciones de embolsado, apreciada por bancos, transportadoras de caudales y centros de monedas en todo el mundo.", "img/equipments/scan_coin/3003.png", 4, [
         "Velocidad" => "Hasta ~3.500 monedas/minuto (muy alta velocidad, ahorrando tiempo en el procesamiento de grandes lotes).",
         "Capacidad de tolva" => "Aproximadamente 10.000 monedas, lo que permite alimentar grandes cantidades de una sola vez sin recargas frecuentes.",

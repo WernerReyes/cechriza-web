@@ -7,7 +7,7 @@ require_once 'data/procesamiento_billetes.php';
 <link rel="stylesheet" href="css/procesamiento.css">
 
 
-<div class="fondo_paralelo">
+<div class="fondo_paralelo">   
 
 
   <div class="">
@@ -64,22 +64,8 @@ require_once 'data/procesamiento_billetes.php';
 
           <!-- Contadoras y Valorizadoras -->
           <!-- <div class="tab_content"> -->
-          <div class="grid_products">
-
-            <?php foreach ($equipments_bill as $equipment): ?>
-              <div data-function="<?php echo $equipment->function_id; ?>">
-                <div class="item_producto">
-                  <div class="imagen">
-                    <img src="<?php echo $equipment->image; ?>" alt="<?php echo $equipment->name; ?>">
-                  </div>
-                  <h1><?php echo $equipment->name; ?></h1>
-                  <p><?php echo $equipment->description; ?></p>
-                  <a href="detalle_equipo?id=<?php echo $equipment->id; ?>">Detalle de Producto</a>
-                </div>
-              </div>
-            <?php endforeach; ?>
-
-          </div>
+         <div class="grid_products">
+    </div>
           <!-- </div> -->
 
 
@@ -93,72 +79,62 @@ require_once 'data/procesamiento_billetes.php';
     </div>
   </div>
 
-  <br>
-  <br>
-  <section class="promocion container flex-container grid_promocion">
+ 
+ <section class="promocion">
+  <div class="container">
+    <div class="grid_promocion">
 
-
-
-    <!-- Beneficio 1 -->
-    <div class="item ">
-      <div class="div_icono">
-        <div class="icono ">
-          <i class="fa-solid fa-coins  "></i>
+      <div class="item">
+        <div class="div_icono">
+          <div class="icono">
+            <i class="fa-solid fa-coins"></i>
+          </div>
+          <h3 class="titulo">Ahorro de Tiempo Operativo</h3>
+          <p>
+            Automatiza el conteo y clasificación de billetes con equipos de alta velocidad. Reduce significativamente los tiempos de cierre de caja y conciliaciones.
+          </p>
         </div>
-        <h3 class="font-bold text-lg mt-2 titulo">Ahorro de Tiempo Operativo</h3>
-        <p class="text-sm mt-1">
-          Automatiza el conteo y clasificación de billetes con equipos de alta velocidad. Reduce significativamente
-          los tiempos de cierre de caja y conciliaciones.
-        </p>
+      </div>
+
+      <div class="item">
+        <div class="div_icono">
+          <div class="icono">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="titulo">Detección Avanzada de Billetes Sospechosos</h3>
+          <p>
+            Integra sistemas con sensores UV, MG, IR y CIS que aseguran autenticidad en cada transacción y protegen tu negocio contra pérdidas.
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="div_icono">
+          <div class="icono">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="titulo">Eficiencia y Control en tus Operaciones</h3>
+          <p>
+            Mejora la trazabilidad y control del flujo de efectivo con estadísticas en tiempo real y conectividad con sistemas contables.
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="div_icono">
+          <div class="icono">
+            <i class="fa-solid fa-stopwatch"></i>
+          </div>
+          <h3 class="titulo">Mejora de Procesos y Reducción de Tiempos</h3>
+          <p>
+            Optimiza cada etapa del manejo de efectivo, minimizando errores y acelerando el procesamiento. Obtén resultados más rápidos y precisos en tus operaciones diarias.
+          </p>
+        </div>
       </div>
 
     </div>
-
-    <!-- Beneficio 2 -->
-    <div class="item">
-      <div class="div_icono">
-        <div class="icono">
-          <i class="fa-solid fa-shield-halved"></i>
-        </div>
-        <h3 class="font-bold text-lg mt-2 titulo">Detección Avanzada de Billetes Sospechosos</h3>
-        <p class="text-sm mt-1">
-          Integra sistemas con sensores UV, MG, IR y CIS que aseguran autenticidad en cada transacción y protegen tu
-          negocio contra pérdidas.
-        </p>
-      </div>
-    </div>
-
-    <!-- Beneficio 3 -->
-    <div class="item">
-      <div class="div_icono">
-        <div class="icono">
-          <i class="fa-solid fa-chart-line"></i>
-        </div>
-        <h3 class="font-bold text-lg mt-2 titulo">Eficiencia y Control en tus Operaciones</h3>
-        <p class="text-sm mt-1">
-          Mejora la trazabilidad y control del flujo de efectivo con estadísticas en tiempo real y conectividad con
-          sistemas contables.
-        </p>
-      </div>
-    </div>
-
-    <!-- Beneficio 4 -->
-    <div class="item">
-      <div class="div_icono">
-        <div class="icono">
-          <i class="fa-solid fa-stopwatch"></i>
-        </div>
-        <h3 class="font-bold text-lg mt-2 titulo">Mejora de Procesos y Reducción de Tiempos</h3>
-        <p class="text-sm mt-1">
-          Optimiza cada etapa del manejo de efectivo, minimizando errores y acelerando el procesamiento. Obtén
-          resultados más rápidos y precisos en tus operaciones diarias.
-        </p>
-      </div>
-    </div>
-
-
-
-  </section>
+  </div>
+</section>
 
 
   <?php
@@ -257,27 +233,28 @@ require_once 'data/procesamiento_billetes.php';
         //   </a>
         // `;
 
-        itemDiv.innerHTML = `
-        <a style="background-color: transparent;" href="detalle_equipo?id=${eq.id}&amp;type=billete">
-          <div class="wrapper">
-    <div class="container">
-      <div class="top"
-        style="background: url(${eq.image}) no-repeat center center; -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%;"
-      ></div>
-      <h1 class="title">${eq.name}</h1>
-    </div>
-    <div class="inside">
-      <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
-      <div class="contents">
-        <div>
+      // Dentro de la función filterByFunctionAndSearch, en el bucle forEach...
 
-          Sistema automático de clasificación y enfajado de billetes Kisan (K6 Strapper).
+itemDiv.innerHTML = `
+  <a class="product-link" href="detalle_equipo?id=${eq.id}&type=billete">
+    <div class="wrapper">
+      <div class="container">
+        <div class="top">
+          <img src="${eq.image}" alt="${eq.name}">
+        </div>
+        <h1 class="title">${eq.name}</h1>
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
+        <div class="contents">
+          <div>
+            ${eq.description}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-        </a>
-        `;
+  </a>
+`;
 
         gridProducts.appendChild(itemDiv);
       });
@@ -288,148 +265,3 @@ require_once 'data/procesamiento_billetes.php';
 
 
 
-
- 
-
-
-  <style>
-    .wrapper {
-      width: 300px;
-      height: 290px;
-      background: white;
-      margin: auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px 10px 10px 10px;
-      box-shadow: 0;
-      transform: scale(0.95);
-      transition: box-shadow 0.5s, transform 0.5s;
-
-      &:hover {
-        transform: scale(1);
-        box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
-      }
-
-      .container {
-        width: 100%;
-        height: 100%;
-
-        .top {
-          height: 250px;
-          width: 100%;
-          background: url(${eq.image}) no-repeat center center;
-          -webkit-background-size: 100%;
-          -moz-background-size: 100%;
-          -o-background-size: 100%;
-          background-size: 100%;
-        }
-
-        .title {
-          font-size: 1.1rem;
-          color: #333;
-          margin-bottom: 10px;
-          font-weight: 600;
-          text-align: center;
-        }
-
-        .bottom {
-        
-          width: 200%;
-          height: 20%;
-          transition: transform 0.5s;
-
-          &.clicked {
-            transform: translateX(-50%);
-          }
-
-          h1 {
-            margin: 0;
-            padding: 0;
-          }
-
-          p {
-            margin: 0;
-            padding: 0;
-          }
-
-
-
-
-        }
-      }
-
-      .inside {
-        z-index: 9;
-        background-color:	rgba(0, 0, 0, 0.6);
-	opacity:1;
-	backdrop-filter:				blur(0px);
-	-webkit-backdrop-filter:	blur(0px);
-	filter:						blur(0px);
-        width: 140px;
-        height: 140px;
-        position: absolute;
-        top: -70px;
-        right: -70px;
-        ;
-        border-radius: 0px 0px 200px 200px;
-        transition: all 0.5s, border-radius 2s, top 1s;
-        overflow: hidden;
-
-        .icon {
-          
-          position: absolute;
-          right: 85px;
-          top: 85px;
-          color: white;
-          opacity: 1;
-        }
-
-        &:hover {
-          
-          width: 100%;
-          right: 0;
-          top: 0;
-          border-radius: 0;
-          height: 80%;
-
-          .icon {
-            opacity: 0;
-            right: 15px;
-            top: 15px;
-          }
-
-          .contents {
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1);
-            transform: translateY(0);
-          }
-        }
-
-        .contents {
-          padding: 5%;
-          opacity: 0;
-          visibility: hidden;
-          transform: scale(0.5);
-          transform: translateY(-200%);
-          transition: opacity 0.2s, transform 0.8s;
-
-          div {
-         
-            text-align: center;
-            color: white;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-          }
-        }
-
-           
-      }
-    }
-  </style>
-
-  
