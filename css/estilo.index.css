@@ -104,8 +104,9 @@
   border: 3px solid #111827;
   /* width: 300px; */
   width: calc(300px - 10px);
+  height: 100%;
   padding: 10px;
-  height: 220px;
+  /* height: 220px; */
   border-radius: 20px;
   background-color: #f3f4f6;
 }
