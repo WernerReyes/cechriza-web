@@ -15,8 +15,8 @@
   <div class="img_2">
     <div class="slide-content">
       <h1>Equipos de Alta Gama</h1> 
-      <h4>Billetes y monedas</h4>
-      <p>Distribuimos las mejores marcas internacionales en sistemas de conteo, clasificación y depósito de efectivo.</p>
+      <h4>Procesamiento de Billetes y Monedas</h4>
+      <p>Distribuimos las mejores marcas internacionales en sistemas de conteo, clasificación, depósito y reciclado de efectivo.</p>
       <button>Catálogo completo</button>
     </div>
     <img style="max-width: 800px;" src="img/equipments.png" alt="">
@@ -26,7 +26,7 @@
     <div class="slide-content">
       <h1>Soporte Técnico</h1>
       <h4>En todo el Perú</h4>
-      <p>Nuestro equipo de ingenieros capacitados garantiza atención rápida y eficaz a nuestros clientes en cualquier parte del país.</p>
+      <p>Nuestro equipo de ingenieros y técnicos capacitados por el fabricante, garantizan una atención rápida y eficiente a nuestros clientes en cualquier parte del país.</p>
       <button>Contáctanos</button>
     </div>
     <img class="invisible" src="img/MG165_cechriza.png" alt="">

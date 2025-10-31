@@ -13,20 +13,25 @@ require_once 'data/procesamiento_monedas.php';
 
   <div class="">
     <div class="grid fondo_procesamiento_billete">
-      <h2 class="text-center text-white titulo">Equipos para Procesamiento de Moneda</h2>
+      <h2 class="text-center text-white titulo">Equipos para Procesamiento de Monedas</h2>
       <h1 class="text-center text-white subtitulo">
         Tecnología de precisión para una gestión eficiente del efectivo
       </h1>
-      <p class="text-center text-white">
-        Nuestras soluciones para conteo y clasificación de monedas ofrecen rendimiento confiable y exactitud en cada
-        operación. <br>
-        Ideales para bancos, entidades de transporte, recaudación de peajes y cualquier organización que maneje grandes
-        volúmenes de efectivo físico.
+      <p class="text-center text-white mx-auto" style="max-width: 800px;">
+        Nuestras soluciones para conteo y clasificación de monedas ofrecen rendimiento confiable y exactitud en cada operación.
+        <br>
+        Ideales para Bancos, Transportadoras de Valores, recaudadoras  de peajes y cualquier entidad  que maneje y administre grandes volúmenes de efectivo físico.
+        
       </p>
       <!-- <a href="detalle_equipo">Descargar Presentación</a> -->
     </div>
   </div>
 
+  <style>
+  .text-color {
+      color: #4b5563;
+    }
+  </style>
   
 
 

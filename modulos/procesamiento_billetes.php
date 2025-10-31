@@ -7,19 +7,19 @@ require_once 'data/procesamiento_billetes.php';
 <link rel="stylesheet" href="css/procesamiento.css">
 
 
-<div class="fondo_paralelo">   
+<div class="fondo_paralelo">
 
 
   <div class="">
     <div class="grid fondo_procesamiento_billete">
-      <h2 class="text-center text-white titulo">Equipos Clasificadores de Billetes</h2>
+      <h2 class="text-center text-white titulo">Equipos para el procesamiento de Billetes</h2>
       <h1 class="text-center text-white subtitulo">
         Precisión, velocidad y seguridad en cada conteo
       </h1>
-      <p class="text-center text-white">
-        Nuestros clasificadores de billetes están diseñados para optimizar el flujo de trabajo en instituciones
-        financieras, <br> incrementando la eficiencia y reduciendo errores operativos. Perfectos para bancos, casas de
-        cambio y empresas que requieren alto rendimiento.
+      <p class="text-center text-white mx-auto" style="max-width: 800px;">
+        Nuestros equipos están diseñados para optimizar el flujo del efectivo en instituciones financieras y grandes
+        empresas. incrementando la eficiencia y reduciendo errores operativos. Perfectos para bancos, casas de cambio y
+        empresas que requieren un alto rendimiento y seguridad.
       </p>
       <!-- <a href="">Descargar Presentación</a> -->
     </div>
@@ -64,8 +64,8 @@ require_once 'data/procesamiento_billetes.php';
 
           <!-- Contadoras y Valorizadoras -->
           <!-- <div class="tab_content"> -->
-         <div class="grid_products">
-    </div>
+          <div class="grid_products">
+          </div>
           <!-- </div> -->
 
 
@@ -79,62 +79,66 @@ require_once 'data/procesamiento_billetes.php';
     </div>
   </div>
 
- 
- <section class="promocion">
-  <div class="container">
-    <div class="grid_promocion">
 
-      <div class="item">
-        <div class="div_icono">
-          <div class="icono">
-            <i class="fa-solid fa-coins"></i>
+  <section class="promocion">
+    <div class="container">
+      <div class="grid_promocion">
+
+        <div class="item">
+          <div class="div_icono">
+            <div class="icono">
+              <i class="fa-solid fa-coins"></i>
+            </div>
+            <h3 class="titulo">Ahorro de Tiempo Operativo</h3>
+            <p>
+              Automatiza el conteo y clasificación de billetes con equipos de alta velocidad. Reduce significativamente
+              los tiempos de cierre de caja y conciliaciones.
+            </p>
           </div>
-          <h3 class="titulo">Ahorro de Tiempo Operativo</h3>
-          <p>
-            Automatiza el conteo y clasificación de billetes con equipos de alta velocidad. Reduce significativamente los tiempos de cierre de caja y conciliaciones.
-          </p>
         </div>
-      </div>
 
-      <div class="item">
-        <div class="div_icono">
-          <div class="icono">
-            <i class="fa-solid fa-shield-halved"></i>
+        <div class="item">
+          <div class="div_icono">
+            <div class="icono">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="titulo">Detección Avanzada de Billetes Sospechosos</h3>
+            <p>
+              Integra sistemas con sensores UV, MG, IR y CIS que aseguran autenticidad en cada transacción y protegen tu
+              negocio contra pérdidas.
+            </p>
           </div>
-          <h3 class="titulo">Detección Avanzada de Billetes Sospechosos</h3>
-          <p>
-            Integra sistemas con sensores UV, MG, IR y CIS que aseguran autenticidad en cada transacción y protegen tu negocio contra pérdidas.
-          </p>
         </div>
-      </div>
 
-      <div class="item">
-        <div class="div_icono">
-          <div class="icono">
-            <i class="fa-solid fa-chart-line"></i>
+        <div class="item">
+          <div class="div_icono">
+            <div class="icono">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="titulo">Eficiencia y Control en tus Operaciones</h3>
+            <p>
+              Mejora la trazabilidad y control del flujo de efectivo con estadísticas en tiempo real y conectividad con
+              sistemas contables.
+            </p>
           </div>
-          <h3 class="titulo">Eficiencia y Control en tus Operaciones</h3>
-          <p>
-            Mejora la trazabilidad y control del flujo de efectivo con estadísticas en tiempo real y conectividad con sistemas contables.
-          </p>
         </div>
-      </div>
 
-      <div class="item">
-        <div class="div_icono">
-          <div class="icono">
-            <i class="fa-solid fa-stopwatch"></i>
+        <div class="item">
+          <div class="div_icono">
+            <div class="icono">
+              <i class="fa-solid fa-stopwatch"></i>
+            </div>
+            <h3 class="titulo">Mejora de Procesos y Reducción de Tiempos</h3>
+            <p>
+              Optimiza cada etapa del manejo de efectivo, minimizando errores y acelerando el procesamiento. Obtén
+              resultados más rápidos y precisos en tus operaciones diarias.
+            </p>
           </div>
-          <h3 class="titulo">Mejora de Procesos y Reducción de Tiempos</h3>
-          <p>
-            Optimiza cada etapa del manejo de efectivo, minimizando errores y acelerando el procesamiento. Obtén resultados más rápidos y precisos en tus operaciones diarias.
-          </p>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <?php
@@ -233,9 +237,9 @@ require_once 'data/procesamiento_billetes.php';
         //   </a>
         // `;
 
-      // Dentro de la función filterByFunctionAndSearch, en el bucle forEach...
+        // Dentro de la función filterByFunctionAndSearch, en el bucle forEach...
 
-itemDiv.innerHTML = `
+        itemDiv.innerHTML = `
   <a class="product-link" href="detalle_equipo?id=${eq.id}&type=billete">
     <div class="wrapper">
       <div class="container">
@@ -261,7 +265,3 @@ itemDiv.innerHTML = `
     }
 
   </script>
-
-
-
-

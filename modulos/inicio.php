@@ -18,8 +18,8 @@ require_once "modulos/slider_principal.php";
     <div class="titulo_cuatro">
       <div class="flex flex-col items-center justify-center text-center">
         <h1 class="titulo_elegirnos">¿Por qué elegirnos?</h1>
-        <h1 class="unico"> <strong>Aliados en tu gestión de efectivo</strong> </h1>
-        <p class="">Ofrecemos tecnología confiable, soporte técnico nacional y soluciones adaptadas a tu operación.</p>
+        <h1 class="unico"> <strong>Aliados en la Gestión del Efectivo</strong> </h1>
+        <p class="">Ofrecemos tecnología confiable, soporte técnico a nivel nacional y soluciones adaptadas a tu operación</p>
 
       </div>
     </div>
@@ -31,7 +31,7 @@ require_once "modulos/slider_principal.php";
           <div class="p-10 flex flex-col items-center justify-center text-center">
             <i class="fas fa-lock icono"></i>
             <h1 class="subtitulo_elegirnos"> <strong>Confianza y Certificación</strong></h1>
-            <p>Distribuimos equipos certificados por las marcas más reconocidas del sector bancario.</p>
+            <p>Distribuimos equipos certificados por las marcas más reconocidas del Sector  Financiero y Grandes Empresas</p>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@ require_once "modulos/slider_principal.php";
           <div class="p-10 flex flex-col items-center justify-center text-center">
             <i class="fa-solid fa-server icono"></i>
             <h1 class="subtitulo_elegirnos"> <strong>Soluciones Diversificadas</strong></h1>
-            <p>Desde contadoras hasta clasificadoras inteligentes, para bancos, empresas y retail.</p>
+            <p>Desde contadoras hasta recicladores de efectivo inteligentes, para Bancos, Empresas y Retail.</p>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ require_once "modulos/slider_principal.php";
           <div class="p-10 flex flex-col items-center justify-center text-center">
             <i class="fa-solid fa-users-viewfinder icono"></i>
             <h1 class="subtitulo_elegirnos"> <strong>Consultoría Especializada</strong></h1>
-            <p>Analizamos tu flujo de efectivo para recomendarte la mejor solución.</p>
+            <p>Analizamos el flujo de efectivo para recomendar e implementar la mejor solución.</p>
           </div>
         </div>
       </div>
@@ -74,8 +74,8 @@ require_once "modulos/slider_principal.php";
         <div class="borde_elegirnos shadow-xl shadow-blue-950">
           <div class="p-10 flex flex-col items-center justify-center text-center">
             <i class="fa-solid fa-user-gear icono"></i>
-            <h1 class="subtitulo_elegirnos"><strong>Alquiler y Venta Flexibles </strong> </h1>
-            <p>Planes a medida según tus necesidades operativas y presupuesto.</p>
+            <h1 class="subtitulo_elegirnos"><strong>Venta Flexibles y Arrendamiento</strong> </h1>
+            <p>Planes a medida según tus necesidades operativas y ajustadas a tu presupuesto.</p>
           </div>
         </div>
       </div>
@@ -103,8 +103,7 @@ require_once "modulos/slider_principal.php";
 
       <div>
         <h1>
-          En <strong>CECHRIZA SAC</strong>, impulsamos la eficiencia en la gestión de efectivo con equipos de alta
-          tecnología, procesos seguros y atención especializada en todo el Perú.
+         En CECHRIZA , impulsamos la eficiencia en la Gestión del Efectivo con equipos de alta tecnología, procesos seguros y atención especializada en todo el Perú.
         </h1>
       </div>
 

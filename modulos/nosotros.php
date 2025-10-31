@@ -5,15 +5,13 @@
 
   <div class="banner_nosotros">
     <div class="item_interno">
-      <h1 class="titulo_general">Nosotros</h1>
+       <h1 class="titulo_general">Nosotros</h1>
+
+       <!-- <div class="slogan_mejorado">Generando Confianza</div> -->
+       <!-- <p class="slogan" style="font-size:1.2rem; font-weight:700; margin-top:8px;">Generando Confianza</p> -->
       <!-- <h2 class="subtitulo">Desde 2023 <strong>Cechriza S.A.C.</strong> transformando la gestión del efectivo</h2> -->
       <p class="parrafo">
-        Con más de 30 años de experiencia, en CECHRIZA somos especialistas en gestión de efectivo en el Perú, brindando
-        soluciones respaldadas por tecnología de última generación. Nuestro portafolio incluye equipos de procesamiento
-        y valorizadores de efectivo, sistemas de depósito, recicladores y cajas inteligentes para transporte de dinero,
-        diseñados para optimizar la seguridad y eficiencia de tu negocio. Además, contamos con un servicio postventa a
-        nivel nacional, respaldado por mantenimiento preventivo y correctivo, y un equipo técnico comprometido en
-        atender a nuestros clientes en el menor tiempo posible.
+       Con más de 30 años de experiencia, en CECHRIZA somos especialistas en la Gestión del Efectivo en el Perú, brindando soluciones respaldadas por tecnología de última generación. Nuestro portafolio orientado al procesamiento del efectivo incluye equipos contadores,  valorizadores, clasificadores, , sistemas de depósito, recicladores y cajas inteligentes para transporte de dinero, diseñados para optimizar la seguridad y eficiencia de cada  negocio. Además, contamos con un eficiente equipo  postventa a nivel nacional, con servicios de  mantenimientos preventivo y correctivo, y un equipo técnico comprometido en atender a nuestros clientes en el menor tiempo posible.
       <div class="destacado">
         <i class="fa-solid fa-angles-right"></i>
         <span>EXCELENCIA</span>
@@ -27,17 +25,18 @@
     </div>
 
     <div class="imagen_interna">
-      <img src="img/fondos/fondo_nosotros.png" alt="Fondo Nosotros" />
-    </div>
+  <img src="img/fondos/fondo_nosotros.png" alt="Fondo Nosotros" />
+  <div class="slogan_flotante">Generando Confianza</div>
+</div>
+
   </div>
 
 
   <div class="seccion_nosotros text-white">
     <div class="container">
       <div class="div_titulos">
-        <h1 class="text-center">CECHRIZA S.A.C.</h1>
-        <p class="text-center">Soluciones integrales para el procesamiento, control y gestión segura del dinero en tu
-          empresa.</p>
+        <h1 class="text-center">CECHRIZA</h1>
+        <p class="text-center">Soluciones integrales para el procesamiento, control y gestión segura del dinero en tu empresa.</p>
       </div>
 
 
@@ -71,6 +70,71 @@
       </div>
     </div>
   </div>
+
+  <style>
+
+   .imagen_interna {
+  position: relative;
+}
+
+.slogan_flotante {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeSlideIn 1.2s ease forwards, glowPulse 3s ease-in-out infinite;
+}
+
+/* Línea animada debajo */
+.slogan_flotante::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #ffffff;
+  margin: 10px auto 0;
+  border-radius: 3px;
+  animation: lineGrow 1.3s ease forwards 0.8s;
+}
+
+/* Animación aparecer + deslizar */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Brillo sutil */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6), 0 0 0px rgba(255,255,255,0.0);
+  }
+  50% {
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6), 0 0 12px rgba(255,255,255,0.7);
+  }
+}
+
+/* Línea se va extendiendo */
+@keyframes lineGrow {
+  0% { width: 0; }
+  100% { width: 120px; }
+}
+
+
+  </style>
 
 
   <div class="container">
