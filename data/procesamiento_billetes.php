@@ -204,7 +204,7 @@ $equipments_bill = array(
         
         // TODO: Complete using official descriptions from Secure Innovation
     new Equipment(
-    "40",
+    "400",
     "IBox - 617",
     "Contenedor inteligente de transporte de efectivo con neutralización por tinta (IBNS) y apertura gestionada digitalmente.",
     "La iBox 617 es una caja de transporte de efectivo de alta seguridad utilizada en operaciones de transporte de valores (CIT). Incorpora el sistema IBNS (Intelligent Banknote Neutralization System), que libera tinta de seguridad indeleble sobre los billetes en caso de manipulación o apertura no autorizada, inutilizándolos completamente. Además, emplea el sistema Digital Key para una apertura controlada electrónicamente sin necesidad de llaves físicas, reduciendo riesgos de robo interno o externo. Su carcasa reforzada y sus sensores integrados de movimiento, vibración y taladro garantizan una protección integral durante el traslado del efectivo.",
